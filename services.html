@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Accounts Navigator</title>
+  <meta name="description" content="Full-suite accounting and advisory services for UK businesses — tax, payroll, cloud bookkeeping, R&D credits, VAT and strategic growth consulting."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#faf9f8", "surface-cream": "#F4F3EF", "surface-low": "#f4f3f2",
+            "surface-variant": "#e3e2e1", "on-surface": "#1a1c1c", "on-surface-var": "#43474e",
+            "deep-navy": "#01203F", "accent-lav": "#B590FF", "muted-steel": "#5D708A",
+          },
+          fontFamily: { "display": ["Montserrat","sans-serif"] },
+          maxWidth: { "site": "1200px" },
+          borderRadius: { "card": "6px", "pill": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#0D1535}
+    #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#B590FF,#01203F);z-index:9999}
+    .rv{opacity:0;transform:translateY(28px)}
+    a:focus-visible,button:focus-visible{outline:2px solid #B590FF;outline-offset:3px;border-radius:2px}
+    .service-card{scroll-margin-top:100px}
+    @media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}}
+  </style>
+</head>
+<body>
+<div id="sp" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 px-4 pt-3 pb-1">
+  <nav class="max-w-site mx-auto px-5 lg:px-8 h-14 flex items-center justify-between gap-6 bg-white/90 backdrop-blur-md border border-surface-variant rounded-card shadow-sm">
+    <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0" aria-label="Accounts Navigator home">
+      <div class="w-7 h-7 bg-deep-navy flex items-center justify-center rounded-[3px]">
+        <div class="w-3 h-3 bg-accent-lav rotate-45 rounded-[2px]"></div>
+      </div>
+      <span class="font-display font-bold text-[11px] tracking-[.15em] uppercase text-deep-navy hidden sm:block">Accounts Navigator</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 lg:gap-9">
+      <a href="services.html" class="text-[11px] font-bold text-accent-lav uppercase tracking-widest">Services</a>
+      <a href="who-we-help.html" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Who We Help</a>
+      <a href="index.html#how-we-work" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Process</a>
+      <a href="index.html#testimonials" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Results</a>
+      <a href="index.html#faq" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">FAQ</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+441992714010" class="hidden lg:flex items-center gap-1.5 text-[11px] font-semibold text-muted-steel hover:text-deep-navy transition-colors">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        01992 714 010
+      </a>
+      <a href="contact.html" class="bg-deep-navy text-white px-5 py-2.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card flex-shrink-0">Book a Free Call</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="bg-deep-navy py-20">
+  <div class="max-w-site mx-auto px-6 lg:px-10 text-center">
+    <span class="rv inline-flex items-center gap-2 bg-white/8 border border-white/12 px-4 py-2 rounded-pill text-[11px] font-bold uppercase tracking-[.14em] text-white/70 mb-8">Our Services</span>
+    <h1 class="rv font-display text-4xl lg:text-5xl font-bold text-white leading-[1.08] tracking-[-0.025em] mb-6">Everything your business needs,<br/><span class="text-accent-lav">under one roof.</span></h1>
+    <p class="rv text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-10">From day-to-day bookkeeping to strategic financial planning — expert accounting with a genuine commitment to your growth.</p>
+    <div class="rv flex flex-wrap justify-center gap-3">
+      <a href="#tax" class="border border-white/20 text-white/70 hover:text-white hover:border-white/40 px-5 py-2 text-[11px] font-bold uppercase tracking-widest rounded-card transition-colors">Tax</a>
+      <a href="#growth" class="border border-white/20 text-white/70 hover:text-white hover:border-white/40 px-5 py-2 text-[11px] font-bold uppercase tracking-widest rounded-card transition-colors">Growth</a>
+      <a href="#payroll" class="border border-white/20 text-white/70 hover:text-white hover:border-white/40 px-5 py-2 text-[11px] font-bold uppercase tracking-widest rounded-card transition-colors">Payroll</a>
+      <a href="#cloud" class="border border-white/20 text-white/70 hover:text-white hover:border-white/40 px-5 py-2 text-[11px] font-bold uppercase tracking-widest rounded-card transition-colors">Cloud</a>
+      <a href="#rd" class="border border-white/20 text-white/70 hover:text-white hover:border-white/40 px-5 py-2 text-[11px] font-bold uppercase tracking-widest rounded-card transition-colors">R&amp;D</a>
+      <a href="#vat" class="border border-white/20 text-white/70 hover:text-white hover:border-white/40 px-5 py-2 text-[11px] font-bold uppercase tracking-widest rounded-card transition-colors">VAT</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES DETAIL -->
+<section class="bg-surface py-24">
+  <div class="max-w-site mx-auto px-6 lg:px-10 space-y-24">
+
+    <!-- 01 Tax -->
+    <div id="tax" class="service-card grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start rv">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="font-display text-6xl font-bold text-surface-variant select-none">01</span>
+          <div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185z"/></svg>
+          </div>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">Tax Compliance &amp; Planning</h2>
+        <p class="text-muted-steel leading-relaxed mb-4">UK tax law is complex and constantly evolving. Our dedicated tax team handles everything from corporation tax returns and self-assessment to VAT and personal tax planning — so you stay fully compliant while keeping more of what you earn.</p>
+        <p class="text-muted-steel leading-relaxed mb-6">We don't just file returns. We proactively review your position throughout the year, spotting legitimate savings and structuring your affairs in the most tax-efficient way possible — from profit extraction strategies to director remuneration.</p>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Corporation tax returns &amp; computations</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Self-assessment &amp; personal tax returns</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Director salary &amp; dividend planning</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Year-end accounts preparation</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>HMRC investigation support</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors rounded-card">Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-8 rounded-card">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-muted-steel mb-4">Client result</p>
+        <p class="font-display text-4xl font-bold text-deep-navy mb-2">£43,000</p>
+        <p class="text-sm text-muted-steel mb-6">saved through proactive director remuneration restructuring for a Hertfordshire SME.</p>
+        <div class="border-t border-surface-variant pt-6">
+          <p class="text-xs text-muted-steel/70 italic">"They identified tax savings my previous accountant had missed for years. The restructuring paid for three years of fees in one go."</p>
+          <p class="text-xs font-semibold text-deep-navy mt-3">— David K., Managing Director</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-surface-variant"></div>
+
+    <!-- 02 Growth -->
+    <div id="growth" class="service-card grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start rv">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="font-display text-6xl font-bold text-surface-variant select-none">02</span>
+          <div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>
+          </div>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">Strategic Growth Consulting</h2>
+        <p class="text-muted-steel leading-relaxed mb-4">Numbers tell a story — but only if you know how to read them. Our advisory service translates your financial data into actionable insight, giving you the clarity to make confident decisions and scale with purpose.</p>
+        <p class="text-muted-steel leading-relaxed mb-6">From monthly management accounts and KPI dashboards to financial modelling for expansion, investment, or exit — we act as your in-house finance director at a fraction of the cost.</p>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Monthly management accounts &amp; commentary</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>KPI dashboards &amp; real-time reporting</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Cash flow forecasting &amp; scenario planning</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Investor reporting &amp; board packs</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Business valuations &amp; exit planning</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors rounded-card">Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-deep-navy p-8 rounded-card">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-accent-lav mb-6">What you get</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-accent-lav/20 rounded-[3px] flex items-center justify-center flex-shrink-0"><span class="text-accent-lav text-xs font-bold">FD</span></div>
+            <div><p class="text-white text-sm font-semibold mb-1">Fractional Finance Director</p><p class="text-white/50 text-xs">Strategic financial leadership without the full-time overhead</p></div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-accent-lav/20 rounded-[3px] flex items-center justify-center flex-shrink-0"><span class="text-accent-lav text-xs font-bold">MA</span></div>
+            <div><p class="text-white text-sm font-semibold mb-1">Monthly Accounts Pack</p><p class="text-white/50 text-xs">P&amp;L, balance sheet, cash flow — delivered by the 10th</p></div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-accent-lav/20 rounded-[3px] flex items-center justify-center flex-shrink-0"><span class="text-accent-lav text-xs font-bold">QR</span></div>
+            <div><p class="text-white text-sm font-semibold mb-1">Quarterly Review Calls</p><p class="text-white/50 text-xs">30-min strategy session with your dedicated advisor</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-surface-variant"></div>
+
+    <!-- 03 Payroll -->
+    <div id="payroll" class="service-card grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start rv">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="font-display text-6xl font-bold text-surface-variant select-none">03</span>
+          <div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">Payroll &amp; HR Support</h2>
+        <p class="text-muted-steel leading-relaxed mb-4">Payroll errors damage trust and carry significant penalties. Our managed payroll service ensures every employee is paid accurately and on time, with all RTI submissions filed correctly and all HMRC obligations met without you having to think about it.</p>
+        <p class="text-muted-steel leading-relaxed mb-6">We handle everything from setting up new starters and processing leavers to managing pension auto-enrolment, employee benefits, and year-end P60/P11D submissions — so payroll day is never stressful.</p>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Weekly, fortnightly or monthly payroll</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>RTI submissions to HMRC</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Pension auto-enrolment setup &amp; management</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>P60, P11D &amp; benefits in kind</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>CIS contractor payroll</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors rounded-card">Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-8 rounded-card space-y-4">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-muted-steel mb-2">Payroll includes</p>
+        <div class="flex items-center gap-3 py-3 border-b border-surface-variant"><svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm text-on-surface-var">Digital payslips sent directly to employees</span></div>
+        <div class="flex items-center gap-3 py-3 border-b border-surface-variant"><svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm text-on-surface-var">Automatic tax code updates</span></div>
+        <div class="flex items-center gap-3 py-3 border-b border-surface-variant"><svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm text-on-surface-var">Statutory pay calculations (SMP, SSP)</span></div>
+        <div class="flex items-center gap-3 py-3"><svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span class="text-sm text-on-surface-var">Year-end employer forms</span></div>
+      </div>
+    </div>
+
+    <div class="border-t border-surface-variant"></div>
+
+    <!-- 04 Cloud -->
+    <div id="cloud" class="service-card grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start rv">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="font-display text-6xl font-bold text-surface-variant select-none">04</span>
+          <div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+          </div>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">Cloud Bookkeeping &amp; Accounts</h2>
+        <p class="text-muted-steel leading-relaxed mb-4">Real-time financial data is the foundation of every good business decision. We set up, manage and optimise your cloud accounting platform — whether that's Xero, QuickBooks or Sage — so your books are always accurate and current.</p>
+        <p class="text-muted-steel leading-relaxed mb-6">As Xero Gold Partners, we bring unrivalled expertise in cloud accounting workflows. We handle bank reconciliation, receipt capture, invoice automation and monthly reporting — giving you a live view of your business finances at all times.</p>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Xero, QuickBooks &amp; Sage setup &amp; migration</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Daily bank reconciliation</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Monthly management reports</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>App integrations (Stripe, Shopify, HubSpot)</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>MTD-compliant VAT filing</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors rounded-card">Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-deep-navy p-8 rounded-card">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-accent-lav mb-6">Our software partners</p>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between bg-white/5 border border-white/10 px-5 py-4 rounded-card"><span class="text-white font-semibold text-sm">Xero</span><span class="text-xs text-accent-lav font-bold">Gold Partner</span></div>
+          <div class="flex items-center justify-between bg-white/5 border border-white/10 px-5 py-4 rounded-card"><span class="text-white font-semibold text-sm">QuickBooks</span><span class="text-xs text-white/50 font-bold">Certified</span></div>
+          <div class="flex items-center justify-between bg-white/5 border border-white/10 px-5 py-4 rounded-card"><span class="text-white font-semibold text-sm">Sage</span><span class="text-xs text-white/50 font-bold">Certified</span></div>
+          <div class="flex items-center justify-between bg-white/5 border border-white/10 px-5 py-4 rounded-card"><span class="text-white font-semibold text-sm">Dext (ReceiptBank)</span><span class="text-xs text-white/50 font-bold">Partner</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-surface-variant"></div>
+
+    <!-- 05 R&D -->
+    <div id="rd" class="service-card grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start rv">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="font-display text-6xl font-bold text-surface-variant select-none">05</span>
+          <div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.7-1.352 2.42L17 18.2m-9.4.3l-1.402 1.402c-1 1-.03 2.7 1.352 2.42L7 21.8"/></svg>
+          </div>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">R&amp;D Tax Credits</h2>
+        <p class="text-muted-steel leading-relaxed mb-4">R&amp;D tax relief is one of the most generous incentives available to UK businesses — yet thousands of eligible companies fail to claim it each year. If your business is developing new products, processes, software or systems, you likely qualify.</p>
+        <p class="text-muted-steel leading-relaxed mb-6">Our specialists identify eligible R&amp;D activity across your business, prepare robust technical and financial narratives, and submit claims that stand up to HMRC scrutiny — maximising your relief while minimising risk.</p>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Eligibility assessment (free)</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Technical &amp; financial narrative preparation</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>HMRC submission &amp; correspondence</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Ongoing R&amp;D tracking strategy</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors rounded-card">Check Eligibility <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-8 rounded-card">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-muted-steel mb-4">Average claim value</p>
+        <p class="font-display text-4xl font-bold text-deep-navy mb-2">£53,000</p>
+        <p class="text-sm text-muted-steel mb-6">Average R&amp;D tax credit claim for our tech and innovation clients.</p>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-accent-lav mt-1.5 flex-shrink-0"></div><p class="text-sm text-muted-steel">SME scheme: up to 33% of R&amp;D expenditure returned</p></div>
+          <div class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-accent-lav mt-1.5 flex-shrink-0"></div><p class="text-sm text-muted-steel">RDEC: 20% above-the-line credit for larger companies</p></div>
+          <div class="flex items-start gap-3"><div class="w-2 h-2 rounded-full bg-accent-lav mt-1.5 flex-shrink-0"></div><p class="text-sm text-muted-steel">Claims can go back 2 accounting periods</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-surface-variant"></div>
+
+    <!-- 06 VAT -->
+    <div id="vat" class="service-card grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-20 items-start rv">
+      <div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="font-display text-6xl font-bold text-surface-variant select-none">06</span>
+          <div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 8.25H9m6 3H9m3 6l-3-3h1.5a3 3 0 100-6M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+        </div>
+        <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">VAT &amp; Making Tax Digital</h2>
+        <p class="text-muted-steel leading-relaxed mb-4">VAT is one of the most complex areas of UK tax — and one of the most expensive to get wrong. Our VAT specialists handle everything from registration and returns to partial exemption calculations, ensuring accuracy and full MTD compliance.</p>
+        <p class="text-muted-steel leading-relaxed mb-6">With Making Tax Digital now mandatory for all VAT-registered businesses, we ensure your software and processes are fully compliant — and we proactively identify opportunities to optimise your VAT position.</p>
+        <ul class="space-y-2 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>VAT registration &amp; deregistration</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Quarterly VAT returns &amp; filing</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Making Tax Digital setup &amp; compliance</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Partial exemption &amp; mixed supply VAT</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>International &amp; cross-border VAT</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors rounded-card">Get Started <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-deep-navy p-8 rounded-card">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-accent-lav mb-6">MTD timeline</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4"><div class="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></div><div><p class="text-white text-sm font-semibold">MTD for VAT</p><p class="text-white/50 text-xs">Mandatory for all VAT-registered businesses</p></div></div>
+          <div class="flex items-start gap-4"><div class="w-6 h-6 bg-accent-lav/30 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-accent-lav text-xs font-bold">!</span></div><div><p class="text-white text-sm font-semibold">MTD for Income Tax</p><p class="text-white/50 text-xs">From April 2026 for sole traders &amp; landlords</p></div></div>
+          <div class="flex items-start gap-4"><div class="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"><span class="text-white/30 text-xs font-bold">↑</span></div><div><p class="text-white text-sm font-semibold">MTD for Corporation Tax</p><p class="text-white/50 text-xs">Coming for companies — prepare now</p></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="bg-surface-cream py-24">
+  <div class="max-w-site mx-auto px-6 lg:px-10">
+    <div class="text-center mb-14 rv">
+      <span class="text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel block mb-4">Pricing</span>
+      <h2 class="font-display text-3xl font-bold text-deep-navy mb-4">Fixed fees. Zero surprises.</h2>
+      <p class="text-muted-steel max-w-xl mx-auto">All fees are agreed upfront — no hourly rates, no unexpected charges. Monthly direct debit, cancel anytime.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white border border-surface-variant p-8 rounded-card rv">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-muted-steel mb-2">Starter</p>
+        <p class="font-display text-4xl font-bold text-deep-navy mb-1">From £149<span class="text-lg font-normal text-muted-steel">/mo</span></p>
+        <p class="text-sm text-muted-steel mb-6">For sole traders &amp; small businesses</p>
+        <ul class="space-y-2.5 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Self-assessment tax return</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Basic bookkeeping &amp; reconciliation</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Quarterly VAT returns</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Annual accounts filing</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Email &amp; phone support</li>
+        </ul>
+        <a href="contact.html" class="block text-center bg-surface-cream border border-surface-variant text-deep-navy px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav hover:text-white hover:border-accent-lav transition-colors rounded-card">Get a Quote</a>
+      </div>
+      <div class="bg-deep-navy border border-accent-lav/30 p-8 rounded-card rv relative" data-delay="80">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-lav text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-pill">Most Popular</div>
+        <p class="text-[11px] font-bold uppercase tracking-widest text-accent-lav mb-2">Growth</p>
+        <p class="font-display text-4xl font-bold text-white mb-1">From £399<span class="text-lg font-normal text-white/50">/mo</span></p>
+        <p class="text-sm text-white/50 mb-6">For growing SMEs (up to £1M turnover)</p>
+        <ul class="space-y-2.5 mb-8">
+          <li class="flex items-center gap-3 text-sm text-white/80"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Everything in Starter</li>
+          <li class="flex items-center gap-3 text-sm text-white/80"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Monthly management accounts</li>
+          <li class="flex items-center gap-3 text-sm text-white/80"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Managed payroll (up to 10 employees)</li>
+          <li class="flex items-center gap-3 text-sm text-white/80"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Dedicated account manager</li>
+          <li class="flex items-center gap-3 text-sm text-white/80"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Quarterly strategy calls</li>
+        </ul>
+        <a href="contact.html" class="block text-center bg-accent-lav text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors rounded-card">Get a Quote</a>
+      </div>
+      <div class="bg-white border border-surface-variant p-8 rounded-card rv" data-delay="160">
+        <p class="text-[11px] font-bold uppercase tracking-widest text-muted-steel mb-2">Enterprise</p>
+        <p class="font-display text-4xl font-bold text-deep-navy mb-1">Custom</p>
+        <p class="text-sm text-muted-steel mb-6">For established businesses &amp; groups</p>
+        <ul class="space-y-2.5 mb-8">
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Everything in Growth</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Fractional Finance Director</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Group consolidation accounts</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Bespoke reporting &amp; dashboards</li>
+          <li class="flex items-center gap-3 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Priority support &amp; same-day response</li>
+        </ul>
+        <a href="contact.html" class="block text-center bg-surface-cream border border-surface-variant text-deep-navy px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav hover:text-white hover:border-accent-lav transition-colors rounded-card">Speak to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-deep-navy py-16">
+  <div class="max-w-site mx-auto px-6 lg:px-10 text-center rv">
+    <h2 class="font-display text-3xl font-bold text-white mb-4">Ready to get started?</h2>
+    <p class="text-white/60 mb-8 text-lg">Book your free 30-minute discovery call. No commitment, no jargon.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors rounded-card group">
+      Book Your Free Call
+      <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-surface-low border-t border-surface-variant">
+  <div class="max-w-site mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
+    <div>
+      <div class="flex items-center gap-2.5 mb-6">
+        <div class="w-6 h-6 bg-deep-navy flex items-center justify-center rounded-[3px]"><div class="w-2.5 h-2.5 bg-accent-lav rotate-45 rounded-[2px]"></div></div>
+        <span class="font-display font-bold text-[11px] tracking-[.15em] uppercase text-deep-navy">Accounts Navigator</span>
+      </div>
+      <p class="text-sm text-muted-steel leading-relaxed max-w-xs mb-6">Strategic financial guidance for growth-minded UK businesses.</p>
+      <p class="text-xs text-muted-steel/60 mb-2">📞 <a href="tel:+441992714010" class="hover:text-deep-navy transition-colors">01992 714 010</a></p>
+      <p class="text-xs text-muted-steel/60">✉ <a href="mailto:info@accountsnavigator.com" class="hover:text-deep-navy transition-colors">info@accountsnavigator.com</a></p>
+    </div>
+    <div>
+      <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Services</h4>
+      <ul class="space-y-3">
+        <li><a href="services.html#tax" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Tax Compliance</a></li>
+        <li><a href="services.html#growth" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Strategic Growth</a></li>
+        <li><a href="services.html#payroll" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Payroll Support</a></li>
+        <li><a href="services.html#rd" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">R&amp;D Credits</a></li>
+        <li><a href="services.html#cloud" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Cloud Accounting</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Company</h4>
+      <ul class="space-y-3">
+        <li><a href="about.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">About Us</a></li>
+        <li><a href="who-we-help.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Who We Support</a></li>
+        <li><a href="switch.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Switch Accountant</a></li>
+        <li><a href="index.html#faq" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Resources</a></li>
+        <li><a href="contact.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Legal</h4>
+      <ul class="space-y-3">
+        <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Terms of Service</a></li>
+        <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Cookie Policy</a></li>
+        <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Complaints</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-site mx-auto px-6 lg:px-10 py-5 border-t border-surface-variant flex flex-col md:flex-row items-center justify-between gap-3">
+    <p class="text-xs text-muted-steel/60">© 2024 Accounts Navigator Ltd. All rights reserved. Registered in England &amp; Wales.</p>
+    <p class="text-xs text-muted-steel/60">Authorised by ICAEW · Members of ACCA</p>
+  </div>
+</footer>
+
+<!-- Float CTA -->
+<a href="tel:+441992714010" class="fixed bottom-8 right-8 w-14 h-14 bg-accent-lav text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-40" aria-label="Call us">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener('scroll', () => {
+  const winH = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('sp').style.width = (window.scrollY / winH * 100) + '%';
+});
+gsap.utils.toArray('.rv').forEach(el => {
+  const delay = parseFloat(el.dataset.delay || 0) / 1000;
+  gsap.to(el, { opacity: 1, y: 0, duration: 0.7, delay, ease: 'power2.out',
+    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+  });
+});
+</script>
+</body>
+</html>

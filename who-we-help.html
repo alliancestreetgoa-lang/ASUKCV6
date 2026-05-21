@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who We Help | Accounts Navigator</title>
+  <meta name="description" content="Specialist accounting and tax expertise for 8 UK industries — retail, construction, tech, healthcare, property, hospitality, childcare, and creative agencies."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#faf9f8", "surface-cream": "#F4F3EF", "surface-low": "#f4f3f2",
+            "surface-variant": "#e3e2e1", "on-surface": "#1a1c1c", "on-surface-var": "#43474e",
+            "deep-navy": "#01203F", "accent-lav": "#B590FF", "muted-steel": "#5D708A",
+          },
+          fontFamily: { "display": ["Montserrat","sans-serif"] },
+          maxWidth: { "site": "1200px" },
+          borderRadius: { "card": "6px", "pill": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#0D1535}
+    #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#B590FF,#01203F);z-index:9999}
+    .rv{opacity:0;transform:translateY(28px)}
+    .ind-section{scroll-margin-top:100px}
+    a:focus-visible,button:focus-visible{outline:2px solid #B590FF;outline-offset:3px;border-radius:2px}
+    @media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}}
+  </style>
+</head>
+<body>
+<div id="sp" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 px-4 pt-3 pb-1">
+  <nav class="max-w-site mx-auto px-5 lg:px-8 h-14 flex items-center justify-between gap-6 bg-white/90 backdrop-blur-md border border-surface-variant rounded-card shadow-sm">
+    <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0">
+      <div class="w-7 h-7 bg-deep-navy flex items-center justify-center rounded-[3px]"><div class="w-3 h-3 bg-accent-lav rotate-45 rounded-[2px]"></div></div>
+      <span class="font-display font-bold text-[11px] tracking-[.15em] uppercase text-deep-navy hidden sm:block">Accounts Navigator</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 lg:gap-9">
+      <a href="services.html" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Services</a>
+      <a href="who-we-help.html" class="text-[11px] font-bold text-accent-lav uppercase tracking-widest">Who We Help</a>
+      <a href="index.html#how-we-work" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Process</a>
+      <a href="index.html#testimonials" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Results</a>
+      <a href="index.html#faq" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">FAQ</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="tel:+441992714010" class="hidden lg:flex items-center gap-1.5 text-[11px] font-semibold text-muted-steel hover:text-deep-navy transition-colors">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        01992 714 010
+      </a>
+      <a href="contact.html" class="bg-deep-navy text-white px-5 py-2.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card flex-shrink-0">Book a Free Call</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="bg-deep-navy py-20">
+  <div class="max-w-site mx-auto px-6 lg:px-10 text-center">
+    <span class="rv inline-flex items-center gap-2 bg-white/8 border border-white/12 px-4 py-2 rounded-pill text-[11px] font-bold uppercase tracking-[.14em] text-white/70 mb-8">Industries We Serve</span>
+    <h1 class="rv font-display text-4xl lg:text-5xl font-bold text-white leading-[1.08] tracking-[-0.025em] mb-6">Specialist expertise<br/><span class="text-accent-lav">for your sector.</span></h1>
+    <p class="rv text-lg text-white/60 max-w-2xl mx-auto leading-relaxed mb-10">Cookie-cutter accounting misses the nuances that matter. We've built deep knowledge in 8 key industries — so you work with someone who understands your challenges.</p>
+    <div class="rv flex flex-wrap justify-center gap-2">
+      <a href="#retail" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Retail</a>
+      <a href="#construction" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Construction</a>
+      <a href="#tech" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Tech &amp; SaaS</a>
+      <a href="#childcare" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Childcare</a>
+      <a href="#healthcare" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Healthcare</a>
+      <a href="#property" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Property</a>
+      <a href="#hospitality" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Hospitality</a>
+      <a href="#creative" class="bg-white/8 border border-white/12 hover:border-accent-lav/50 text-white/70 hover:text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest rounded-pill transition-colors">Creative</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="bg-surface py-24">
+  <div class="max-w-site mx-auto px-6 lg:px-10 space-y-20">
+
+    <!-- Retail -->
+    <div id="retail" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Retail &amp; E-commerce</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Retail and e-commerce businesses face a unique set of financial challenges — fluctuating stock levels, complex VAT across different product types, marketplace fees, and the pressure of thin margins. Add cross-border selling and the picture becomes even more complicated.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We understand the retail P&amp;L inside out. From optimising your VAT position on mixed supplies to reconciling marketplace settlements from Amazon, eBay and Shopify, we make sure your numbers are accurate and your tax position is optimised.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Stock valuation &amp; cost of goods</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Marketplace (Amazon/eBay) reconciliation</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>VAT on mixed supplies &amp; digital goods</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Cross-border &amp; EU VAT (IOSS/OSS)</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Shopify/WooCommerce integration</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a retail specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Key challenge</p><p class="text-sm text-deep-navy font-semibold mb-2">VAT on mixed supplies</p><p class="text-xs text-muted-steel leading-relaxed">Different VAT rates apply to different product types. We ensure your VAT is correct across every category — avoiding costly errors.</p></div>
+    </div>
+
+    <!-- Construction -->
+    <div id="construction" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Construction &amp; Trades</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Construction businesses operate under a unique tax framework — the Construction Industry Scheme (CIS) adds significant complexity to payroll, subcontractor management, and cash flow. The domestic reverse charge VAT rules add another layer.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We are specialists in CIS compliance — verifying subcontractors, making correct deductions, filing monthly returns, and maximising CIS refunds. We also navigate the domestic reverse charge VAT rules, ensuring your invoicing and returns are always correct.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>CIS monthly returns &amp; verification</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Domestic reverse charge VAT</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Subcontractor payroll &amp; deductions</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>CIS tax refund claims</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Project-based P&amp;L reporting</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a construction specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Key challenge</p><p class="text-sm text-deep-navy font-semibold mb-2">CIS compliance</p><p class="text-xs text-muted-steel leading-relaxed">Non-compliance with CIS can result in significant HMRC penalties. We manage every aspect of your CIS obligations.</p></div>
+    </div>
+
+    <!-- Tech & SaaS -->
+    <div id="tech" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Tech &amp; SaaS</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Technology businesses have some of the most significant tax opportunities available — R&amp;D tax credits, EMI share options, SEIS/EIS investor relief — yet many tech founders miss them through lack of specialist advice.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We work with early-stage startups through to Series B companies, providing the financial infrastructure needed to scale — investor-grade reporting, cap table modelling, and R&amp;D claims that maximise your credit without HMRC scrutiny.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>R&amp;D tax credits (SME &amp; RDEC)</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>EMI share option schemes</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>SEIS/EIS investor relief setup</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Investor reporting &amp; board packs</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>SaaS MRR/ARR financial modelling</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a tech specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-deep-navy p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-accent-lav mb-3">Avg R&amp;D claim</p><p class="font-display text-3xl font-bold text-white mb-1">£53,000</p><p class="text-xs text-white/50 leading-relaxed">Average R&amp;D tax credit recovered for our tech clients annually.</p></div>
+    </div>
+
+    <!-- Childcare -->
+    <div id="childcare" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Nurseries &amp; Childcare</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Day nurseries and childcare providers operate in a uniquely complex VAT environment. Government funding, exempt supplies, and mixed-rate services create specific challenges that require specialist knowledge — and getting it wrong is costly.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We are sector specialists with extensive experience in childcare finance — from VAT exemption analysis and funding reconciliation to Ofsted financial reporting and staff:child ratio cost modelling.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>VAT exemption &amp; partial exemption</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>EYPP/Free hours funding reconciliation</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Ofsted financial reporting</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Staff cost &amp; ratio modelling</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a childcare specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Sector insight</p><p class="text-sm text-deep-navy font-semibold mb-2">VAT on childcare</p><p class="text-xs text-muted-steel leading-relaxed">Most childcare is VAT-exempt, but mixed supplies (meals, activities) can create complex partial exemption calculations. We navigate this for you.</p></div>
+    </div>
+
+    <!-- Healthcare -->
+    <div id="healthcare" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Healthcare &amp; Wellness</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Healthcare professionals — from NHS contractors and GPs to private practitioners and wellness clinics — face a distinctive mix of regulatory requirements and tax considerations. The NHS pension, IR35 for locums, and VAT on medical services all require careful handling.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We support NHS contractors, private clinics, dental practices, physios, and wellness businesses with specialist accounting that understands the sector's unique financial landscape.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>NHS contractor accounts &amp; tax</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Private practice bookkeeping</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>NHS pension annual allowance</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>IR35 &amp; locum tax advice</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a healthcare specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Sector insight</p><p class="text-sm text-deep-navy font-semibold mb-2">NHS pension trap</p><p class="text-xs text-muted-steel leading-relaxed">Many NHS professionals face unexpected annual allowance charges. We proactively plan to minimise your pension tax exposure.</p></div>
+    </div>
+
+    <!-- Property -->
+    <div id="property" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Property &amp; Real Estate</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Property is one of the most tax-intensive asset classes in the UK. From SDLT planning and CGT on disposals to the structure of your property portfolio — the right advice at the right time can save tens of thousands of pounds.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We advise landlords, developers and property investors on the most tax-efficient structure for their portfolios, whether that means holding property personally, in a limited company, or through a trust.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>BTL landlord accounts &amp; tax returns</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>CGT planning &amp; calculations</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>SDLT advice &amp; structure planning</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Ltd company vs personal ownership</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a property specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Client result</p><p class="font-display text-3xl font-bold text-deep-navy mb-1">£127k</p><p class="text-xs text-muted-steel leading-relaxed">Tax saved for a construction firm through portfolio restructuring and proactive CGT planning.</p></div>
+    </div>
+
+    <!-- Hospitality -->
+    <div id="hospitality" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 4.87v6.75m6-6.75v6.75"/></svg></div><div class="w-px flex-1 bg-surface-variant mt-4"></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Hospitality &amp; Food</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Restaurants, cafes, bars, and food businesses operate on thin margins with complex VAT rules, significant cash flow challenges, and the added complexity of tips, tronc arrangements, and seasonal income fluctuations.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We understand the hospitality sector's pressures — from managing the VAT on food versus drinks to setting up compliant tronc arrangements for staff tips that minimise NIC exposure.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Cash flow &amp; weekly P&amp;L monitoring</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Food &amp; drink VAT (split supply)</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Tronc &amp; tips payroll setup</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Seasonal forecasting &amp; budgeting</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a hospitality specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Sector insight</p><p class="text-sm text-deep-navy font-semibold mb-2">Tips legislation</p><p class="text-xs text-muted-steel leading-relaxed">The Allocation of Tips Act 2023 changed how tips must be distributed. We ensure your business is fully compliant.</p></div>
+    </div>
+
+    <!-- Creative -->
+    <div id="creative" class="ind-section grid lg:grid-cols-[80px_1fr_320px] gap-8 rv">
+      <div class="hidden lg:flex flex-col items-center pt-2"><div class="w-12 h-12 bg-accent-lav/10 rounded-card flex items-center justify-center"><svg class="w-6 h-6 text-accent-lav" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg></div></div>
+      <div>
+        <h2 class="font-display text-2xl font-bold text-deep-navy mb-3">Creative &amp; Agencies</h2>
+        <p class="text-muted-steel leading-relaxed mb-3">Creative agencies, marketing firms, designers, and freelancers face the ongoing challenge of IR35 status, project-based accounting, and managing income from multiple international clients — often simultaneously.</p>
+        <p class="text-muted-steel leading-relaxed mb-5">We help creative professionals structure their business correctly from day one, navigate IR35 determinations with confidence, and manage international VAT and currency invoicing with clarity.</p>
+        <ul class="grid sm:grid-cols-2 gap-2 mb-5">
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>IR35 assessment &amp; contract review</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Freelancer &amp; contractor payroll</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>Project-based P&amp;L reporting</li>
+          <li class="flex items-center gap-2 text-sm text-on-surface-var"><svg class="w-4 h-4 text-accent-lav flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>International invoicing &amp; VAT</li>
+        </ul>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-accent-lav text-[11px] font-bold uppercase tracking-widest hover:text-deep-navy transition-colors">Talk to a creative specialist <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      </div>
+      <div class="bg-surface-cream border border-surface-variant p-6 rounded-card self-start"><p class="text-[10px] font-bold uppercase tracking-widest text-muted-steel mb-3">Sector insight</p><p class="text-sm text-deep-navy font-semibold mb-2">IR35 risk</p><p class="text-xs text-muted-steel leading-relaxed">HMRC's IR35 enforcement is increasing. We assess every contract and structure your working arrangements to minimise risk.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-deep-navy py-20">
+  <div class="max-w-site mx-auto px-6 lg:px-10 text-center rv">
+    <h2 class="font-display text-3xl font-bold text-white mb-4">Not sure if we work with your industry?</h2>
+    <p class="text-white/60 text-lg mb-8">Ask us. We work with businesses across many sectors and are always happy to discuss your specific situation.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors rounded-card group">
+      Book a Free Call
+      <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-surface-low border-t border-surface-variant">
+  <div class="max-w-site mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
+    <div><div class="flex items-center gap-2.5 mb-6"><div class="w-6 h-6 bg-deep-navy flex items-center justify-center rounded-[3px]"><div class="w-2.5 h-2.5 bg-accent-lav rotate-45 rounded-[2px]"></div></div><span class="font-display font-bold text-[11px] tracking-[.15em] uppercase text-deep-navy">Accounts Navigator</span></div><p class="text-sm text-muted-steel leading-relaxed max-w-xs mb-6">Strategic financial guidance for growth-minded UK businesses.</p><p class="text-xs text-muted-steel/60 mb-2">📞 <a href="tel:+441992714010" class="hover:text-deep-navy">01992 714 010</a></p><p class="text-xs text-muted-steel/60">✉ <a href="mailto:info@accountsnavigator.com" class="hover:text-deep-navy">info@accountsnavigator.com</a></p></div>
+    <div><h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Services</h4><ul class="space-y-3"><li><a href="services.html#tax" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Tax Compliance</a></li><li><a href="services.html#growth" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Strategic Growth</a></li><li><a href="services.html#payroll" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Payroll Support</a></li><li><a href="services.html#rd" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">R&amp;D Credits</a></li><li><a href="services.html#cloud" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Cloud Accounting</a></li></ul></div>
+    <div><h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Company</h4><ul class="space-y-3"><li><a href="about.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">About Us</a></li><li><a href="who-we-help.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Who We Support</a></li><li><a href="switch.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Switch Accountant</a></li><li><a href="index.html#faq" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Resources</a></li><li><a href="contact.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Contact</a></li></ul></div>
+    <div><h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Legal</h4><ul class="space-y-3"><li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Privacy Policy</a></li><li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Terms of Service</a></li><li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Cookie Policy</a></li><li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Complaints</a></li></ul></div>
+  </div>
+  <div class="max-w-site mx-auto px-6 lg:px-10 py-5 border-t border-surface-variant flex flex-col md:flex-row items-center justify-between gap-3"><p class="text-xs text-muted-steel/60">© 2024 Accounts Navigator Ltd. All rights reserved.</p><p class="text-xs text-muted-steel/60">Authorised by ICAEW · Members of ACCA</p></div>
+</footer>
+
+<a href="tel:+441992714010" class="fixed bottom-8 right-8 w-14 h-14 bg-accent-lav text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-40" aria-label="Call us"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener('scroll', () => {
+  const winH = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('sp').style.width = (window.scrollY / winH * 100) + '%';
+});
+gsap.utils.toArray('.rv').forEach(el => {
+  const delay = parseFloat(el.dataset.delay || 0) / 1000;
+  gsap.to(el, { opacity: 1, y: 0, duration: 0.7, delay, ease: 'power2.out',
+    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+  });
+});
+</script>
+</body>
+</html>
