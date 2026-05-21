@@ -77,16 +77,14 @@
     #vanta-bg{position:absolute;inset:0;width:100%;height:100%}
 
     /* ── Service cards ── */
-    .svc-card{transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease}
-    .svc-card:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(1,32,63,.13);background:#01203F!important;border-color:#01203F!important}
-    .svc-card:hover .svc-icon-wrap{background:rgba(181,144,255,.18)!important}
-    .svc-card:hover .svc-num{color:rgba(255,255,255,.06)!important}
-    .svc-card:hover .svc-title{color:#fff!important}
-    .svc-card:hover .svc-desc{color:rgba(255,255,255,.55)!important}
-    .svc-card:hover .svc-tag{background:rgba(255,255,255,.08)!important;color:rgba(255,255,255,.55)!important}
-    .svc-card:hover .svc-icon{color:#B590FF!important}
-    .svc-card:hover .svc-cta{color:#B590FF!important;gap:.5rem}
-    .svc-icon,.svc-icon-wrap,.svc-num,.svc-title,.svc-desc,.svc-tag,.svc-cta{transition:color .25s ease,background .25s ease,gap .2s ease}
+    .svc-card{transition:transform .3s ease,box-shadow .3s ease;min-height:340px}
+    .svc-card:hover{transform:translateY(-5px);box-shadow:0 24px 56px rgba(1,32,63,.28)!important}
+    .svc-card:hover .svc-overlay{opacity:1!important}
+    .svc-card:hover .svc-cta{color:#B590FF!important;gap:.6rem}
+    .svc-overlay{transition:opacity .3s ease}
+    .svc-num,.svc-title,.svc-desc,.svc-tag,.svc-cta{transition:color .25s ease,background .25s ease,gap .2s ease}
+    .svc-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
+    .svc-card:hover .svc-bg{transform:scale(1.04)}
 
     /* ── Industry card ── */
     .ind-card{transition:background .22s ease,box-shadow .22s ease}
@@ -369,93 +367,123 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
 
       <!-- 01 Tax -->
-      <div class="svc-card rv bg-white border border-surface-variant rounded-card p-7 flex flex-col cursor-pointer relative overflow-hidden" data-delay="0">
-        <div class="svc-num absolute top-4 right-5 font-display text-[5rem] font-bold text-deep-navy/[.045] leading-none select-none pointer-events-none">01</div>
-        <h3 class="svc-title font-display text-lg font-bold text-deep-navy mb-3 leading-snug">Tax Compliance &amp; Planning</h3>
-        <p class="svc-desc text-sm text-muted-steel leading-relaxed mb-5 flex-1">Expert navigation through UK tax law — self-assessment to corporation tax — ensuring compliance while identifying every legitimate saving.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Corporation Tax</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Self Assessment</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Tax Planning</span>
+      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="0">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&q=80&fit=crop')"></div>
+        <div class="svc-overlay absolute inset-0 bg-gradient-to-t from-[#01203F]/95 via-[#01203F]/70 to-[#01203F]/30 opacity-90"></div>
+        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">01</div>
+        <div class="relative z-10 flex flex-col h-full p-7 pt-16">
+          <div class="flex-1"></div>
+          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Tax Compliance &amp; Planning</h3>
+          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Expert navigation through UK tax law — self-assessment to corporation tax — ensuring compliance while identifying every legitimate saving.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Corporation Tax</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Self Assessment</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Tax Planning</span>
+          </div>
+          <a href="services.html#tax" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
+            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
         </div>
-        <a href="services.html#tax" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-muted-steel hover:text-accent-lav transition-colors">
-          Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
       </div>
 
       <!-- 02 Growth -->
-      <div class="svc-card rv bg-white border border-surface-variant rounded-card p-7 flex flex-col cursor-pointer relative overflow-hidden" data-delay="60">
-        <div class="svc-num absolute top-4 right-5 font-display text-[5rem] font-bold text-deep-navy/[.045] leading-none select-none pointer-events-none">02</div>
-        <h3 class="svc-title font-display text-lg font-bold text-deep-navy mb-3 leading-snug">Strategic Growth Consulting</h3>
-        <p class="svc-desc text-sm text-muted-steel leading-relaxed mb-5 flex-1">Beyond the books — financial modelling, KPI dashboards, and growth planning that transform your numbers into a clear roadmap for the year ahead.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Financial Modelling</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">KPI Dashboards</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Forecasting</span>
+      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="60">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80&fit=crop')"></div>
+        <div class="svc-overlay absolute inset-0 bg-gradient-to-t from-[#01203F]/95 via-[#01203F]/65 to-[#01203F]/25 opacity-90"></div>
+        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">02</div>
+        <div class="relative z-10 flex flex-col h-full p-7 pt-16">
+          <div class="flex-1"></div>
+          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Strategic Growth Consulting</h3>
+          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Beyond the books — financial modelling, KPI dashboards, and growth planning that transform your numbers into a clear roadmap for the year ahead.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Financial Modelling</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">KPI Dashboards</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Forecasting</span>
+          </div>
+          <a href="services.html#growth" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
+            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
         </div>
-        <a href="services.html#growth" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-muted-steel hover:text-accent-lav transition-colors">
-          Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
       </div>
 
       <!-- 03 Payroll -->
-      <div class="svc-card rv bg-white border border-surface-variant rounded-card p-7 flex flex-col cursor-pointer relative overflow-hidden" data-delay="120">
-        <div class="svc-num absolute top-4 right-5 font-display text-[5rem] font-bold text-deep-navy/[.045] leading-none select-none pointer-events-none">03</div>
-        <h3 class="svc-title font-display text-lg font-bold text-deep-navy mb-3 leading-snug">Payroll &amp; HR Support</h3>
-        <p class="svc-desc text-sm text-muted-steel leading-relaxed mb-5 flex-1">Accurate, timely payroll with full RTI compliance. We handle PAYE, pension auto-enrolment, and employee benefits so nothing falls through the cracks.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">PAYE &amp; RTI</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Auto-Enrolment</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">P11D Benefits</span>
+      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="120">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&q=80&fit=crop')"></div>
+        <div class="svc-overlay absolute inset-0 bg-gradient-to-t from-[#01203F]/95 via-[#01203F]/65 to-[#01203F]/25 opacity-90"></div>
+        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">03</div>
+        <div class="relative z-10 flex flex-col h-full p-7 pt-16">
+          <div class="flex-1"></div>
+          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Payroll &amp; HR Support</h3>
+          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Accurate, timely payroll with full RTI compliance. We handle PAYE, pension auto-enrolment, and employee benefits so nothing falls through the cracks.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">PAYE &amp; RTI</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Auto-Enrolment</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">P11D Benefits</span>
+          </div>
+          <a href="services.html#payroll" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
+            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
         </div>
-        <a href="services.html#payroll" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-muted-steel hover:text-accent-lav transition-colors">
-          Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
       </div>
 
       <!-- 04 Cloud -->
-      <div class="svc-card rv bg-white border border-surface-variant rounded-card p-7 flex flex-col cursor-pointer relative overflow-hidden" data-delay="0">
-        <div class="svc-num absolute top-4 right-5 font-display text-[5rem] font-bold text-deep-navy/[.045] leading-none select-none pointer-events-none">04</div>
-        <h3 class="svc-title font-display text-lg font-bold text-deep-navy mb-3 leading-snug">Cloud Bookkeeping &amp; Accounts</h3>
-        <p class="svc-desc text-sm text-muted-steel leading-relaxed mb-5 flex-1">Real-time financial visibility through Xero, QuickBooks, or Sage — set up, managed, and optimised so your data is always current and decision-ready.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Xero Gold Partner</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">QuickBooks</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">Real-time Data</span>
+      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="0">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fit=crop')"></div>
+        <div class="svc-overlay absolute inset-0 bg-gradient-to-t from-[#01203F]/95 via-[#01203F]/65 to-[#01203F]/25 opacity-90"></div>
+        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">04</div>
+        <div class="relative z-10 flex flex-col h-full p-7 pt-16">
+          <div class="flex-1"></div>
+          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Cloud Bookkeeping &amp; Accounts</h3>
+          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Real-time financial visibility through Xero, QuickBooks, or Sage — set up, managed, and optimised so your data is always current and decision-ready.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Xero Gold Partner</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">QuickBooks</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Real-time Data</span>
+          </div>
+          <a href="services.html#cloud" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
+            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
         </div>
-        <a href="services.html#cloud" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-muted-steel hover:text-accent-lav transition-colors">
-          Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
       </div>
 
       <!-- 05 R&D -->
-      <div class="svc-card rv bg-white border border-surface-variant rounded-card p-7 flex flex-col cursor-pointer relative overflow-hidden" data-delay="60">
-        <div class="svc-num absolute top-4 right-5 font-display text-[5rem] font-bold text-deep-navy/[.045] leading-none select-none pointer-events-none">05</div>
-        <h3 class="svc-title font-display text-lg font-bold text-deep-navy mb-3 leading-snug">R&amp;D Tax Credits</h3>
-        <p class="svc-desc text-sm text-muted-steel leading-relaxed mb-5 flex-1">Many businesses leave R&amp;D credits unclaimed. We identify eligible activity, prepare robust claims, and ensure you receive every penny of innovation relief.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">HMRC Claims</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">SME Relief</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-muted-steel px-2.5 py-1 rounded-pill">RDEC Scheme</span>
+      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="60">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1532094349884-543559373af3?w=700&q=80&fit=crop')"></div>
+        <div class="svc-overlay absolute inset-0 bg-gradient-to-t from-[#01203F]/95 via-[#01203F]/65 to-[#01203F]/25 opacity-90"></div>
+        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">05</div>
+        <div class="relative z-10 flex flex-col h-full p-7 pt-16">
+          <div class="flex-1"></div>
+          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">R&amp;D Tax Credits</h3>
+          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Many businesses leave R&amp;D credits unclaimed. We identify eligible activity, prepare robust claims, and ensure you receive every penny of innovation relief.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">HMRC Claims</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">SME Relief</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">RDEC Scheme</span>
+          </div>
+          <a href="services.html#rd" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
+            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
         </div>
-        <a href="services.html#rd" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-muted-steel hover:text-accent-lav transition-colors">
-          Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
       </div>
 
-      <!-- 06 VAT — wide card with result callout -->
-      <div class="svc-card rv bg-deep-navy border border-deep-navy rounded-card p-7 flex flex-col cursor-pointer relative overflow-hidden" data-delay="120">
-        <div class="svc-num absolute top-4 right-5 font-display text-[5rem] font-bold text-white/[.045] leading-none select-none pointer-events-none">06</div>
-        <h3 class="svc-title font-display text-lg font-bold text-white mb-3 leading-snug">VAT &amp; Making Tax Digital</h3>
-        <p class="svc-desc text-sm text-white/55 leading-relaxed mb-5 flex-1">HMRC-compliant VAT returns delivered accurately and on schedule. Full MTD setup and ongoing compliance — always ahead of the deadlines.</p>
-        <div class="flex flex-wrap gap-2 mb-6">
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/8 text-white/55 px-2.5 py-1 rounded-pill">MTD Compliant</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/8 text-white/55 px-2.5 py-1 rounded-pill">Bridging Software</span>
-          <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/8 text-white/55 px-2.5 py-1 rounded-pill">Flat Rate Scheme</span>
+      <!-- 06 VAT -->
+      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="120">
+        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80&fit=crop')"></div>
+        <div class="svc-overlay absolute inset-0 bg-gradient-to-t from-[#2a0060]/95 via-[#01203F]/70 to-[#01203F]/30 opacity-90"></div>
+        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">06</div>
+        <div class="relative z-10 flex flex-col h-full p-7 pt-16">
+          <div class="flex-1"></div>
+          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">VAT &amp; Making Tax Digital</h3>
+          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">HMRC-compliant VAT returns delivered accurately and on schedule. Full MTD setup and ongoing compliance — always ahead of the deadlines.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-accent-lav/20 text-accent-lav px-2.5 py-1 rounded-pill backdrop-blur-sm">MTD Compliant</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Bridging Software</span>
+            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Flat Rate Scheme</span>
+          </div>
+          <a href="services.html#vat" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-accent-lav pt-4 border-t border-white/15">
+            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
         </div>
-        <a href="services.html#vat" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-accent-lav hover:text-white transition-colors">
-          Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-        </a>
       </div>
 
     </div>
