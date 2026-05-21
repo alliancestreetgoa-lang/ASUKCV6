@@ -44,24 +44,30 @@
     #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#B590FF,#01203F);z-index:9999}
 
     /* ── Floating nav ── */
-    #site-nav{transition:box-shadow .35s ease,background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
-    .nav-link{position:relative;padding-bottom:2px}
+    #site-nav{transition:box-shadow .35s ease,background .35s ease,border-color .35s ease,backdrop-filter .35s ease;position:relative;overflow:hidden}
+    /* Glossy sheen pseudo-element — top highlight stripe */
+    #site-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,0) 100%);pointer-events:none;z-index:0;border-radius:inherit}
+    /* Glossy inner glow on top edge */
+    #site-nav::after{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65) 30%,rgba(255,255,255,.85) 50%,rgba(255,255,255,.65) 70%,transparent);pointer-events:none;z-index:1}
+    .nav-link{position:relative;padding-bottom:2px;z-index:2}
     .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:currentColor;transition:width .25s ease}
     .nav-link:hover::after{width:100%}
-    /* Glass nav — default (light sections) */
-    #site-nav{background:rgba(255,255,255,0.55)!important;backdrop-filter:blur(18px) saturate(180%)!important;-webkit-backdrop-filter:blur(18px) saturate(180%)!important;border-color:rgba(255,255,255,.65)!important;box-shadow:0 4px 32px rgba(1,32,63,.07),inset 0 1px 0 rgba(255,255,255,.8)!important}
-    /* Glass nav — dark/hero mode */
-    .nav-dark{background:rgba(8,16,42,0.45)!important;backdrop-filter:blur(20px) saturate(160%)!important;-webkit-backdrop-filter:blur(20px) saturate(160%)!important;border-color:rgba(255,255,255,.10)!important;box-shadow:0 4px 32px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.06)!important}
-    .nav-dark .nav-link{color:rgba(255,255,255,.8)!important}
+    /* Glossy nav — default (light sections) */
+    #site-nav{background:linear-gradient(135deg,rgba(255,255,255,0.62) 0%,rgba(230,225,255,0.45) 100%)!important;backdrop-filter:blur(22px) saturate(200%)!important;-webkit-backdrop-filter:blur(22px) saturate(200%)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 8px 32px rgba(1,32,63,.10),0 1px 0 rgba(255,255,255,.9) inset,0 -1px 0 rgba(181,144,255,.15) inset!important}
+    /* Glossy nav — dark/hero mode */
+    .nav-dark{background:linear-gradient(135deg,rgba(80,60,140,0.38) 0%,rgba(8,16,55,0.42) 100%)!important;backdrop-filter:blur(24px) saturate(180%)!important;-webkit-backdrop-filter:blur(24px) saturate(180%)!important;border-color:rgba(181,144,255,.18)!important;box-shadow:0 8px 40px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.12) inset,0 -1px 0 rgba(181,144,255,.12) inset!important}
+    .nav-dark .nav-link{color:rgba(255,255,255,.82)!important;z-index:2}
     .nav-dark .nav-link:hover{color:#fff!important}
-    .nav-dark .nav-wordmark{color:#fff!important}
+    .nav-dark .nav-wordmark{color:#fff!important;z-index:2}
     .nav-dark .nav-diamond-wrap{background:rgba(255,255,255,.12)!important}
     .nav-dark .nav-diamond-inner{background:#B590FF!important}
-    .nav-dark .nav-phone{color:rgba(255,255,255,.6)!important}
+    .nav-dark .nav-phone{color:rgba(255,255,255,.6)!important;z-index:2}
     .nav-dark .nav-phone:hover{color:#fff!important}
     .nav-dark .nav-phone svg{color:rgba(255,255,255,.5)!important}
-    .nav-dark .nav-cta{background:rgba(181,144,255,0.85)!important;color:#fff!important;backdrop-filter:blur(8px)!important;border:1px solid rgba(181,144,255,.4)!important}
-    .nav-dark .nav-cta:hover{background:#fff!important;color:#01203F!important}
+    .nav-dark .nav-cta{background:linear-gradient(135deg,rgba(181,144,255,0.9) 0%,rgba(140,100,230,0.85) 100%)!important;color:#fff!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 4px 16px rgba(181,144,255,.3),inset 0 1px 0 rgba(255,255,255,.25)!important;z-index:2}
+    .nav-dark .nav-cta:hover{background:linear-gradient(135deg,#fff 0%,#f0eaff 100%)!important;color:#01203F!important;box-shadow:0 4px 20px rgba(181,144,255,.4)!important}
+    /* Ensure all nav children sit above the gloss pseudo-elements */
+    #site-nav > *{position:relative;z-index:2}
 
     /* ── Mobile menu ── */
     #mob-menu{position:fixed;top:0;right:0;width:min(360px,100vw);height:100vh;background:#01203F;z-index:300;transform:translateX(100%);display:flex;flex-direction:column;padding:1.5rem}
