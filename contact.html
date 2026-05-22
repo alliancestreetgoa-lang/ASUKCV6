@@ -68,6 +68,9 @@
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
     }
+    @view-transition{navigation:auto}
+    ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
+    .nav-active{color:#01203F!important;text-decoration-line:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
   </style>
 </head>
 <body class="text-on-surface">
@@ -78,6 +81,35 @@
     #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#B590FF,#01203F);z-index:9999}
   </style>
 
+  <!-- Mobile overlay -->
+  <div id="mob-overlay" aria-hidden="true" onclick="closeMobMenu()" style="position:fixed;inset:0;background:rgba(1,32,63,.55);backdrop-filter:blur(6px);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s ease"></div>
+
+  <!-- Mobile menu -->
+  <aside id="mob-menu" aria-label="Site navigation" role="dialog" style="position:fixed;top:0;right:0;width:min(360px,100vw);height:100vh;background:#01203F;z-index:300;transform:translateX(100%);display:flex;flex-direction:column;padding:1.5rem;transition:transform .3s ease">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <span style="font-family:Montserrat,sans-serif;font-weight:700;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#fff">Accounts Navigator</span>
+      <button onclick="closeMobMenu()" style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer" aria-label="Close menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav style="display:flex;flex-direction:column">
+      <a href="services.html" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;text-decoration:none">Services</a>
+      <a href="who-we-help.html" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;text-decoration:none">Who We Help</a>
+      <a href="about.html" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;text-decoration:none">About</a>
+      <a href="switch.html" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;text-decoration:none">Switch Accountant</a>
+      <a href="index.html#how-we-work" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;text-decoration:none">Process</a>
+      <a href="index.html#testimonials" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;text-decoration:none">Results</a>
+      <a href="index.html#faq" style="color:rgba(255,255,255,.7);font-weight:600;padding:14px 0;font-size:14px;text-decoration:none">FAQ</a>
+    </nav>
+    <div style="margin-top:auto;padding-top:24px;display:flex;flex-direction:column;gap:12px">
+      <a href="tel:+441992714010" style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.4);font-size:14px;text-decoration:none">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        01992 714 010
+      </a>
+      <a href="contact.html" onclick="closeMobMenu()" style="background:#B590FF;color:#fff;padding:14px;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:6px;text-align:center;text-decoration:none;display:block">Book a Free Call</a>
+    </div>
+  </aside>
+
   <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
   <header class="sticky top-0 z-50 px-4 pt-3 pb-1">
     <nav id="site-nav" class="max-w-site mx-auto px-5 lg:px-8 h-14 flex items-center justify-between gap-6 bg-white/90 backdrop-blur-md border border-surface-variant rounded-card shadow-sm">
@@ -87,9 +119,11 @@
         </div>
         <span class="font-display font-bold text-[11px] tracking-[.15em] uppercase text-deep-navy hidden sm:block">Accounts Navigator</span>
       </a>
-      <div class="hidden md:flex items-center gap-7 lg:gap-9">
+      <div class="hidden md:flex items-center gap-5 lg:gap-7">
         <a href="services.html" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Services</a>
         <a href="who-we-help.html" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Who We Help</a>
+        <a href="about.html" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">About</a>
+        <a href="switch.html" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Switch</a>
         <a href="index.html#how-we-work" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Process</a>
         <a href="index.html#testimonials" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Results</a>
         <a href="index.html#faq" class="text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">FAQ</a>
@@ -102,6 +136,9 @@
         <a href="contact.html" class="bg-deep-navy text-white px-5 py-2.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card flex-shrink-0">
           Book a Free Call
         </a>
+        <button onclick="openMobMenu()" class="md:hidden w-9 h-9 flex items-center justify-center text-deep-navy" aria-label="Open menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+        </button>
       </div>
     </nav>
   </header>
@@ -181,7 +218,9 @@
                     required
                     placeholder="Jane Smith"
                     class="form-input border border-surface-variant rounded-card px-4 py-3 w-full text-sm text-on-surface placeholder:text-muted-steel/50 focus:border-accent-lav outline-none transition-colors bg-white"
+                    aria-describedby="err-name"
                   />
+                  <p id="err-name" class="hidden text-red-500 text-xs mt-1.5" role="alert">Please enter your full name.</p>
                 </div>
 
                 <!-- Email Address -->
@@ -195,7 +234,9 @@
                     required
                     placeholder="jane@yourcompany.co.uk"
                     class="form-input border border-surface-variant rounded-card px-4 py-3 w-full text-sm text-on-surface placeholder:text-muted-steel/50 focus:border-accent-lav outline-none transition-colors bg-white"
+                    aria-describedby="err-email"
                   />
+                  <p id="err-email" class="hidden text-red-500 text-xs mt-1.5" role="alert">Please enter a valid email address.</p>
                 </div>
 
                 <!-- Phone Number -->
@@ -518,18 +559,64 @@
     // ── GSAP ScrollTrigger Reveals ──
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.utils.toArray('.rv').forEach(function(el) {
-      gsap.to(el, {
-        opacity: 1,
-        y: 0,
-        duration: 0.72,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: el,
-          start: 'top 88%',
-          toggleActions: 'play none none none',
-        }
-      });
+    // Batch stagger reveal
+    ScrollTrigger.batch('.rv', {
+      onEnter: function(batch) {
+        gsap.fromTo(batch,
+          { opacity: 0, y: 28 },
+          { opacity: 1, y: 0, stagger: 0.1, duration: 0.75, ease: 'power2.out', overwrite: 'auto' }
+        );
+      },
+      start: 'top 88%',
+      once: true
+    });
+
+    // Hero parallax — content rises as hero scrolls away
+    (function(){
+      var hero = document.querySelector('section.bg-deep-navy');
+      var content = hero && hero.querySelector('.max-w-site');
+      if (content) {
+        gsap.to(content, {
+          y: -40, ease: 'none',
+          scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1.5 }
+        });
+      }
+    })();
+
+    // Info cards — cascade scale-up from left
+    ScrollTrigger.batch('.info-card, .disc-card', {
+      onEnter: function(batch) {
+        gsap.fromTo(batch,
+          { opacity: 0, y: 30, scale: 0.96 },
+          { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.65, ease: 'back.out(1.4)', overwrite: 'auto' }
+        );
+      },
+      start: 'top 88%',
+      once: true
+    });
+
+    // Form fields — slide in from left in sequence
+    (function(){
+      var fields = document.querySelectorAll('.form-input, input, textarea, select, label');
+      if (fields.length) {
+        gsap.fromTo(fields,
+          { opacity: 0, x: -20 },
+          { opacity: 1, x: 0, stagger: 0.06, duration: 0.55, ease: 'power2.out',
+            scrollTrigger: { trigger: fields[0], start: 'top 82%', once: true } }
+        );
+      }
+    })();
+
+    // Credential badges — pop in with scale
+    ScrollTrigger.batch('.cred-badge, [class*="cred"]', {
+      onEnter: function(batch) {
+        gsap.fromTo(batch,
+          { opacity: 0, scale: 0.8 },
+          { opacity: 1, scale: 1, stagger: 0.08, duration: 0.5, ease: 'back.out(1.7)', overwrite: 'auto' }
+        );
+      },
+      start: 'top 88%',
+      once: true
     });
 
     // ── Scroll Progress Bar ──
@@ -554,6 +641,27 @@
         document.getElementById('form-success').classList.remove('hidden');
       }, 600);
     });
+  </script>
+  <script>
+  // Active nav
+  (function(){
+    const p = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('header a[href]').forEach(a => {
+      const h = a.getAttribute('href').split('#')[0].split('/').pop() || 'index.html';
+      if (h && h === p) a.classList.add('nav-active');
+    });
+  })();
+  // Mobile menu
+  function openMobMenu(){
+    document.getElementById('mob-menu').style.transform='translateX(0)';
+    document.getElementById('mob-overlay').style.opacity='1';
+    document.getElementById('mob-overlay').style.pointerEvents='auto';
+  }
+  function closeMobMenu(){
+    document.getElementById('mob-menu').style.transform='translateX(100%)';
+    document.getElementById('mob-overlay').style.opacity='0';
+    document.getElementById('mob-overlay').style.pointerEvents='none';
+  }
   </script>
 
 </body>

@@ -128,6 +128,11 @@
     /* Focus */
     a:focus-visible,button:focus-visible{outline:2px solid #B590FF;outline-offset:3px;border-radius:2px}
 
+    @view-transition{navigation:auto}
+    ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
+    .nav-active{color:#01203F!important;text-decoration-line:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+    .nav-dark .nav-active{color:#fff!important}
+
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
       .h-badge,.h-title,.h-body,.h-ctas,.h-stats,.rv{opacity:1!important;transform:none!important}
@@ -153,6 +158,8 @@
   <nav class="flex flex-col gap-1">
     <a href="#services"     onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Services</a>
     <a href="#who-we-help"  onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Who We Help</a>
+    <a href="about.html"    onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">About</a>
+    <a href="switch.html"   onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Switch Accountant</a>
     <a href="#how-we-work"  onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">How It Works</a>
     <a href="#testimonials" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Results</a>
     <a href="#faq"          onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">FAQ</a>
@@ -178,9 +185,11 @@
       <span class="nav-wordmark font-display font-bold text-[11px] tracking-[.15em] uppercase text-deep-navy hidden sm:block transition-colors duration-300">Accounts Navigator</span>
     </a>
 
-    <div class="hidden md:flex items-center gap-7 lg:gap-9">
+    <div class="hidden md:flex items-center gap-5 lg:gap-7">
       <a href="#services"     class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Services</a>
       <a href="#who-we-help"  class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Who We Help</a>
+      <a href="about.html"    class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">About</a>
+      <a href="switch.html"   class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Switch</a>
       <a href="#how-we-work"  class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Process</a>
       <a href="#testimonials" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Results</a>
       <a href="#faq"          class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">FAQ</a>
@@ -1001,19 +1010,14 @@ heroTl.add(() => {
   });
 }, '-=0.2');
 
-/* ── Scroll reveals ── */
-gsap.utils.toArray('.rv').forEach(el => {
-  const delay = parseFloat(el.dataset.delay || 0) / 1000;
-  gsap.to(el, {
-    opacity: 1, y: 0, duration: 0.7,
-    delay,
-    ease: 'power2.out',
-    scrollTrigger: {
-      trigger: el,
-      start: 'top 88%',
-      toggleActions: 'play none none none',
-    }
-  });
+/* ── Scroll reveals — batch stagger for grouped wave effect ── */
+ScrollTrigger.batch('.rv', {
+  onEnter: batch => gsap.fromTo(batch,
+    { opacity: 0, y: 28 },
+    { opacity: 1, y: 0, stagger: 0.1, duration: 0.75, ease: 'power2.out', overwrite: 'auto' }
+  ),
+  start: 'top 88%',
+  once: true
 });
 
 /* ── Stats strip counters (big-counter) ── */
@@ -1194,6 +1198,54 @@ updateNavTheme();
 window.addEventListener('scroll', updateNavTheme, { passive: true });
 
 /* ══════════════════════════════════════
+   Hero geometric shape parallax
+══════════════════════════════════════ */
+if (heroEl) {
+  heroEl.querySelectorAll('[aria-hidden="true"]').forEach((shape, i) => {
+    gsap.to(shape, {
+      y: -(25 + i * 18),
+      ease: 'none',
+      scrollTrigger: { trigger: heroEl, start: 'top top', end: 'bottom top', scrub: 2 }
+    });
+  });
+  const heroInner = heroEl.querySelector('.relative.z-10');
+  if (heroInner) {
+    gsap.to(heroInner, {
+      y: -55, ease: 'none',
+      scrollTrigger: { trigger: heroEl, start: 'top top', end: 'bottom top', scrub: 1.5 }
+    });
+  }
+}
+
+/* ── Stat cards scale entrance ── */
+ScrollTrigger.batch('.stat-card', {
+  onEnter: batch => gsap.fromTo(batch,
+    { opacity: 0, y: 24, scale: 0.92 },
+    { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.65, ease: 'back.out(1.5)', overwrite: 'auto' }
+  ),
+  start: 'top 85%',
+  once: true
+});
+
+/* ── Section heading decorative lines draw from left ── */
+gsap.utils.toArray('span.w-5.h-px, span.w-8.h-px, span[class*="h-px"]').forEach(line => {
+  gsap.fromTo(line, { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.7, ease: 'power2.out',
+      scrollTrigger: { trigger: line, start: 'top 92%', once: true } }
+  );
+});
+
+/* ── Testimonial quote marks pop in ── */
+gsap.utils.toArray('#testimonials blockquote').forEach((q, i) => {
+  gsap.fromTo(q,
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
+      delay: i * 0.08,
+      scrollTrigger: { trigger: q, start: 'top 85%', once: true } }
+  );
+});
+
+/* ══════════════════════════════════════
    Smooth anchor scroll offset (sticky nav)
 ══════════════════════════════════════ */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1206,6 +1258,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+// Active nav — highlight About/Switch when on those pages (index stays undecorated)
+(function(){
+  const p = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('header a[href]').forEach(a => {
+    const h = a.getAttribute('href').split('#')[0].split('/').pop() || 'index.html';
+    if (h && h === p && !h.startsWith('#')) a.classList.add('nav-active');
+  });
+})();
 </script>
 
 </body>
