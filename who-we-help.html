@@ -45,9 +45,11 @@
     #site-nav{transition:box-shadow .35s ease,background .35s ease,border-color .35s ease,backdrop-filter .35s ease;position:relative;overflow:hidden}
     #site-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,0) 100%);pointer-events:none;z-index:0;border-radius:inherit}
     #site-nav::after{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65) 30%,rgba(255,255,255,.85) 50%,rgba(255,255,255,.65) 70%,transparent);pointer-events:none;z-index:1}
-    .nav-link{position:relative;padding-bottom:2px;z-index:2}
-    .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:currentColor;transition:width .25s ease}
-    .nav-link:hover::after{width:100%}
+    .nav-link{position:relative;overflow:hidden;isolation:isolate;z-index:2;padding:.45rem .8rem;border-radius:9999px;border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.16);-webkit-backdrop-filter:blur(8px) saturate(150%);backdrop-filter:blur(8px) saturate(150%);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 2px 8px rgba(1,10,40,.05);transition:background .25s ease,box-shadow .25s ease,transform .25s ease,color .25s ease}
+    .nav-link::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:1;background:linear-gradient(180deg,rgba(255,255,255,.32) 0%,rgba(255,255,255,.04) 45%,rgba(255,255,255,0) 60%)}
+    .nav-link::after{content:'';position:absolute;top:-30%;left:-95%;width:55%;height:160%;pointer-events:none;z-index:1;background:linear-gradient(105deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-18deg);transition:left .7s cubic-bezier(.2,.6,.2,1)}
+    .nav-link:hover::after{left:170%}
+    .nav-link:hover{background:rgba(255,255,255,.55);transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.85),0 5px 16px rgba(1,10,40,.10)}
     #site-nav{background:linear-gradient(135deg,rgba(255,255,255,0.62) 0%,rgba(230,225,255,0.45) 100%)!important;backdrop-filter:blur(22px) saturate(200%)!important;-webkit-backdrop-filter:blur(22px) saturate(200%)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 8px 32px rgba(28,10,48,.10),0 1px 0 rgba(255,255,255,.9) inset,0 -1px 0 rgba(150,70,180,.15) inset!important}
     .nav-dark{background:linear-gradient(135deg,rgba(80,60,140,0.38) 0%,rgba(8,16,55,0.42) 100%)!important;backdrop-filter:blur(24px) saturate(180%)!important;-webkit-backdrop-filter:blur(24px) saturate(180%)!important;border-color:rgba(150,70,180,.18)!important;box-shadow:0 8px 40px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.12) inset,0 -1px 0 rgba(150,70,180,.12) inset!important}
     .nav-dark .nav-link{color:rgba(255,255,255,.82)!important;z-index:2}
@@ -77,12 +79,17 @@
     .stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(150,70,180,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s ease}
     .stat-card:hover::before{transform:translateX(100%)}
     .tilt-card{transform-style:preserve-3d;will-change:transform}
+    .glass-card{background:rgba(255,255,255,.5);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgba(255,255,255,.65);box-shadow:0 10px 30px rgba(1,10,40,.07),inset 0 1px 0 rgba(255,255,255,.7);position:relative;overflow:hidden}
+    .glass-card::before{content:'';position:absolute;left:0;right:0;top:0;height:48%;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.4),rgba(255,255,255,0));z-index:0}
+    .glass-card-dark{background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 30px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.18);position:relative;overflow:hidden}
+    .glass-card-dark::before{content:'';position:absolute;left:0;right:0;top:0;height:48%;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0));z-index:0}
+    .glass-card>*,.glass-card-dark>*{position:relative;z-index:1}
     .val-card{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
     .val-card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(28,10,48,.12);border-color:#D4197F}
     a:focus-visible,button:focus-visible{outline:2px solid #D4197F;outline-offset:3px;border-radius:2px}
     @view-transition{navigation:auto}
     ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
-    .nav-active{color:#2A0E45!important;text-decoration-line:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+    .nav-active{background-image:linear-gradient(100deg,#7A2A8C,#D4197F,#1EA9D7)!important;color:#fff!important;border-color:rgba(255,255,255,.5)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 6px 18px rgba(212,25,127,.28)!important;text-decoration:none!important}
     .nav-dark .nav-active{color:#fff!important}
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
@@ -132,7 +139,7 @@
     <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0" aria-label="Account Clerks home">
       <img src="assets/logo.png" alt="Account Clerks" class="nav-logo nav-logo-color h-10 w-auto"><img src="assets/logo-light.png" alt="Account Clerks" class="nav-logo nav-logo-light h-10 w-auto">
     </a>
-    <div class="hidden lg:flex items-center gap-5 xl:gap-7">
+    <div class="hidden lg:flex items-center gap-1.5 xl:gap-2.5">
       <a href="services.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Services</a>
       <a href="financial-management.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Financial Management</a>
       <a href="who-we-help.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest nav-active">Who We Work With</a>
@@ -175,27 +182,27 @@
 <section class="py-16 bg-surface-cream">
   <div class="max-w-site mx-auto px-6 lg:px-10">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3" id="industry-grid">
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ind-card glass-card tilt-card p-6 rounded-card cursor-pointer">
       <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg></div>
       <p class="ic-title text-sm font-bold text-deep-navy mb-1">Entrepreneurs &amp; Start-ups</p>
       <p class="ic-sub text-xs text-muted-steel"></p>
     </div>
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ind-card glass-card tilt-card p-6 rounded-card cursor-pointer">
       <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg></div>
       <p class="ic-title text-sm font-bold text-deep-navy mb-1">E-commerce</p>
       <p class="ic-sub text-xs text-muted-steel"></p>
     </div>
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ind-card glass-card tilt-card p-6 rounded-card cursor-pointer">
       <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/></svg></div>
       <p class="ic-title text-sm font-bold text-deep-navy mb-1">Retail</p>
       <p class="ic-sub text-xs text-muted-steel"></p>
     </div>
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ind-card glass-card tilt-card p-6 rounded-card cursor-pointer">
       <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg></div>
       <p class="ic-title text-sm font-bold text-deep-navy mb-1">Automotive</p>
       <p class="ic-sub text-xs text-muted-steel"></p>
     </div>
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ind-card glass-card tilt-card p-6 rounded-card cursor-pointer">
       <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
       <p class="ic-title text-sm font-bold text-deep-navy mb-1">International Markets</p>
       <p class="ic-sub text-xs text-muted-steel"></p>
