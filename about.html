@@ -296,8 +296,14 @@ heroTl
   .to('.h-badge', { opacity: 1, y: 0, duration: 0.6, delay: 0.2 })
   .to('.h-title', { opacity: 1, y: 0, duration: 0.8 }, '-=0.3')
   .to('.h-body',  { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
-  .to('.h-ctas',  { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
-  .to('.h-stats', { opacity: 1, y: 0, duration: 0.6 }, '-=0.3');
+  .to('.h-ctas',  { opacity: 1, y: 0, duration: 0.6 }, '-=0.4');
+
+/* Hero safety net: never leave hero hidden if the timeline is throttled */
+window.addEventListener('load', () => setTimeout(() => {
+  document.querySelectorAll('.h-badge,.h-title,.h-body,.h-ctas,.h-stats').forEach(el => {
+    if (getComputedStyle(el).opacity === '0') { el.style.opacity = '1'; el.style.transform = 'none'; }
+  });
+}, 1400));
 
 /* Reveals */
 ScrollTrigger.batch('.rv', {

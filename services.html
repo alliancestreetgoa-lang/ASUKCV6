@@ -150,7 +150,7 @@
         <span class="w-2 h-2 rounded-full bg-accent-lav flex-shrink-0"></span>
         <span class="text-[11px] font-bold uppercase tracking-[.14em] text-white/70">Services</span>
       </div>
-      <h1 class="h-title font-display text-4xl lg:text-[3.3rem] font-bold text-white leading-[1.08] tracking-[-0.025em] mb-7">Finance services built with <span class="text-accent-lav">commercial intent.</span></h1>
+      <h1 class="h-title font-display text-4xl lg:text-[3.3rem] font-bold text-white leading-[1.08] tracking-[-0.025em] mb-7">Beyond <span class="text-accent-lav">the Numbers.</span></h1>
       <p class="h-body text-lg text-white/60 leading-relaxed max-w-[600px] mb-10">From bookkeeping and management reporting to a fully outsourced finance function &mdash; structured, compliant, and designed to give you clarity at every stage.</p>
       <div class="h-ctas flex flex-col sm:flex-row gap-3">
         <a href="contact.html" class="bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors duration-300 rounded-card flex items-center justify-center gap-2 group">
@@ -321,8 +321,14 @@ heroTl
   .to('.h-badge', { opacity: 1, y: 0, duration: 0.6, delay: 0.2 })
   .to('.h-title', { opacity: 1, y: 0, duration: 0.8 }, '-=0.3')
   .to('.h-body',  { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
-  .to('.h-ctas',  { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
-  .to('.h-stats', { opacity: 1, y: 0, duration: 0.6 }, '-=0.3');
+  .to('.h-ctas',  { opacity: 1, y: 0, duration: 0.6 }, '-=0.4');
+
+/* Hero safety net: never leave hero hidden if the timeline is throttled */
+window.addEventListener('load', () => setTimeout(() => {
+  document.querySelectorAll('.h-badge,.h-title,.h-body,.h-ctas,.h-stats').forEach(el => {
+    if (getComputedStyle(el).opacity === '0') { el.style.opacity = '1'; el.style.transform = 'none'; }
+  });
+}, 1400));
 
 /* Reveals */
 ScrollTrigger.batch('.rv', {
