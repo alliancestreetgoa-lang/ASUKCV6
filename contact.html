@@ -88,6 +88,10 @@
       *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
       .h-badge,.h-title,.h-body,.h-ctas,.h-stats,.rv{opacity:1!important;transform:none!important}
     }
+    .brand-grad{background-image:linear-gradient(100deg,#7A2A8C 0%,#D4197F 50%,#1EA9D7 100%)}
+    .brand-grad:hover{filter:brightness(1.06)}
+    .grad-text{background-image:linear-gradient(100deg,#7A2A8C 0%,#D4197F 52%,#1EA9D7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+    .h-title .text-accent-lav{background-image:linear-gradient(100deg,#7A2A8C 0%,#D4197F 52%,#1EA9D7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
     .nav-logo{display:block}
     .nav-logo-light{display:none}
     .nav-dark .nav-logo-color{display:none}
@@ -152,7 +156,7 @@
       <h1 class="h-title font-display text-[2.4rem] lg:text-5xl font-bold text-deep-navy leading-[1.06] tracking-[-0.025em] mb-5">Let&rsquo;s go <span class="text-accent-lav">beyond the numbers.</span></h1>
       <p class="h-body text-base lg:text-lg text-muted-steel leading-relaxed max-w-[560px] mb-7">Tell us a little about your business and what you're trying to achieve. We'll get back to you to arrange a no-pressure conversation.</p>
       <div class="h-ctas flex flex-col sm:flex-row gap-3">
-        <a href="#contact-form" class="bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors duration-300 rounded-card flex items-center justify-center gap-2 group">
+        <a href="#contact-form" class="brand-grad text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase transition-all duration-300 rounded-card flex items-center justify-center gap-2 group shadow-[0_8px_24px_rgba(212,25,127,.28)]">
           Start the conversation
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
         </a>
@@ -238,7 +242,7 @@ function submitContact(e){ e.preventDefault(); document.getElementById('form-not
     <p class="text-xs text-muted-steel/60">Beyond the Numbers</p>
   </div>
 </footer>
-<a href="contact.html" class="fixed bottom-8 right-8 px-5 h-12 bg-accent-lav text-white rounded-pill shadow-2xl flex items-center gap-2 hover:scale-105 active:scale-95 transition-transform z-40" aria-label="Talk to an expert">
+<a href="contact.html" class="fixed bottom-8 right-8 px-5 h-12 brand-grad text-white rounded-pill shadow-2xl flex items-center gap-2 hover:scale-105 active:scale-95 transition-transform z-40" aria-label="Talk to an expert">
   <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10.5h8M8 14h5m-9 6l3.5-2.5A2 2 0 0110.6 17H18a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v13z"/></svg>
   <span class="text-[11px] font-bold uppercase tracking-[.1em]">Talk to an Expert</span>
 </a>
