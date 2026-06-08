@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Account Clerks | Strategic Financial Partnership for UK Businesses</title>
-  <meta name="description" content="Expert accounting, bookkeeping, tax, and financial advisory for UK businesses. ICAEW registered. 500+ clients. Book a free discovery call."/>
+  <title>Account Clerks | Beyond the Numbers</title>
+  <meta name="description" content="Strategic finance support that goes beyond the numbers — helping UK businesses gain clarity, maintain profitability, and grow with confidence."/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -22,8 +22,11 @@
             "surface-variant":    "#e3e2e1",
             "on-surface":         "#1a1c1c",
             "on-surface-var":     "#43474e",
-            "deep-navy":          "#01203F",
-            "accent-lav":         "#B590FF",
+            "deep-navy":          "#2A0E45",
+            "accent-lav":         "#D4197F",
+            "brand-cyan":         "#1EA9D7",
+            "brand-grape":        "#78267F",
+            "brand-purple":       "#5B1B6D",
             "muted-steel":        "#5D708A",
           },
           fontFamily: { "display": ["Montserrat","sans-serif"] },
@@ -37,123 +40,64 @@
   <style>
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#0D1535}
-    /* Sections after hero restore the light bg visually via their own bg-* classes */
-
-    /* ── Scroll progress ── */
-    #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#B590FF,#01203F);z-index:9999}
-
-    /* ── Floating nav ── */
+    body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#1C0A30}
+    #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#D4197F,#2A0E45);z-index:9999}
     #site-nav{transition:box-shadow .35s ease,background .35s ease,border-color .35s ease,backdrop-filter .35s ease;position:relative;overflow:hidden}
-    /* Glossy sheen pseudo-element — top highlight stripe */
     #site-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,0) 100%);pointer-events:none;z-index:0;border-radius:inherit}
-    /* Glossy inner glow on top edge */
     #site-nav::after{content:'';position:absolute;top:0;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65) 30%,rgba(255,255,255,.85) 50%,rgba(255,255,255,.65) 70%,transparent);pointer-events:none;z-index:1}
     .nav-link{position:relative;padding-bottom:2px;z-index:2}
     .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:currentColor;transition:width .25s ease}
     .nav-link:hover::after{width:100%}
-    /* Glossy nav — default (light sections) */
-    #site-nav{background:linear-gradient(135deg,rgba(255,255,255,0.62) 0%,rgba(230,225,255,0.45) 100%)!important;backdrop-filter:blur(22px) saturate(200%)!important;-webkit-backdrop-filter:blur(22px) saturate(200%)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 8px 32px rgba(1,32,63,.10),0 1px 0 rgba(255,255,255,.9) inset,0 -1px 0 rgba(181,144,255,.15) inset!important}
-    /* Glossy nav — dark/hero mode */
-    .nav-dark{background:linear-gradient(135deg,rgba(80,60,140,0.38) 0%,rgba(8,16,55,0.42) 100%)!important;backdrop-filter:blur(24px) saturate(180%)!important;-webkit-backdrop-filter:blur(24px) saturate(180%)!important;border-color:rgba(181,144,255,.18)!important;box-shadow:0 8px 40px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.12) inset,0 -1px 0 rgba(181,144,255,.12) inset!important}
+    #site-nav{background:linear-gradient(135deg,rgba(255,255,255,0.62) 0%,rgba(230,225,255,0.45) 100%)!important;backdrop-filter:blur(22px) saturate(200%)!important;-webkit-backdrop-filter:blur(22px) saturate(200%)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 8px 32px rgba(28,10,48,.10),0 1px 0 rgba(255,255,255,.9) inset,0 -1px 0 rgba(150,70,180,.15) inset!important}
+    .nav-dark{background:linear-gradient(135deg,rgba(80,60,140,0.38) 0%,rgba(8,16,55,0.42) 100%)!important;backdrop-filter:blur(24px) saturate(180%)!important;-webkit-backdrop-filter:blur(24px) saturate(180%)!important;border-color:rgba(150,70,180,.18)!important;box-shadow:0 8px 40px rgba(0,0,0,.3),0 1px 0 rgba(255,255,255,.12) inset,0 -1px 0 rgba(150,70,180,.12) inset!important}
     .nav-dark .nav-link{color:rgba(255,255,255,.82)!important;z-index:2}
     .nav-dark .nav-link:hover{color:#fff!important}
-    .nav-dark .nav-wordmark{color:#fff!important;z-index:2}
-    .nav-dark .nav-diamond-wrap{background:rgba(255,255,255,.12)!important}
-    .nav-dark .nav-diamond-inner{background:#B590FF!important}
     .nav-dark .nav-phone{color:rgba(255,255,255,.6)!important;z-index:2}
     .nav-dark .nav-phone:hover{color:#fff!important}
-    .nav-dark .nav-phone svg{color:rgba(255,255,255,.5)!important}
-    .nav-dark .nav-cta{background:linear-gradient(135deg,rgba(181,144,255,0.9) 0%,rgba(140,100,230,0.85) 100%)!important;color:#fff!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 4px 16px rgba(181,144,255,.3),inset 0 1px 0 rgba(255,255,255,.25)!important;z-index:2}
-    .nav-dark .nav-cta:hover{background:linear-gradient(135deg,#fff 0%,#f0eaff 100%)!important;color:#01203F!important;box-shadow:0 4px 20px rgba(181,144,255,.4)!important}
-    /* Ensure all nav children sit above the gloss pseudo-elements */
+    .nav-dark .nav-cta{background:linear-gradient(135deg,rgba(150,70,180,0.9) 0%,rgba(140,100,230,0.85) 100%)!important;color:#fff!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 4px 16px rgba(150,70,180,.3),inset 0 1px 0 rgba(255,255,255,.25)!important;z-index:2}
+    .nav-dark .nav-cta:hover{background:linear-gradient(135deg,#fff 0%,#f0eaff 100%)!important;color:#2A0E45!important;box-shadow:0 4px 20px rgba(150,70,180,.4)!important}
     #site-nav > *{position:relative;z-index:2}
-
-    /* ── Mobile menu ── */
-    #mob-menu{position:fixed;top:0;right:0;width:min(360px,100vw);height:100vh;background:#01203F;z-index:300;transform:translateX(100%);display:flex;flex-direction:column;padding:1.5rem}
-    #mob-overlay{position:fixed;inset:0;background:rgba(1,32,63,.55);backdrop-filter:blur(6px);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s ease}
-
-    /* ── Vanta container ── */
+    #mob-menu{position:fixed;top:0;right:0;width:min(360px,100vw);height:100vh;background:#2A0E45;z-index:300;transform:translateX(100%);display:flex;flex-direction:column;padding:1.5rem}
+    #mob-overlay{position:fixed;inset:0;background:rgba(28,10,48,.55);backdrop-filter:blur(6px);z-index:250;opacity:0;pointer-events:none;transition:opacity .3s ease}
     #vanta-bg{position:absolute;inset:0;width:100%;height:100%}
-
-    /* ── Service cards ── */
-    .svc-card{transition:transform .3s ease,box-shadow .3s ease;height:400px}
-    .svc-card:hover{transform:translateY(-5px);box-shadow:0 24px 56px rgba(1,32,63,.35)!important}
-    .svc-card:hover .svc-overlay{opacity:1!important}
-    .svc-card:hover .svc-cta{color:#B590FF!important;gap:.6rem}
-    .svc-overlay{transition:opacity .3s ease}
-    .svc-num,.svc-title,.svc-desc,.svc-tag,.svc-cta{transition:color .25s ease,background .25s ease,gap .2s ease}
-    .svc-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s ease}
-    .svc-card:hover .svc-bg{transform:scale(1.06)}
-    .svc-title{text-shadow:0 2px 12px rgba(0,0,0,.5)}
-    .svc-desc{text-shadow:0 1px 6px rgba(0,0,0,.4)}
-
-    /* ── Industry card ── */
     .ind-card{transition:background .22s ease,box-shadow .22s ease}
-    .ind-card:hover{background:#01203F!important}
-    .ind-card:hover .ic-icon{color:#B590FF}
+    .ind-card:hover{background:#2A0E45!important}
+    .ind-card:hover .ic-icon{color:#D4197F}
     .ind-card:hover .ic-title{color:#fff}
     .ind-card:hover .ic-sub{color:#c4c6cf}
     .ic-icon,.ic-title,.ic-sub{transition:color .22s ease}
-
-    /* ── FAQ ── */
     .faq-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s cubic-bezier(.4,0,.2,1)}
     .faq-inner{overflow:hidden}
     .faq-item.open .faq-body{grid-template-rows:1fr}
-    .faq-item.open .faq-arr{transform:rotate(45deg);color:#B590FF}
+    .faq-item.open .faq-arr{transform:rotate(45deg);color:#D4197F}
     .faq-arr{transition:transform .3s ease,color .25s ease}
-
-    /* ── Marquee ── */
-    @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    .mq-inner{display:flex;gap:3rem;animation:mq 22s linear infinite;width:max-content}
-
-    /* ── Live dot ── */
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
-    .live-dot{animation:pulse 2s ease infinite}
-
-    /* ── GSAP initial states (prevent FOUC) ── */
     .h-badge,.h-title,.h-body,.h-ctas,.h-stats{opacity:0;transform:translateY(20px)}
-
-    /* ── Reveal ── */
     .rv{opacity:0;transform:translateY(28px)}
-
-    /* ── Shimmer on stat cards ── */
     .stat-card{position:relative;overflow:hidden}
-    .stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(181,144,255,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s ease}
+    .stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(150,70,180,.08) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s ease}
     .stat-card:hover::before{transform:translateX(100%)}
-
-    /* ── Tilt wrapper (Vanilla-Tilt target) ── */
     .tilt-card{transform-style:preserve-3d;will-change:transform}
-
-    /* Focus */
-    a:focus-visible,button:focus-visible{outline:2px solid #B590FF;outline-offset:3px;border-radius:2px}
-
+    .val-card{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+    .val-card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(28,10,48,.12);border-color:#D4197F}
+    a:focus-visible,button:focus-visible{outline:2px solid #D4197F;outline-offset:3px;border-radius:2px}
     @view-transition{navigation:auto}
     ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
-    .nav-active{color:#01203F!important;text-decoration-line:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
+    .nav-active{color:#2A0E45!important;text-decoration-line:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
     .nav-dark .nav-active{color:#fff!important}
-
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
       .h-badge,.h-title,.h-body,.h-ctas,.h-stats,.rv{opacity:1!important;transform:none!important}
     }
+    .nav-logo{display:block}
+    .nav-logo-light{display:none}
+    .nav-dark .nav-logo-color{display:none}
+    .nav-dark .nav-logo-light{display:block}
   </style>
-<style>
-  .nav-logo{display:block}
-  .nav-logo-light{display:none}
-  .nav-dark .nav-logo-color{display:none}
-  .nav-dark .nav-logo-light{display:block}
-</style>
 </head>
 <body>
 
-<!-- Scroll progress -->
 <div id="sp" aria-hidden="true"></div>
-
-<!-- Mobile overlay -->
 <div id="mob-overlay" aria-hidden="true" onclick="closeMobMenu()"></div>
-
-<!-- Mobile menu -->
 <aside id="mob-menu" aria-label="Site navigation" role="dialog">
   <div class="flex justify-between items-center mb-8">
     <img src="assets/logo-light.png" alt="Account Clerks" class="h-7 w-auto">
@@ -162,836 +106,336 @@
     </button>
   </div>
   <nav class="flex flex-col gap-1">
-    <a href="#services"     onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Services</a>
-    <a href="#who-we-help"  onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Who We Help</a>
-    <a href="about.html"    onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">About</a>
-    <a href="switch.html"   onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Switch Accountant</a>
-    <a href="#how-we-work"  onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">How It Works</a>
-    <a href="#testimonials" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Results</a>
-    <a href="#faq"          onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">FAQ</a>
+    <a href="services.html" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Services</a>
+    <a href="financial-management.html" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Financial Management</a>
+    <a href="who-we-help.html" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">Who We Work With</a>
+    <a href="what-we-do.html" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">What We Do</a>
+    <a href="about.html" onclick="closeMobMenu()" class="text-white/70 hover:text-white font-semibold py-3.5 border-b border-white/8 transition-colors text-sm">About</a>
   </nav>
-  <div class="mt-auto pt-6 flex flex-col gap-3">
-    <a href="tel:+441992714010" class="flex items-center gap-2 text-white/40 text-sm">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
-      01992 714 010
-    </a>
-    <a href="contact.html" onclick="closeMobMenu()" class="w-full bg-accent-lav text-white py-3.5 text-xs font-bold tracking-[.12em] uppercase rounded-card flex items-center justify-center">Book a Free Call</a>
+  <div class="mt-auto pt-6">
+    <a href="contact.html" onclick="closeMobMenu()" class="w-full bg-accent-lav text-white py-3.5 text-xs font-bold tracking-[.12em] uppercase rounded-card flex items-center justify-center">Talk to an Expert</a>
   </div>
 </aside>
-
-<!-- ════════════════════════════════════
-     HEADER
-════════════════════════════════════ -->
 <header class="sticky top-0 z-50 px-4 pt-3 pb-1">
   <nav id="site-nav" class="max-w-site mx-auto px-5 lg:px-8 h-14 flex items-center justify-between gap-6 bg-white/90 backdrop-blur-md border border-surface-variant rounded-card shadow-sm">
-    <a href="#" class="flex items-center gap-2.5 flex-shrink-0" aria-label="Account Clerks home">
+    <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0" aria-label="Account Clerks home">
       <img src="assets/logo.png" alt="Account Clerks" class="nav-logo nav-logo-color h-10 w-auto"><img src="assets/logo-light.png" alt="Account Clerks" class="nav-logo nav-logo-light h-10 w-auto">
     </a>
-
-    <div class="hidden md:flex items-center gap-5 lg:gap-7">
-      <a href="#services"     class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Services</a>
-      <a href="#who-we-help"  class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Who We Help</a>
-      <a href="about.html"    class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">About</a>
-      <a href="switch.html"   class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Switch</a>
-      <a href="#how-we-work"  class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Process</a>
-      <a href="#testimonials" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Results</a>
-      <a href="#faq"          class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">FAQ</a>
+    <div class="hidden lg:flex items-center gap-5 xl:gap-7">
+      <a href="services.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Services</a>
+      <a href="financial-management.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Financial Management</a>
+      <a href="who-we-help.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">Who We Work With</a>
+      <a href="what-we-do.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">What We Do</a>
+      <a href="about.html" class="nav-link text-[11px] font-bold text-muted-steel hover:text-deep-navy transition-colors uppercase tracking-widest">About</a>
     </div>
-
     <div class="flex items-center gap-3">
-      <a href="tel:+441992714010" class="nav-phone hidden lg:flex items-center gap-1.5 text-[11px] font-semibold text-muted-steel hover:text-deep-navy transition-colors duration-300">
-        <svg class="w-3.5 h-3.5 flex-shrink-0 transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
-        01992 714 010
+      <a href="contact.html" class="nav-cta bg-deep-navy text-white px-5 py-2.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card flex-shrink-0 hidden sm:block">
+        Talk to an Expert
       </a>
-      <a href="contact.html" class="nav-cta bg-deep-navy text-white px-5 py-2.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card flex-shrink-0">
-        Book a Free Call
-      </a>
-      <button onclick="openMobMenu()" class="md:hidden w-9 h-9 flex items-center justify-center text-deep-navy" aria-label="Open menu">
+      <button onclick="openMobMenu()" class="lg:hidden w-9 h-9 flex items-center justify-center text-deep-navy" aria-label="Open menu">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
       </button>
     </div>
   </nav>
 </header>
-
-
-<!-- ════════════════════════════════════
-     HERO — Full-width Vanta background
-════════════════════════════════════ -->
-<section class="relative min-h-[92vh] flex items-center overflow-hidden bg-deep-navy">
-
-  <!-- Vanta.js full-section background -->
+<section data-hero class="relative min-h-[88vh] flex items-center overflow-hidden bg-deep-navy">
   <div id="vanta-bg" class="absolute inset-0 w-full h-full"></div>
-
-  <!-- Bottom-fade gradient so next section blends cleanly -->
   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-deep-navy/80 pointer-events-none z-[1]"></div>
-  <!-- Left-edge vignette to lift text readability -->
   <div class="absolute inset-0 bg-gradient-to-r from-deep-navy/70 via-deep-navy/30 to-transparent pointer-events-none z-[1]"></div>
-
-  <!-- Geometric accent squares (match screenshot) -->
   <div class="absolute top-10 right-10 w-14 h-14 border border-white/8 rotate-6 rounded-[3px]" aria-hidden="true"></div>
   <div class="absolute top-16 right-16 w-9 h-9 border border-accent-lav/15 rotate-6 rounded-[3px]" aria-hidden="true"></div>
-  <div class="absolute bottom-24 left-1/2 w-24 h-24 border border-white/5 rounded-full" aria-hidden="true"></div>
-
-  <!-- Content grid -->
-  <div class="relative z-10 max-w-site mx-auto px-6 sm:px-10 lg:px-16 xl:px-20 w-full py-24 grid lg:grid-cols-[1fr_360px] gap-16 items-center">
-
-    <!-- Left: main content -->
-    <div>
-      <div class="h-badge inline-flex items-center gap-2.5 mb-10 self-start bg-white/8 border border-white/12 backdrop-blur-sm px-4 py-2 rounded-pill">
-        <span class="live-dot w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0"></span>
-        <span class="text-[11px] font-bold uppercase tracking-[.14em] text-white/70">ICAEW Registered · Accepting New Clients</span>
+  <div class="relative z-10 max-w-site mx-auto px-6 sm:px-10 lg:px-16 w-full py-24">
+    <div class="max-w-[760px]">
+      <div class="h-badge inline-flex items-center gap-2.5 mb-8 bg-white/8 border border-white/12 backdrop-blur-sm px-4 py-2 rounded-pill">
+        <span class="w-2 h-2 rounded-full bg-accent-lav flex-shrink-0"></span>
+        <span class="text-[11px] font-bold uppercase tracking-[.14em] text-white/70">Beyond the Numbers</span>
       </div>
-
-      <h1 class="h-title font-display text-5xl lg:text-[3.4rem] xl:text-[4rem] font-bold text-white leading-[1.08] tracking-[-0.025em] mb-7">
-        Financial clarity.<br/>
-        <span class="text-accent-lav">Strategic</span> growth.<br/>
-        Real partnership.
-      </h1>
-
-      <p class="h-body text-lg text-white/60 leading-relaxed max-w-[520px] mb-10">
-        More than accountants — we're the financial team that grows alongside your UK business, with precision, transparency, and a relentless focus on what comes next.
-      </p>
-
-      <div class="h-ctas flex flex-col sm:flex-row gap-3 mb-16">
+      <h1 class="h-title font-display text-4xl lg:text-[3.3rem] font-bold text-white leading-[1.08] tracking-[-0.025em] mb-7">Strategic finance that goes <span class="text-accent-lav">beyond the numbers.</span></h1>
+      <p class="h-body text-lg text-white/60 leading-relaxed max-w-[600px] mb-10">We provide strategic finance support that goes beyond the numbers &mdash; helping businesses gain clarity, maintain profitability, and grow with confidence. Our services support companies at every stage: from financial control and management, to real-time analysis and planning, through to long-term business growth and development.</p>
+      <div class="h-ctas flex flex-col sm:flex-row gap-3">
         <a href="contact.html" class="bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors duration-300 rounded-card flex items-center justify-center gap-2 group">
-          Get Started Today
+          Talk to an Expert
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
         </a>
-        <a href="services.html" class="border border-white/25 text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-card flex items-center justify-center">
-          View Our Services
-        </a>
+        <a href="services.html" class="border border-white/25 text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-card flex items-center justify-center">Explore Services</a>
       </div>
-
-      <div class="h-stats grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
-        <div>
-          <p class="font-display text-[2rem] font-bold text-white tabular-nums">
-            <span class="counter" data-target="500">0</span><span class="text-accent-lav">+</span>
-          </p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-white/40 mt-1.5">Active Clients</p>
-        </div>
-        <div>
-          <p class="font-display text-[2rem] font-bold text-white tabular-nums">
-            <span class="counter" data-target="98">0</span><span class="text-accent-lav">%</span>
-          </p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-white/40 mt-1.5">Retention Rate</p>
-        </div>
-        <div>
-          <p class="font-display text-[2rem] font-bold text-white tabular-nums">
-            <span class="counter" data-target="15">0</span><span class="text-accent-lav">+</span>
-          </p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-white/40 mt-1.5">Yrs Experience</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right: floating result card -->
-    <div class="hidden lg:block h-badge">
-      <div class="bg-white/8 border border-white/12 p-7 rounded-card backdrop-blur-sm">
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-7 h-7 bg-accent-lav/25 rounded-[3px] flex items-center justify-center flex-shrink-0">
-            <svg class="w-3.5 h-3.5 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd"/></svg>
-          </div>
-          <span class="text-[10px] font-bold uppercase tracking-[.12em] text-accent-lav">Latest Client Result</span>
-        </div>
-        <p class="font-display text-3xl font-bold text-white mb-2">£127,000</p>
-        <p class="text-sm text-white/50 leading-relaxed mb-5">Tax savings identified for a UK construction firm in the first year of partnership.</p>
-        <div class="flex items-center gap-2.5 pt-4 border-t border-white/8">
-          <div class="flex -space-x-1.5">
-            <div class="w-7 h-7 rounded-full bg-accent-lav/30 border border-white/15 flex items-center justify-center text-[9px] font-bold text-white">SR</div>
-            <div class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-[9px] font-bold text-white">JM</div>
-            <div class="w-7 h-7 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-[9px] font-bold text-white">PT</div>
-          </div>
-          <span class="text-[11px] text-white/35">30+ verified reviews</span>
-        </div>
-      </div>
-
-      <!-- Second mini card -->
-      <div class="mt-4 bg-white/5 border border-white/8 p-5 rounded-card backdrop-blur-sm flex items-center gap-4">
-        <div class="w-10 h-10 bg-emerald-500/15 rounded-[3px] flex items-center justify-center flex-shrink-0">
-          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <div>
-          <p class="text-white font-bold text-sm">Zero setup fee</p>
-          <p class="text-white/40 text-xs">Free financial review included</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════
-     CREDENTIAL BAR
-════════════════════════════════════ -->
-<section class="bg-surface-low border-y border-surface-variant py-5" aria-label="Professional credentials">
-  <div class="max-w-site mx-auto px-6 lg:px-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-    <div class="flex items-center gap-2 text-muted-steel">
-      <svg class="w-4 h-4 text-deep-navy flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-      <span class="text-[11px] font-bold uppercase tracking-widest">ICAEW Authorised</span>
-    </div>
-    <div class="w-px h-4 bg-surface-variant hidden sm:block"></div>
-    <div class="flex items-center gap-2 text-muted-steel">
-      <svg class="w-4 h-4 text-deep-navy flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-      <span class="text-[11px] font-bold uppercase tracking-widest">ACCA Members</span>
-    </div>
-    <div class="w-px h-4 bg-surface-variant hidden sm:block"></div>
-    <div class="flex items-center gap-2 text-muted-steel">
-      <svg class="w-4 h-4 text-deep-navy flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-      <span class="text-[11px] font-bold uppercase tracking-widest">Xero Certified Partner</span>
-    </div>
-    <div class="w-px h-4 bg-surface-variant hidden sm:block"></div>
-    <div class="flex items-center gap-2 text-muted-steel">
-      <svg class="w-4 h-4 text-deep-navy flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-      <span class="text-[11px] font-bold uppercase tracking-widest">4.9 / 5 Client Rating</span>
-    </div>
-    <div class="w-px h-4 bg-surface-variant hidden sm:block"></div>
-    <div class="flex items-center gap-2 text-muted-steel">
-      <svg class="w-4 h-4 text-deep-navy flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-      <span class="text-[11px] font-bold uppercase tracking-widest">500+ UK Businesses</span>
     </div>
   </div>
 </section>
-
-
-<!-- ════════════════════════════════════
-     SERVICES
-════════════════════════════════════ -->
-<section id="services" class="py-28 bg-surface-cream">
+<section class="py-24 bg-surface-cream">
   <div class="max-w-site mx-auto px-6 lg:px-10">
-
-    <!-- Header -->
-    <div class="grid md:grid-cols-[1fr_auto] gap-10 items-end mb-16 rv">
-      <div>
-        <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5">
-          <span class="w-5 h-px bg-muted-steel/50 block"></span>What We Do
-        </span>
-        <h2 class="font-display text-4xl lg:text-[2.8rem] font-bold text-deep-navy leading-[1.1] tracking-tight">Services built<br/><span class="text-accent-lav">around your business.</span></h2>
-      </div>
-      <div class="max-w-[420px]">
-        <p class="text-base text-muted-steel leading-relaxed mb-5">A full suite of accounting and advisory services, delivered with clarity and commercial intent — so you can focus on running your business.</p>
-        <a href="services.html" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy hover:text-accent-lav transition-colors group">
-          Explore all services
-          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-        </a>
-      </div>
+    <div class="mb-14 rv max-w-[760px]">
+      <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Why Account Clerks</span>
+      <h2 class="font-display text-3xl lg:text-[2.6rem] font-bold text-deep-navy leading-[1.12] tracking-tight">Clarity, profitability,<br/>and confident growth.</h2>
+      <p class="text-base text-muted-steel leading-relaxed mt-5 max-w-[640px] ">We integrate finance into the heart of your decision-making &mdash; turning data into insight, and insight into the systems that move your business forward.</p>
     </div>
-
-    <!-- Cards grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-      <!-- 01 Tax -->
-      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="0">
-        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=700&q=80&fit=crop&crop=center')"></div>
-        <div class="svc-overlay absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.15) 100%)"></div>
-        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">01</div>
-        <div class="relative z-10 flex flex-col h-full p-7 justify-end">
-          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Tax Compliance &amp; Planning</h3>
-          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Expert navigation through UK tax law — self-assessment to corporation tax — ensuring compliance while identifying every legitimate saving.</p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Corporation Tax</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Self Assessment</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Tax Planning</span>
-          </div>
-          <a href="services.html#tax" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
-            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- 02 Growth -->
-      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="60">
-        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=700&q=80&fit=crop&crop=center')"></div>
-        <div class="svc-overlay absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.15) 100%)"></div>
-        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">02</div>
-        <div class="relative z-10 flex flex-col h-full p-7 justify-end">
-          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Strategic Growth Consulting</h3>
-          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Beyond the books — financial modelling, KPI dashboards, and growth planning that transform your numbers into a clear roadmap for the year ahead.</p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Financial Modelling</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">KPI Dashboards</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Forecasting</span>
-          </div>
-          <a href="services.html#growth" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
-            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- 03 Payroll -->
-      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="120">
-        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80&fit=crop&crop=center')"></div>
-        <div class="svc-overlay absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.15) 100%)"></div>
-        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">03</div>
-        <div class="relative z-10 flex flex-col h-full p-7 justify-end">
-          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Payroll &amp; HR Support</h3>
-          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Accurate, timely payroll with full RTI compliance. We handle PAYE, pension auto-enrolment, and employee benefits so nothing falls through the cracks.</p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">PAYE &amp; RTI</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Auto-Enrolment</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">P11D Benefits</span>
-          </div>
-          <a href="services.html#payroll" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
-            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- 04 Cloud -->
-      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="0">
-        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=700&q=80&fit=crop&crop=center')"></div>
-        <div class="svc-overlay absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.15) 100%)"></div>
-        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">04</div>
-        <div class="relative z-10 flex flex-col h-full p-7 justify-end">
-          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">Cloud Bookkeeping &amp; Accounts</h3>
-          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Real-time financial visibility through Xero, QuickBooks, or Sage — set up, managed, and optimised so your data is always current and decision-ready.</p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Xero Gold Partner</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">QuickBooks</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Real-time Data</span>
-          </div>
-          <a href="services.html#cloud" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
-            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- 05 R&D -->
-      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="60">
-        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80&fit=crop&crop=center')"></div>
-        <div class="svc-overlay absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 40%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.15) 100%)"></div>
-        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">05</div>
-        <div class="relative z-10 flex flex-col h-full p-7 justify-end">
-          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">R&amp;D Tax Credits</h3>
-          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">Many businesses leave R&amp;D credits unclaimed. We identify eligible activity, prepare robust claims, and ensure you receive every penny of innovation relief.</p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">HMRC Claims</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">SME Relief</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">RDEC Scheme</span>
-          </div>
-          <a href="services.html#rd" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-white/70 pt-4 border-t border-white/15">
-            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- 06 VAT -->
-      <div class="svc-card rv rounded-card cursor-pointer relative overflow-hidden border-0" data-delay="120">
-        <div class="svc-bg" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=80&fit=crop&crop=center')"></div>
-        <div class="svc-overlay absolute inset-0" style="background:linear-gradient(to top,rgba(20,0,50,.97) 0%,rgba(0,0,0,.83) 40%,rgba(0,0,0,.45) 65%,rgba(0,0,0,.15) 100%)"></div>
-        <div class="svc-num absolute top-5 right-5 font-display text-[5.5rem] font-bold text-white/[.06] leading-none select-none pointer-events-none">06</div>
-        <div class="relative z-10 flex flex-col h-full p-7 justify-end">
-          <h3 class="svc-title font-display text-xl font-bold text-white mb-3 leading-snug">VAT &amp; Making Tax Digital</h3>
-          <p class="svc-desc text-sm text-white/65 leading-relaxed mb-5">HMRC-compliant VAT returns delivered accurately and on schedule. Full MTD setup and ongoing compliance — always ahead of the deadlines.</p>
-          <div class="flex flex-wrap gap-2 mb-5">
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-accent-lav/20 text-accent-lav px-2.5 py-1 rounded-pill backdrop-blur-sm">MTD Compliant</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Bridging Software</span>
-            <span class="svc-tag text-[10px] font-bold uppercase tracking-wide bg-white/10 text-white/70 px-2.5 py-1 rounded-pill backdrop-blur-sm">Flat Rate Scheme</span>
-          </div>
-          <a href="services.html#vat" class="svc-cta inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-accent-lav pt-4 border-t border-white/15">
-            Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </a>
-        </div>
-      </div>
-
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="val-card bg-white border border-surface-variant rounded-card p-7 rv">
+      <div class="w-11 h-11 rounded-card bg-accent-lav/12 text-accent-lav flex items-center justify-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Clarity &amp; Control</h3>
+      <p class="text-sm text-muted-steel leading-relaxed">Clean, structured data and management reporting that give you a true, real-time picture of how your business is performing.</p>
     </div>
-
-    <!-- Bottom CTA strip -->
-    <div class="mt-14 rv flex flex-col sm:flex-row items-center justify-between gap-5 bg-white border border-surface-variant rounded-card px-8 py-6">
-      <div>
-        <p class="font-display text-lg font-bold text-deep-navy mb-1">Not sure which service you need?</p>
-        <p class="text-sm text-muted-steel">Book a free 30-minute call and we'll map out exactly what your business needs.</p>
-      </div>
-      <a href="contact.html" class="flex-shrink-0 bg-deep-navy text-white px-7 py-3.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors rounded-card whitespace-nowrap">
-        Book Free Consultation
-      </a>
+      <div class="val-card bg-white border border-surface-variant rounded-card p-7 rv">
+      <div class="w-11 h-11 rounded-card bg-accent-lav/12 text-accent-lav flex items-center justify-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Profitability</h3>
+      <p class="text-sm text-muted-steel leading-relaxed">We protect and improve margins by understanding and controlling costs across every area of your business.</p>
     </div>
-
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════
-     WHO WE HELP
-════════════════════════════════════ -->
-<section id="who-we-help" class="py-24 bg-surface">
-  <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="text-center mb-14 rv">
-      <span class="text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel block mb-4">Who We Help</span>
-      <h2 class="font-display text-3xl font-bold text-deep-navy">Specialist knowledge for your sector.</h2>
+      <div class="val-card bg-white border border-surface-variant rounded-card p-7 rv">
+      <div class="w-11 h-11 rounded-card bg-accent-lav/12 text-accent-lav flex items-center justify-center mb-5"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Confident Growth</h3>
+      <p class="text-sm text-muted-steel leading-relaxed">Strategies, forecasting and KPIs that make growth measurable, financially sound, and aligned with your ambitions.</p>
     </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="industry-grid">
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Retail &amp; E-commerce</p>
-        <p class="ic-sub text-xs text-muted-steel">Stock, margins &amp; VAT</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Construction &amp; Trades</p>
-        <p class="ic-sub text-xs text-muted-steel">CIS &amp; subcontractors</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Tech &amp; SaaS</p>
-        <p class="ic-sub text-xs text-muted-steel">R&amp;D credits &amp; equity</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Nurseries &amp; Childcare</p>
-        <p class="ic-sub text-xs text-muted-steel">Sector specialists</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Healthcare &amp; Wellness</p>
-        <p class="ic-sub text-xs text-muted-steel">NHS contractors &amp; private</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Property &amp; Real Estate</p>
-        <p class="ic-sub text-xs text-muted-steel">Landlords &amp; developers</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 4.87v6.75m6-6.75v6.75"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Hospitality &amp; Food</p>
-        <p class="ic-sub text-xs text-muted-steel">Cash flow, VAT &amp; tips</p>
-      </div>
-
-      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
-        <svg class="ic-icon text-muted-steel w-6 h-6 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42"/></svg>
-        <p class="ic-title text-sm font-bold text-deep-navy mb-1">Creative &amp; Agencies</p>
-        <p class="ic-sub text-xs text-muted-steel">IR35 &amp; freelancer payroll</p>
-      </div>
-
+    </div>
+    <div class="mt-5 rv flex flex-col sm:flex-row items-center gap-5 bg-deep-navy rounded-card px-8 py-7">
+      <div class="w-12 h-12 rounded-card bg-accent-lav/20 text-accent-lav flex items-center justify-center flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <div class="flex-grow"><p class="font-display text-lg font-bold text-white mb-1">All of this in real time.</p><p class="text-sm text-white/55 leading-relaxed">Our approach focuses on live data, not historical data &mdash; so you stay proactive, not reactive.</p></div>
     </div>
   </div>
 </section>
-
-
-<!-- ════════════════════════════════════
-     STATS STRIP
-════════════════════════════════════ -->
-<section class="py-20 bg-deep-navy overflow-hidden">
-  <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-card overflow-hidden">
-
-      <div class="stat-card bg-deep-navy px-8 py-10 text-center">
-        <p class="font-display text-4xl font-bold text-white mb-2 tabular-nums">
-          <span class="big-counter" data-target="500">0</span><span class="text-accent-lav">+</span>
-        </p>
-        <p class="text-[11px] font-bold uppercase tracking-widest text-white/40">Active Clients</p>
-      </div>
-
-      <div class="stat-card bg-deep-navy px-8 py-10 text-center">
-        <p class="font-display text-4xl font-bold text-white mb-2 tabular-nums">
-          £<span class="big-counter" data-target="127">0</span>k<span class="text-accent-lav">+</span>
-        </p>
-        <p class="text-[11px] font-bold uppercase tracking-widest text-white/40">Avg Annual Savings</p>
-      </div>
-
-      <div class="stat-card bg-deep-navy px-8 py-10 text-center">
-        <p class="font-display text-4xl font-bold text-white mb-2 tabular-nums">
-          <span class="big-counter" data-target="98">0</span><span class="text-accent-lav">%</span>
-        </p>
-        <p class="text-[11px] font-bold uppercase tracking-widest text-white/40">Client Retention</p>
-      </div>
-
-      <div class="stat-card bg-deep-navy px-8 py-10 text-center">
-        <p class="font-display text-4xl font-bold text-white mb-2 tabular-nums">
-          <span class="big-counter" data-target="20">0</span><span class="text-accent-lav">+</span>
-        </p>
-        <p class="text-[11px] font-bold uppercase tracking-widest text-white/40">Years Experience</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════
-     HOW WE WORK
-════════════════════════════════════ -->
-<section id="how-we-work" class="py-24 bg-surface">
-  <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="text-center mb-20 rv">
-      <span class="text-[11px] font-bold uppercase tracking-[.14em] text-accent-lav block mb-4">The Process</span>
-      <h2 class="font-display text-3xl font-bold text-deep-navy">From first call to full partnership.</h2>
-    </div>
-
-    <div class="grid md:grid-cols-4 gap-6 relative" id="process-steps">
-      <div class="absolute top-8 left-[12.5%] right-[12.5%] h-px bg-surface-variant hidden md:block" aria-hidden="true"></div>
-
-      <div class="process-step text-center" data-delay="0">
-        <div class="w-16 h-16 border border-surface-variant flex items-center justify-center mx-auto mb-6 bg-white rounded-card shadow-sm">
-          <span class="font-display text-lg font-bold text-accent-lav">01</span>
-        </div>
-        <h3 class="font-display text-xs font-bold text-deep-navy mb-3 uppercase tracking-wide">Discovery Call</h3>
-        <p class="text-sm text-muted-steel leading-relaxed">30 minutes. No pressure. We learn about your business — you decide if we're the right fit.</p>
-      </div>
-
-      <div class="process-step text-center" data-delay="100">
-        <div class="w-16 h-16 border border-surface-variant flex items-center justify-center mx-auto mb-6 bg-white rounded-card shadow-sm">
-          <span class="font-display text-lg font-bold text-accent-lav">02</span>
-        </div>
-        <h3 class="font-display text-xs font-bold text-deep-navy mb-3 uppercase tracking-wide">Financial Review</h3>
-        <p class="text-sm text-muted-steel leading-relaxed">We audit your current position, identify gaps, and map opportunities — free of charge.</p>
-      </div>
-
-      <div class="process-step text-center" data-delay="200">
-        <div class="w-16 h-16 border border-surface-variant flex items-center justify-center mx-auto mb-6 bg-white rounded-card shadow-sm">
-          <span class="font-display text-lg font-bold text-accent-lav">03</span>
-        </div>
-        <h3 class="font-display text-xs font-bold text-deep-navy mb-3 uppercase tracking-wide">Custom Proposal</h3>
-        <p class="text-sm text-muted-steel leading-relaxed">A clear, fixed-fee proposal tailored to your needs — no hidden costs, no surprises.</p>
-      </div>
-
-      <div class="process-step text-center" data-delay="300">
-        <div class="w-16 h-16 border border-accent-lav/30 bg-accent-lav/10 flex items-center justify-center mx-auto mb-6 rounded-card">
-          <span class="font-display text-lg font-bold text-accent-lav">04</span>
-        </div>
-        <h3 class="font-display text-xs font-bold text-deep-navy mb-3 uppercase tracking-wide">Active Partnership</h3>
-        <p class="text-sm text-muted-steel leading-relaxed">Onboarding, migration, and ongoing advisory — in your corner from day one.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════
-     TESTIMONIALS
-════════════════════════════════════ -->
-<section id="testimonials" class="py-24 bg-surface-cream">
-  <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="text-center mb-14 rv">
-      <span class="text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel block mb-4">Client Stories</span>
-      <h2 class="font-display text-3xl font-bold text-deep-navy">Trusted by growth-minded businesses.</h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-4">
-
-      <article class="bg-white p-8 border border-surface-variant hover:shadow-[0_6px_28px_rgba(1,32,63,.07)] transition-shadow duration-300 flex flex-col rounded-card" data-delay="0">
-        <div class="flex gap-0.5 mb-6">
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        </div>
-        <blockquote class="text-base text-on-surface-var leading-relaxed flex-grow mb-8">"Switching to Account Clerks was the best business decision we made last year. They flagged a tax saving we'd been missing for three years. I genuinely feel like they're invested in our growth."</blockquote>
-        <footer class="flex items-center gap-4 pt-6 border-t border-surface-cream">
-          <div class="w-10 h-10 bg-accent-lav/15 flex items-center justify-center flex-shrink-0 rounded-[3px]"><span class="text-xs font-bold text-accent-lav">SR</span></div>
-          <div><p class="text-sm font-bold text-deep-navy">Sarah R.</p><p class="text-xs text-muted-steel">Director, Bloom Nursery Group</p></div>
-        </footer>
-      </article>
-
-      <article class="bg-deep-navy p-8 border border-white/8 hover:shadow-[0_6px_28px_rgba(1,32,63,.25)] transition-shadow duration-300 flex flex-col rounded-card" data-delay="80">
-        <div class="flex gap-0.5 mb-6">
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        </div>
-        <blockquote class="text-base text-white/65 leading-relaxed flex-grow mb-8">"As a tech startup, our finances were complex from day one — R&amp;D credits, investor reporting, payroll. Account Clerks handled everything proactively. Their approach gives us real confidence to scale."</blockquote>
-        <footer class="flex items-center gap-4 pt-6 border-t border-white/10">
-          <div class="w-10 h-10 bg-accent-lav/15 flex items-center justify-center flex-shrink-0 rounded-[3px]"><span class="text-xs font-bold text-accent-lav">JM</span></div>
-          <div><p class="text-sm font-bold text-white">James M.</p><p class="text-xs text-white/45">CEO, Meridian Labs</p></div>
-        </footer>
-      </article>
-
-      <article class="bg-white p-8 border border-surface-variant hover:shadow-[0_6px_28px_rgba(1,32,63,.07)] transition-shadow duration-300 flex flex-col rounded-card" data-delay="160">
-        <div class="flex gap-0.5 mb-6">
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        </div>
-        <blockquote class="text-base text-on-surface-var leading-relaxed flex-grow mb-8">"I'd been with my previous accountant for eight years and was nervous to switch. The team made it completely painless. Within a month they'd restructured our VAT approach and we were already saving."</blockquote>
-        <footer class="flex items-center gap-4 pt-6 border-t border-surface-cream">
-          <div class="w-10 h-10 bg-accent-lav/15 flex items-center justify-center flex-shrink-0 rounded-[3px]"><span class="text-xs font-bold text-accent-lav">PT</span></div>
-          <div><p class="text-sm font-bold text-deep-navy">Priya T.</p><p class="text-xs text-muted-steel">Owner, Tandem Interiors Ltd</p></div>
-        </footer>
-      </article>
-    </div>
-
-    <div class="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rv">
-      <div class="flex items-center gap-2 text-muted-steel">
-        <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-        <span class="text-sm font-semibold">500+ Active Clients</span>
-      </div>
-      <div class="w-px h-4 bg-surface-variant hidden md:block"></div>
-      <div class="flex items-center gap-2 text-muted-steel">
-        <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/></svg>
-        <span class="text-sm font-semibold">98% Client Retention</span>
-      </div>
-      <div class="w-px h-4 bg-surface-variant hidden md:block"></div>
-      <div class="flex items-center gap-2 text-muted-steel">
-        <svg class="w-4 h-4 text-accent-lav" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-        <span class="text-sm font-semibold">4.9 / 5 Average Rating</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ════════════════════════════════════
-     INSIGHTS / RESOURCES
-════════════════════════════════════ -->
 <section class="py-24 bg-surface">
   <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="flex justify-between items-end mb-12">
-      <div class="rv">
-        <span class="text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel block mb-4">Knowledge Base</span>
-        <h2 class="font-display text-3xl font-bold text-deep-navy">Insightful resources.</h2>
-      </div>
-      <a href="#" class="hidden md:flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-muted-steel hover:text-deep-navy transition-colors rv">
-        View all
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
+    <div class="grid md:grid-cols-[1fr_auto] gap-10 items-end mb-14">
+      <div class="rv max-w-[640px]"><span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Services</span><h2 class="font-display text-3xl lg:text-[2.6rem] font-bold text-deep-navy leading-[1.12] tracking-tight">Services built around<br/><span class="text-accent-lav">your business.</span></h2></div>
+      <a href="services.html" class="rv inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy hover:text-accent-lav transition-colors group">All services <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
     </div>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <article class="group rv" data-delay="0">
-        <div class="aspect-[16/10] overflow-hidden rounded-card mb-5 bg-surface-cream">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEfZO8ssCgOKF1BUWeQMid7tcasDB1SAX5fy22Apxp0EuF4ug56v2T9_hSMqYB94FeftXPQepZOBmuyD01opWPCikmKqQtoTukYAFppUFR-Z3lKXPv_ZE942poPJzlQytQ7FVVBJg-E-ZS0rIcF6DPZJAjaGZsAX34dtRhNqpFrzSrQCZ1W0pm-lrGtIUHQFddLiFPdznTDilLuFXmEWv-G7gmurZ80avrNcnUMYH3_1zjMITeWptA7IYqUgqATLVZSKb9H7Pz-Rbu" alt="VAT guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-        </div>
-        <span class="inline-block bg-surface-cream text-deep-navy px-3 py-1 rounded-[3px] text-[11px] font-bold uppercase tracking-widest mb-3">Compliance</span>
-        <h3 class="font-display text-base font-bold text-deep-navy mb-2 group-hover:text-accent-lav transition-colors leading-snug">Should Day Nurseries Register for VAT?</h3>
-        <p class="text-sm text-muted-steel line-clamp-2 leading-relaxed">A practical guide to VAT for day nurseries, explaining when registration applies, how exemptions work and the benefits.</p>
-      </article>
-
-      <article class="group rv" data-delay="80">
-        <div class="aspect-[16/10] overflow-hidden rounded-card mb-5 bg-surface-cream">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNQwxI8yV9kYJmWiDJQsObw0snBk6ZN7Kiy9nzVo29pzsnUKx-fZuYr_IqhX_LPm3t23E3_uJsW8E-w8_WBXx8LCgm94ypdPgogB_IGedsKVWmAO60hLuRd6UOUsPcF5AF4FC1T7xIT9BSJlsZZIQFWb3TN5i8HVeUGXRdu-tyaG7Mzg3vZD_Rwtbat9qh0D84G9XzvOCoXkQP5YtNE-2-bKqQPtm5I-q6ha_ojCniJkPTMeqMpXPX-0uRZYN28qBY7Z-2F5GfprTh" alt="MTD guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-        </div>
-        <span class="inline-block bg-surface-cream text-deep-navy px-3 py-1 rounded-[3px] text-[11px] font-bold uppercase tracking-widest mb-3">Tax Digital</span>
-        <h3 class="font-display text-base font-bold text-deep-navy mb-2 group-hover:text-accent-lav transition-colors leading-snug">Making Tax Digital: What UK Businesses Need to Know</h3>
-        <p class="text-sm text-muted-steel line-clamp-2 leading-relaxed">A clear guide to MTD, explaining thresholds, deadlines and what your business needs to do to prepare.</p>
-      </article>
-
-      <article class="group rv" data-delay="160">
-        <div class="aspect-[16/10] overflow-hidden rounded-card mb-5 bg-surface-cream">
-          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb_rFWg8EQTjCWyoa8nNU6J1wlaq-hNg58Cp9e0DYNKJhkB1BKBPfGmkHjQRAX5BoLMGx2aMP4nT0eq9nnti_EymaytAT_kAiXASPZRhEtuSFXE-VdTsMYjopTJexTg-EyeQKH0hUYPweCqGeLYAQRWdN5bG5v5jMYBjZDuOkNCtSXcJOun8NtOAwvNrYJl8YshjsQ9mTr261KrsDS9aBvaWOLL7yBWLmgdexg1DsJWruULtDjobg0dFnJvcP9hQlfWk3qiqeGpac-" alt="Profitability guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-        </div>
-        <span class="inline-block bg-surface-cream text-deep-navy px-3 py-1 rounded-[3px] text-[11px] font-bold uppercase tracking-widest mb-3">Growth</span>
-        <h3 class="font-display text-base font-bold text-deep-navy mb-2 group-hover:text-accent-lav transition-colors leading-snug">Improving Profitability in Your Business</h3>
-        <p class="text-sm text-muted-steel line-clamp-2 leading-relaxed">A detailed guide covering costs, pricing, cash flow, and financial management strategies for SMEs.</p>
-      </article>
-
+    <div class="grid md:grid-cols-3 gap-5">
+      <a href="services.html#finance-accounting" class="val-card group bg-white border border-surface-variant rounded-card p-7 flex flex-col rv">
+      <div class="flex items-center justify-between mb-5">
+        <div class="w-11 h-11 rounded-card bg-accent-lav/12 text-accent-lav flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div>
+        <span class="font-display text-3xl font-bold text-surface-variant">01</span>
+      </div>
+      <h3 class="font-display text-xl font-bold text-deep-navy mb-3 leading-snug">Finance &amp; Accounting</h3>
+      <p class="text-sm text-muted-steel leading-relaxed mb-5 flex-grow">The foundation for strong financial control &mdash; structured processing, accurate bookkeeping and clear management reporting, with full compliance and transparency.</p>
+      <div class="flex flex-wrap gap-2 mb-5"><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Bookkeeping</span><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Financial Reporting</span><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Compliance</span></div>
+      <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy group-hover:text-accent-lav group-hover:gap-2.5 transition-all pt-4 border-t border-surface-cream">Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></span>
+    </a>
+      <a href="services.html#management-accounts" class="val-card group bg-white border border-surface-variant rounded-card p-7 flex flex-col rv">
+      <div class="flex items-center justify-between mb-5">
+        <div class="w-11 h-11 rounded-card bg-accent-lav/12 text-accent-lav flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></div>
+        <span class="font-display text-3xl font-bold text-surface-variant">02</span>
+      </div>
+      <h3 class="font-display text-xl font-bold text-deep-navy mb-3 leading-snug">Management Accounts</h3>
+      <p class="text-sm text-muted-steel leading-relaxed mb-5 flex-grow">Timely management accounts that turn day-to-day data into the insight business owners need to make better commercial decisions.</p>
+      <div class="flex flex-wrap gap-2 mb-5"><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Management Reports</span><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">KPIs</span><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Real-time</span></div>
+      <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy group-hover:text-accent-lav group-hover:gap-2.5 transition-all pt-4 border-t border-surface-cream">Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></span>
+    </a>
+      <a href="services.html#outsourced-solutions" class="val-card group bg-white border border-surface-variant rounded-card p-7 flex flex-col rv">
+      <div class="flex items-center justify-between mb-5">
+        <div class="w-11 h-11 rounded-card bg-accent-lav/12 text-accent-lav flex items-center justify-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg></div>
+        <span class="font-display text-3xl font-bold text-surface-variant">03</span>
+      </div>
+      <h3 class="font-display text-xl font-bold text-deep-navy mb-3 leading-snug">Outsourced Finance Solutions</h3>
+      <p class="text-sm text-muted-steel leading-relaxed mb-5 flex-grow">A full outsourced finance function &mdash; the structure, discipline and reporting of an in-house team, without the overhead.</p>
+      <div class="flex flex-wrap gap-2 mb-5"><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Outsourced</span><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Scalable</span><span class="text-[10px] font-bold uppercase tracking-wide bg-surface-cream text-deep-navy px-2.5 py-1 rounded-pill">Cost-effective</span></div>
+      <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy group-hover:text-accent-lav group-hover:gap-2.5 transition-all pt-4 border-t border-surface-cream">Learn more <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg></span>
+    </a>
     </div>
   </div>
 </section>
-
-
-<!-- ════════════════════════════════════
-     FAQ
-════════════════════════════════════ -->
+<section class="py-24 bg-deep-navy overflow-hidden">
+  <div class="max-w-site mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="rv">
+      <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-accent-lav mb-5"><span class="w-5 h-px bg-accent-lav/60 block"></span>Financial Management</span>
+      <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-[1.12] tracking-tight mb-6">Protect profitability.<br/>Then grow with intent.</h2>
+      <p class="text-white/60 leading-relaxed mb-8">Financial Management protects and improves profitability by understanding and controlling costs. From there, Business Development &amp; Growth turns your existing systems and data into strategies for expansion &mdash; with clear, measurable performance indicators.</p>
+      <a href="financial-management.html" class="bg-accent-lav text-white px-7 py-3.5 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors rounded-card inline-flex items-center gap-2 group">Explore Financial Management <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="bg-white/5 border border-white/10 rounded-card p-6 rv"><div class="w-10 h-10 rounded-card bg-accent-lav/20 text-accent-lav flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div><p class="font-display text-base font-bold text-white mb-1.5">Expansion</p><p class="text-sm text-white/55 leading-relaxed">Cost management, budgeting and margin control to maintain profitability as you scale.</p></div>
+      <div class="bg-white/5 border border-white/10 rounded-card p-6 rv sm:mt-8"><div class="w-10 h-10 rounded-card bg-accent-lav/20 text-accent-lav flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div><p class="font-display text-base font-bold text-white mb-1.5">Growth</p><p class="text-sm text-white/55 leading-relaxed">Financial modelling, forecasting and KPI development to scale sustainably or enter new markets.</p></div>
+    </div>
+  </div>
+</section>
+<section class="py-24 bg-surface-cream">
+  <div class="max-w-site mx-auto px-6 lg:px-10">
+    <div class="mb-14 rv max-w-[760px]">
+      <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>What We Do</span>
+      <h2 class="font-display text-3xl lg:text-[2.6rem] font-bold text-deep-navy leading-[1.12] tracking-tight">A four-stage approach.</h2>
+      <p class="text-base text-muted-steel leading-relaxed mt-5 max-w-[640px] ">It's all in the detail. We build financial control from the ground up &mdash; structured data, compliant accounting, real-time analysis, and growth.</p>
+    </div>
+    <div class="space-y-10" id="approach-steps">
+      <div class="process-step relative pl-20">
+      <div class="absolute left-0 top-0 w-14 h-14 border border-surface-variant bg-white shadow-sm flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">01</span></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Financial Data Processing</h3>
+      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">Every strong financial system starts with clean, structured data. We organise, structure and process your financial information systematically, aligning it with your ambitions so it's ready to support meaningful analysis. A reliable data foundation is the best system for financial control.</p>
+    </div>
+      <div class="process-step relative pl-20">
+      <div class="absolute left-0 top-0 w-14 h-14 border border-surface-variant bg-white shadow-sm flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">02</span></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Finance &amp; Accounting</h3>
+      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">Once your data is structured, we focus on compliant financial accounting &mdash; aiming to understand you and your business. By staying compliant in the day-to-day, we achieve clear visibility into how your business is truly performing, with management reports designed for business owners, not accountants.</p>
+    </div>
+      <div class="process-step relative pl-20">
+      <div class="absolute left-0 top-0 w-14 h-14 border border-surface-variant bg-white shadow-sm flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">03</span></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Financial Management &amp; Analysis</h3>
+      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">This is where numbers become a management tool. Through reporting and real-time analysis we look beyond the numbers &mdash; helping you understand profitability and strengthen controls using live data, not historical data. You become proactive, not reactive, so decisions are made with confidence, not assumptions.</p>
+    </div>
+      <div class="process-step relative pl-20">
+      <div class="absolute left-0 top-0 w-14 h-14 border border-accent-lav/30 bg-accent-lav/10 flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">04</span></div>
+      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Business Development &amp; Growth</h3>
+      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">With financial management in place, we shift focus to development and growth. We optimise the systems already built, then design strategies and KPIs aligned with your long-term ambitions &mdash; for expansion, growth, or exit. Growth planning is the discipline; performance tracking is the execution.</p>
+    </div>
+    </div>
+    <div class="mt-12 rv"><a href="what-we-do.html" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy hover:text-accent-lav transition-colors group">See how we can help <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a></div>
+  </div>
+</section>
+<section class="py-24 bg-surface">
+  <div class="max-w-site mx-auto px-6 lg:px-10">
+    <div class="text-center mb-14 rv">
+      <span class="inline-flex justify-center items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Who We Work With</span>
+      <h2 class="font-display text-3xl font-bold text-deep-navy">Built to scale with ambitious businesses.</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3" id="industry-grid">
+      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg></div>
+      <p class="ic-title text-sm font-bold text-deep-navy mb-1">Entrepreneurs &amp; Start-ups</p>
+      <p class="ic-sub text-xs text-muted-steel">Structure, manage &amp; optimise from startup to exit</p>
+    </div>
+      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"/></svg></div>
+      <p class="ic-title text-sm font-bold text-deep-navy mb-1">E-commerce</p>
+      <p class="ic-sub text-xs text-muted-steel">Live data channels for fast-scaling products</p>
+    </div>
+      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z"/></svg></div>
+      <p class="ic-title text-sm font-bold text-deep-navy mb-1">Retail</p>
+      <p class="ic-sub text-xs text-muted-steel">Seasonal cycles, trade &amp; international supply</p>
+    </div>
+      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg></div>
+      <p class="ic-title text-sm font-bold text-deep-navy mb-1">Automotive</p>
+      <p class="ic-sub text-xs text-muted-steel">Finance support that evolves as you grow</p>
+    </div>
+      <div class="ind-card tilt-card bg-white border border-surface-variant p-6 rounded-card cursor-pointer">
+      <div class="ic-icon text-muted-steel mb-4"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg></div>
+      <p class="ic-title text-sm font-bold text-deep-navy mb-1">International Markets</p>
+      <p class="ic-sub text-xs text-muted-steel">Take control of the numbers across borders</p>
+    </div>
+    </div>
+    <div class="text-center mt-10 rv"><a href="who-we-help.html" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy hover:text-accent-lav transition-colors group">See who we work with <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a></div>
+  </div>
+</section>
 <section id="faq" class="py-24 bg-surface-cream">
   <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="grid md:grid-cols-[300px_1fr] gap-16">
-
+    <div class="grid md:grid-cols-[320px_1fr] gap-16">
       <div class="rv">
         <span class="text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel block mb-4">Common Questions</span>
-        <h2 class="font-display text-3xl font-bold text-deep-navy leading-tight mb-6">Everything you need to know.</h2>
-        <p class="text-muted-steel leading-relaxed mb-8">Can't find the answer you're looking for? Book a free call with our team.</p>
-        <a href="contact.html" class="bg-deep-navy text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card inline-flex items-center">
-          Book a Free Call
-        </a>
+        <h2 class="font-display text-3xl font-bold text-deep-navy leading-tight mb-6">Beyond the numbers, explained.</h2>
+        <p class="text-muted-steel leading-relaxed mb-8">Can't find what you're looking for? Talk to an expert &mdash; no pressure, just a clear conversation.</p>
+        <a href="contact.html" class="bg-deep-navy text-white px-6 py-3 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-accent-lav transition-colors duration-300 rounded-card inline-flex items-center">Talk to an Expert</a>
       </div>
-
       <div id="faq-list" class="space-y-0">
-
         <div class="faq-item border-t border-surface-variant rv">
           <button class="w-full flex items-start justify-between gap-6 py-6 text-left" onclick="toggleFaq(this)">
-            <span class="font-display font-bold text-deep-navy text-base">How quickly can you take on a new client?</span>
+            <span class="font-display font-bold text-deep-navy text-base">What does &lsquo;beyond the numbers&rsquo; actually mean?</span>
             <svg class="faq-arr text-muted-steel w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
           </button>
-          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">Most new clients are onboarded within 5–10 working days. After your free discovery call, we'll handle the transfer from your existing accountant, including all HMRC authorisation codes and prior year data.</p></div></div>
+          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">It means we don't stop at compliance and reporting. We use your financial data as a management tool &mdash; analysing profitability in real time and building the systems and strategies that drive your business forward.</p></div></div>
         </div>
-
-        <div class="faq-item border-t border-surface-variant rv" data-delay="50">
+<div class="faq-item border-t border-surface-variant rv">
           <button class="w-full flex items-start justify-between gap-6 py-6 text-left" onclick="toggleFaq(this)">
-            <span class="font-display font-bold text-deep-navy text-base">Do you work with businesses of all sizes?</span>
+            <span class="font-display font-bold text-deep-navy text-base">Do you really work in real time?</span>
             <svg class="faq-arr text-muted-steel w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
           </button>
-          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">Yes — from sole traders and start-ups through to established SMEs with £10M+ turnover. Our service packages are tailored to your size and complexity, so you only pay for what you need.</p></div></div>
+          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">Yes. Our approach focuses on live data rather than historical data, so you can be proactive instead of reactive and make decisions with confidence.</p></div></div>
         </div>
-
-        <div class="faq-item border-t border-surface-variant rv" data-delay="100">
+<div class="faq-item border-t border-surface-variant rv">
           <button class="w-full flex items-start justify-between gap-6 py-6 text-left" onclick="toggleFaq(this)">
-            <span class="font-display font-bold text-deep-navy text-base">Are your fees fixed or variable?</span>
+            <span class="font-display font-bold text-deep-navy text-base">Which stage should we start at?</span>
             <svg class="faq-arr text-muted-steel w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
           </button>
-          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">All our fees are fixed and agreed upfront — there are no hourly rates or unexpected charges. You'll receive a clear monthly direct debit with no surprises.</p></div></div>
+          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">Wherever you are. Some clients need a clean data foundation first; others already have that and want financial management or growth strategy. We meet you at the right stage and build from there.</p></div></div>
         </div>
-
-        <div class="faq-item border-t border-surface-variant rv" data-delay="150">
+<div class="faq-item border-t border-b border-surface-variant rv">
           <button class="w-full flex items-start justify-between gap-6 py-6 text-left" onclick="toggleFaq(this)">
-            <span class="font-display font-bold text-deep-navy text-base">What accounting software do you use?</span>
+            <span class="font-display font-bold text-deep-navy text-base">Who do you work with?</span>
             <svg class="faq-arr text-muted-steel w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
           </button>
-          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">We are Xero Gold Partners and also work with QuickBooks and Sage. We'll recommend the best platform for your business and handle all setup, migration, and ongoing management.</p></div></div>
-        </div>
-
-        <div class="faq-item border-t border-b border-surface-variant rv" data-delay="200">
-          <button class="w-full flex items-start justify-between gap-6 py-6 text-left" onclick="toggleFaq(this)">
-            <span class="font-display font-bold text-deep-navy text-base">How do I switch from my current accountant?</span>
-            <svg class="faq-arr text-muted-steel w-5 h-5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
-          </button>
-          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">We manage the entire process for you — from notifying your previous accountant and HMRC to collecting all historic records and completing a full financial health review, so there's zero disruption to your business.</p></div></div>
+          <div class="faq-body"><div class="faq-inner pb-6"><p class="text-muted-steel leading-relaxed">Entrepreneurs and start-ups, e-commerce, retail, automotive, and businesses operating in international markets &mdash; anyone who wants finance that scales with them.</p></div></div>
         </div>
 
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- ════════════════════════════════════
-     CTA
-════════════════════════════════════ -->
 <section class="py-24 bg-surface">
   <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="relative overflow-hidden rounded-lg rv" style="background:#0D1535">
-      <!-- Vanta NET animation — same as hero -->
+    <div class="relative overflow-hidden rounded-lg rv" style="background:#1C0A30">
       <div id="vanta-cta" class="absolute inset-0 w-full h-full rounded-lg"></div>
-      <!-- Overlay to darken slightly for text clarity -->
-      <div class="absolute inset-0 bg-gradient-to-r from-[#0D1535]/80 via-[#0D1535]/50 to-transparent pointer-events-none z-[1] rounded-lg"></div>
-
-      <!-- Content -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#1C0A30]/80 via-[#1C0A30]/50 to-transparent pointer-events-none z-[1] rounded-lg"></div>
       <div class="relative z-10 p-12 md:p-20 grid md:grid-cols-[1fr_auto] gap-10 items-center w-full">
-
-        <!-- Left: text -->
         <div>
           <span class="text-[11px] font-bold uppercase tracking-[.14em] text-accent-lav block mb-6">Ready to get started?</span>
-          <h2 class="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] tracking-[-0.02em] mb-6">
-            Let's navigate your<br/>future together.
-          </h2>
-          <p class="text-lg text-white/60 leading-relaxed max-w-lg">
-            Book a free 30-minute discovery call. No commitment, no jargon — just an honest conversation about your finances.
-          </p>
+          <h2 class="font-display text-4xl md:text-5xl font-bold text-white leading-[1.08] tracking-[-0.02em] mb-6">Let's go beyond the numbers,<br/>together.</h2>
+          <p class="text-lg text-white/60 leading-relaxed max-w-lg">Book a free, no-pressure conversation. We'll learn about your business and show you exactly where strategic finance can take it.</p>
         </div>
-
-        <!-- Right: buttons -->
         <div class="flex flex-col gap-3 flex-shrink-0">
           <a href="contact.html" class="bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors duration-300 rounded-card flex items-center justify-center gap-2 group whitespace-nowrap">
-            Book Your Free Call
+            Talk to an Expert
             <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
           </a>
-          <a href="services.html" class="border border-white/25 text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:border-white/55 hover:bg-white/5 transition-all duration-300 rounded-card flex items-center justify-center whitespace-nowrap">
-            View All Services
-          </a>
+          <a href="services.html" class="border border-white/25 text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:border-white/55 hover:bg-white/5 transition-all duration-300 rounded-card flex items-center justify-center whitespace-nowrap">Explore Services</a>
         </div>
-
       </div>
     </div>
   </div>
 </section>
-
-
-<!-- ════════════════════════════════════
-     FOOTER
-════════════════════════════════════ -->
 <footer class="bg-surface-low border-t border-surface-variant">
   <div class="max-w-site mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
-
     <div>
-      <div class="flex items-center gap-2.5 mb-6">
-        <img src="assets/logo.png" alt="Account Clerks" class="h-8 w-auto">
-        
-      </div>
-      <p class="text-sm text-muted-steel leading-relaxed max-w-xs mb-6">Strategic financial guidance for growth-minded UK businesses. Precision, transparency, and genuine partnership in every engagement.</p>
-      <p class="text-xs text-muted-steel/60 mb-2">📞 <a href="tel:+441992714010" class="hover:text-deep-navy transition-colors">01992 714 010</a></p>
-      <p class="text-xs text-muted-steel/60">✉ <a href="mailto:info@accountclerks.com" class="hover:text-deep-navy transition-colors">info@accountclerks.com</a></p>
+      <img src="assets/logo.png" alt="Account Clerks" class="h-9 w-auto mb-6">
+      <p class="text-sm text-muted-steel leading-relaxed max-w-xs mb-4">Beyond the Numbers. Strategic finance support that helps UK businesses gain clarity, maintain profitability, and grow with confidence.</p>
+      <p class="text-xs text-muted-steel/70">&#9993; <a href="mailto:info@accountclerks.com" class="hover:text-deep-navy transition-colors">info@accountclerks.com</a></p>
     </div>
-
     <div>
-      <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Services</h4>
+      <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Explore</h4>
       <ul class="space-y-3">
-        <li><a href="services.html#tax" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Tax Compliance</a></li>
-        <li><a href="services.html#growth" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Strategic Growth</a></li>
-        <li><a href="services.html#payroll" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Payroll Support</a></li>
-        <li><a href="services.html#rd" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">R&amp;D Credits</a></li>
-        <li><a href="services.html#cloud" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Cloud Accounting</a></li>
+        <li><a href="services.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Services</a></li>
+        <li><a href="financial-management.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Financial Management</a></li>
+        <li><a href="who-we-help.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Who We Work With</a></li>
+        <li><a href="what-we-do.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">What We Do</a></li>
       </ul>
     </div>
-
     <div>
       <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Company</h4>
       <ul class="space-y-3">
         <li><a href="about.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">About Us</a></li>
-        <li><a href="who-we-help.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Who We Support</a></li>
-        <li><a href="switch.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Switch Accountant</a></li>
-        <li><a href="#faq" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Resources</a></li>
-        <li><a href="contact.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Contact</a></li>
+        <li><a href="about.html#team" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Meet the Team</a></li>
+        <li><a href="contact.html" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Talk to an Expert</a></li>
       </ul>
     </div>
-
     <div>
       <h4 class="text-[11px] font-bold uppercase tracking-widest text-deep-navy mb-6">Legal</h4>
       <ul class="space-y-3">
         <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Privacy Policy</a></li>
         <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Terms of Service</a></li>
         <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Cookie Policy</a></li>
-        <li><a href="#" class="text-sm text-muted-steel hover:text-deep-navy transition-colors">Complaints</a></li>
       </ul>
     </div>
-
   </div>
   <div class="max-w-site mx-auto px-6 lg:px-10 py-5 border-t border-surface-variant flex flex-col md:flex-row items-center justify-between gap-3">
-    <p class="text-xs text-muted-steel/60">© 2024 Account Clerks Ltd. All rights reserved. Registered in England &amp; Wales.</p>
-    <p class="text-xs text-muted-steel/60">Authorised by ICAEW · Members of ACCA</p>
+    <p class="text-xs text-muted-steel/60">&copy; 2026 Account Clerks. All rights reserved. Registered in England &amp; Wales.</p>
+    <p class="text-xs text-muted-steel/60">Beyond the Numbers</p>
   </div>
 </footer>
-
-
-<!-- ════════════════════════════════════
-     FLOATING CHAT FAB
-════════════════════════════════════ -->
-<a href="tel:+441992714010" class="fixed bottom-8 right-8 w-14 h-14 bg-accent-lav text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-40 group" aria-label="Call us">
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+<a href="contact.html" class="fixed bottom-8 right-8 px-5 h-12 bg-accent-lav text-white rounded-pill shadow-2xl flex items-center gap-2 hover:scale-105 active:scale-95 transition-transform z-40" aria-label="Talk to an expert">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10.5h8M8 14h5m-9 6l3.5-2.5A2 2 0 0110.6 17H18a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v13z"/></svg>
+  <span class="text-[11px] font-bold uppercase tracking-[.1em]">Talk to an Expert</span>
 </a>
-
-
-<!-- ════════════════════════════════════
-     SCRIPTS
-════════════════════════════════════ -->
-<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<!-- Three.js (required by Vanta) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<!-- Vanta.js NET -->
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-<!-- Vanilla-Tilt -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-<!-- Anime.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
 <script>
-/* ══════════════════════════════════════
-   GSAP SETUP
-══════════════════════════════════════ */
 gsap.registerPlugin(ScrollTrigger);
 
-/* ── Scroll progress bar ── */
 window.addEventListener('scroll', () => {
   const winH = document.documentElement.scrollHeight - window.innerHeight;
-  const pct  = (window.scrollY / winH) * 100;
-  document.getElementById('sp').style.width = pct + '%';
-});
+  document.getElementById('sp').style.width = (window.scrollY / winH) * 100 + '%';
+}, {passive:true});
 
-/* ── Hero entrance timeline ── */
+/* Hero entrance */
 const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 heroTl
   .to('.h-badge', { opacity: 1, y: 0, duration: 0.6, delay: 0.2 })
@@ -1000,151 +444,56 @@ heroTl
   .to('.h-ctas',  { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
   .to('.h-stats', { opacity: 1, y: 0, duration: 0.6 }, '-=0.3');
 
-/* ── Hero stats counter (Anime.js) ── */
-heroTl.add(() => {
-  document.querySelectorAll('.counter').forEach(el => {
-    anime({
-      targets: el,
-      innerHTML: [0, parseInt(el.dataset.target)],
-      easing: 'easeOutQuart',
-      duration: 1200,
-      round: 1,
-    });
-  });
-}, '-=0.2');
-
-/* ── Scroll reveals — batch stagger for grouped wave effect ── */
+/* Reveals */
 ScrollTrigger.batch('.rv', {
-  onEnter: batch => gsap.fromTo(batch,
-    { opacity: 0, y: 28 },
-    { opacity: 1, y: 0, stagger: 0.1, duration: 0.75, ease: 'power2.out', overwrite: 'auto' }
-  ),
-  start: 'top 88%',
-  once: true
+  onEnter: batch => gsap.fromTo(batch, { opacity: 0, y: 28 },
+    { opacity: 1, y: 0, stagger: 0.1, duration: 0.75, ease: 'power2.out', overwrite: 'auto' }),
+  start: 'top 88%', once: true
 });
 
-/* ── Stats strip counters (big-counter) ── */
-let bigCountersDone = false;
-ScrollTrigger.create({
-  trigger: '.big-counter',
-  start: 'top 80%',
-  onEnter: () => {
-    if (bigCountersDone) return;
-    bigCountersDone = true;
-    document.querySelectorAll('.big-counter').forEach(el => {
-      anime({
-        targets: el,
-        innerHTML: [0, parseInt(el.dataset.target)],
-        easing: 'easeOutExpo',
-        duration: 1600,
-        round: 1,
-      });
-    });
-  }
-});
+/* Counters */
+function runCounters(sel, dur){
+  document.querySelectorAll(sel).forEach(el => {
+    anime({ targets: el, innerHTML: [0, parseInt(el.dataset.target)], easing: 'easeOutExpo', duration: dur, round: 1 });
+  });
+}
+heroTl.add(() => runCounters('.counter', 1200), '-=0.2');
+let bigDone = false;
+if (document.querySelector('.big-counter')) {
+  ScrollTrigger.create({ trigger: '.big-counter', start: 'top 82%',
+    onEnter: () => { if (bigDone) return; bigDone = true; runCounters('.big-counter', 1600); } });
+}
 
-/* ── Process steps stagger ── */
+/* Process steps */
 gsap.utils.toArray('.process-step').forEach((el, i) => {
-  gsap.from(el, {
-    opacity: 0, y: 30, duration: 0.6,
-    delay: i * 0.12,
-    ease: 'power2.out',
-    scrollTrigger: { trigger: '#process-steps', start: 'top 75%', toggleActions: 'play none none none' }
-  });
+  gsap.from(el, { opacity: 0, y: 30, duration: 0.6, delay: i * 0.12, ease: 'power2.out',
+    scrollTrigger: { trigger: el.closest('[id$="steps"]') || el, start: 'top 78%', toggleActions: 'play none none none' } });
 });
 
-/* ── Industry grid stagger
-     Use fromTo + clearProps so VanillaTilt can own the transform after GSAP finishes ── */
-gsap.set('#industry-grid .ind-card', { opacity: 0, y: 22 });
-ScrollTrigger.create({
-  trigger: '#industry-grid',
-  start: 'top 80%',
-  once: true,
-  onEnter: () => {
-    gsap.to('#industry-grid .ind-card', {
-      opacity: 1, y: 0, duration: 0.55,
-      stagger: 0.07,
-      ease: 'power2.out',
-      clearProps: 'transform,opacity',  /* hand transform back to VanillaTilt */
-    });
-  }
-});
-
-/* ── Testimonial cards parallax ── */
-gsap.utils.toArray('#testimonials article').forEach((el, i) => {
-  gsap.from(el, {
-    opacity: 0, y: 40 + i * 10, duration: 0.75,
-    delay: i * 0.1,
-    ease: 'power2.out',
-    scrollTrigger: { trigger: '#testimonials', start: 'top 75%', toggleActions: 'play none none none' }
-  });
-});
-
-/* ══════════════════════════════════════
-   VANTA.JS NET — Hero animated background
-══════════════════════════════════════ */
-/* ── Hero Vanta NET ── */
-VANTA.NET({
-  el: '#vanta-bg',
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200,
-  minWidth: 200,
-  scale: 1.0,
-  scaleMobile: 1.0,
-  color: 0x7B5FFF,
-  backgroundColor: 0x0D1535,
-  points: 10.00,
-  maxDistance: 24.00,
-  spacing: 18.00,
-  showDots: true,
-});
-
-/* ── CTA section Vanta NET (lazy-init when section enters viewport) ── */
-let ctaVanta = null;
-ScrollTrigger.create({
-  trigger: '#vanta-cta',
-  start: 'top 90%',
-  once: true,
-  onEnter: () => {
-    ctaVanta = VANTA.NET({
-      el: '#vanta-cta',
-      mouseControls: true,
-      touchControls: false,
-      gyroControls: false,
-      minHeight: 200,
-      minWidth: 200,
-      scale: 1.0,
-      scaleMobile: 1.0,
-      color: 0x7B5FFF,
-      backgroundColor: 0x0D1535,
-      points: 9.00,
-      maxDistance: 22.00,
-      spacing: 20.00,
-      showDots: true,
-    });
-  }
-});
-
-/* ══════════════════════════════════════
-   VANILLA-TILT — Industry cards
-══════════════════════════════════════ */
-/* Defer until after GSAP sets initial opacity:0, so VanillaTilt
-   doesn't race with GSAP on the same transform property */
+/* Industry grid + tilt */
+if (document.querySelector('#industry-grid .ind-card')) {
+  gsap.set('#industry-grid .ind-card', { opacity: 0, y: 22 });
+  ScrollTrigger.create({ trigger: '#industry-grid', start: 'top 82%', once: true,
+    onEnter: () => gsap.to('#industry-grid .ind-card', { opacity: 1, y: 0, duration: 0.55, stagger: 0.07, ease: 'power2.out', clearProps: 'transform,opacity' }) });
+}
 setTimeout(() => {
-  VanillaTilt.init(document.querySelectorAll('.tilt-card'), {
-    max: 8,
-    speed: 400,
-    glare: true,
-    'max-glare': 0.08,
-    perspective: 1000,
-  });
-}, 100);
+  if (window.VanillaTilt) VanillaTilt.init(document.querySelectorAll('.tilt-card'), { max: 8, speed: 400, glare: true, 'max-glare': 0.08, perspective: 1000 });
+}, 120);
 
-/* ══════════════════════════════════════
-   FAQ ACCORDION
-══════════════════════════════════════ */
+/* Stat cards */
+ScrollTrigger.batch('.stat-card', {
+  onEnter: batch => gsap.fromTo(batch, { opacity: 0, y: 24, scale: 0.92 },
+    { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.65, ease: 'back.out(1.5)', overwrite: 'auto' }),
+  start: 'top 85%', once: true
+});
+
+/* Decorative lines */
+gsap.utils.toArray('span[class*="h-px"]').forEach(line => {
+  gsap.fromTo(line, { scaleX: 0, transformOrigin: 'left center' },
+    { scaleX: 1, duration: 0.7, ease: 'power2.out', scrollTrigger: { trigger: line, start: 'top 92%', once: true } });
+});
+
+/* FAQ */
 function toggleFaq(btn) {
   const item = btn.closest('.faq-item');
   const isOpen = item.classList.contains('open');
@@ -1152,124 +501,44 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
-/* ══════════════════════════════════════
-   MOBILE MENU (GSAP)
-══════════════════════════════════════ */
-const mobMenu    = document.getElementById('mob-menu');
+/* Mobile menu */
+const mobMenu = document.getElementById('mob-menu');
 const mobOverlay = document.getElementById('mob-overlay');
-
 function openMobMenu() {
-  gsap.to(mobMenu,    { x: 0, duration: 0.38, ease: 'power3.out' });
-  gsap.to(mobOverlay, { opacity: 1, duration: 0.3, ease: 'none',
-    onStart: () => { mobOverlay.style.pointerEvents = 'auto'; }
-  });
+  gsap.to(mobMenu, { x: 0, duration: 0.38, ease: 'power3.out' });
+  gsap.to(mobOverlay, { opacity: 1, duration: 0.3, onStart: () => { mobOverlay.style.pointerEvents = 'auto'; } });
   document.body.style.overflow = 'hidden';
 }
-
 function closeMobMenu() {
-  gsap.to(mobMenu,    { x: '100%', duration: 0.32, ease: 'power3.in' });
-  gsap.to(mobOverlay, { opacity: 0, duration: 0.25,
-    onComplete: () => { mobOverlay.style.pointerEvents = 'none'; }
-  });
+  gsap.to(mobMenu, { x: '100%', duration: 0.32, ease: 'power3.in' });
+  gsap.to(mobOverlay, { opacity: 0, duration: 0.25, onComplete: () => { mobOverlay.style.pointerEvents = 'none'; } });
   document.body.style.overflow = '';
 }
 
-/* ══════════════════════════════════════
-   GSAP — CTA Section parallax ornaments
-══════════════════════════════════════ */
-gsap.to('#faq ~ section .absolute:first-child', {
-  rotate: 25, scrollTrigger: { trigger: 'section.py-24.bg-surface:last-of-type', scrub: 1 }
-});
-
-/* ══════════════════════════════════════
-   Nav: dark over hero, light after
-══════════════════════════════════════ */
-const heroEl = document.querySelector('section.relative.min-h-\\[92vh\\]') ||
-               document.querySelector('section[class*="min-h-[92vh]"]');
+/* Nav theme over hero */
+const heroEl = document.querySelector('[data-hero]');
 const siteNav = document.getElementById('site-nav');
 function updateNavTheme() {
-  const heroBottom = (heroEl ? heroEl.getBoundingClientRect().bottom : 0);
-  if (heroBottom > 80) {
-    siteNav.classList.add('nav-dark');
-  } else {
-    siteNav.classList.remove('nav-dark');
-  }
+  const heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
+  if (heroBottom > 80) siteNav.classList.add('nav-dark'); else siteNav.classList.remove('nav-dark');
 }
-/* Apply immediately so nav is correct on first paint */
 siteNav.classList.add('nav-dark');
 updateNavTheme();
 window.addEventListener('scroll', updateNavTheme, { passive: true });
 
-/* ══════════════════════════════════════
-   Hero geometric shape parallax
-══════════════════════════════════════ */
-if (heroEl) {
-  heroEl.querySelectorAll('[aria-hidden="true"]').forEach((shape, i) => {
-    gsap.to(shape, {
-      y: -(25 + i * 18),
-      ease: 'none',
-      scrollTrigger: { trigger: heroEl, start: 'top top', end: 'bottom top', scrub: 2 }
-    });
-  });
-  const heroInner = heroEl.querySelector('.relative.z-10');
-  if (heroInner) {
-    gsap.to(heroInner, {
-      y: -55, ease: 'none',
-      scrollTrigger: { trigger: heroEl, start: 'top top', end: 'bottom top', scrub: 1.5 }
-    });
-  }
+/* Vanta NET */
+function netCfg(el, extra){ return Object.assign({ el: el, mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200, minWidth: 200, scale: 1.0, scaleMobile: 1.0, color: 0x9C2D87, backgroundColor: 0x1C0A30, points: 10.0, maxDistance: 24.0, spacing: 18.0, showDots: true }, extra||{}); }
+if (document.getElementById('vanta-bg') && window.VANTA) VANTA.NET(netCfg('#vanta-bg'));
+if (document.getElementById('vanta-cta')) {
+  ScrollTrigger.create({ trigger: '#vanta-cta', start: 'top 90%', once: true,
+    onEnter: () => { if (window.VANTA) VANTA.NET(netCfg('#vanta-cta', { points: 9.0, maxDistance: 22.0, spacing: 20.0, touchControls: false })); } });
 }
 
-/* ── Stat cards scale entrance ── */
-ScrollTrigger.batch('.stat-card', {
-  onEnter: batch => gsap.fromTo(batch,
-    { opacity: 0, y: 24, scale: 0.92 },
-    { opacity: 1, y: 0, scale: 1, stagger: 0.1, duration: 0.65, ease: 'back.out(1.5)', overwrite: 'auto' }
-  ),
-  start: 'top 85%',
-  once: true
-});
-
-/* ── Section heading decorative lines draw from left ── */
-gsap.utils.toArray('span.w-5.h-px, span.w-8.h-px, span[class*="h-px"]').forEach(line => {
-  gsap.fromTo(line, { scaleX: 0, transformOrigin: 'left center' },
-    { scaleX: 1, duration: 0.7, ease: 'power2.out',
-      scrollTrigger: { trigger: line, start: 'top 92%', once: true } }
-  );
-});
-
-/* ── Testimonial quote marks pop in ── */
-gsap.utils.toArray('#testimonials blockquote').forEach((q, i) => {
-  gsap.fromTo(q,
-    { opacity: 0, y: 30 },
-    { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out',
-      delay: i * 0.08,
-      scrollTrigger: { trigger: q, start: 'top 85%', once: true } }
-  );
-});
-
-/* ══════════════════════════════════════
-   Smooth anchor scroll offset (sticky nav)
-══════════════════════════════════════ */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (!target) return;
-    e.preventDefault();
-    const offset = 80;
-    const top = target.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  });
-});
-// Active nav — highlight About/Switch when on those pages (index stays undecorated)
-(function(){
-  const p = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('header a[href]').forEach(a => {
-    const h = a.getAttribute('href').split('#')[0].split('/').pop() || 'index.html';
-    if (h && h === p && !h.startsWith('#')) a.classList.add('nav-active');
-  });
-})();
+/* Hero parallax */
+if (heroEl) {
+  const heroInner = heroEl.querySelector('.relative.z-10');
+  if (heroInner) gsap.to(heroInner, { y: -45, ease: 'none', scrollTrigger: { trigger: heroEl, start: 'top top', end: 'bottom top', scrub: 1.5 } });
+}
 </script>
-
 </body>
 </html>
