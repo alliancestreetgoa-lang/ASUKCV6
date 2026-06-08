@@ -40,7 +40,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#1C0A30}
+    body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#faf9f8}
     #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#78267F,#D4197F,#1EA9D7);z-index:9999}
     #site-nav{transition:box-shadow .35s ease,background .35s ease,border-color .35s ease,backdrop-filter .35s ease;position:relative;overflow:hidden}
     #site-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,0) 100%);pointer-events:none;z-index:0;border-radius:inherit}
@@ -138,26 +138,25 @@
     </div>
   </nav>
 </header>
-<section data-hero class="relative min-h-[42vh] lg:min-h-[46vh] flex items-center overflow-hidden bg-deep-navy">
-  <div id="vanta-bg" class="absolute inset-0 w-full h-full"></div>
-  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-deep-navy/80 pointer-events-none z-[1]"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-deep-navy/70 via-deep-navy/30 to-transparent pointer-events-none z-[1]"></div>
-  <div class="absolute top-10 right-10 w-14 h-14 border border-white/8 rotate-6 rounded-[3px]" aria-hidden="true"></div>
-  <div class="absolute top-16 right-16 w-9 h-9 border border-accent-lav/15 rotate-6 rounded-[3px]" aria-hidden="true"></div>
+<section data-hero-light class="relative min-h-[42vh] lg:min-h-[46vh] flex items-center overflow-hidden bg-white">
+  <div id="vanta-bg" class="absolute inset-0 w-full h-full opacity-60"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-white/50 via-white/10 to-white pointer-events-none z-[1]"></div>
+  <div class="absolute top-10 right-10 w-14 h-14 border border-deep-navy/10 rotate-6 rounded-[3px]" aria-hidden="true"></div>
+  <div class="absolute top-16 right-16 w-9 h-9 border border-accent-lav/25 rotate-6 rounded-[3px]" aria-hidden="true"></div>
   <div class="relative z-10 max-w-site mx-auto px-6 sm:px-10 lg:px-16 w-full py-10 lg:py-14">
     <div class="max-w-[760px]">
-      <div class="h-badge inline-flex items-center gap-2.5 mb-5 bg-white/8 border border-white/12 backdrop-blur-sm px-4 py-2 rounded-pill">
+      <div class="h-badge inline-flex items-center gap-2.5 mb-5 bg-surface-cream border border-surface-variant px-4 py-2 rounded-pill">
         <span class="w-2 h-2 rounded-full bg-accent-lav flex-shrink-0"></span>
-        <span class="text-[11px] font-bold uppercase tracking-[.14em] text-white/70">About Us</span>
+        <span class="text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel">About Us</span>
       </div>
-      <h1 class="h-title font-display text-[2.4rem] lg:text-5xl font-bold text-white leading-[1.06] tracking-[-0.025em] mb-5">A trusted <span class="text-accent-lav">growth partner.</span></h1>
-      <p class="h-body text-base lg:text-lg text-white/60 leading-relaxed max-w-[560px] mb-7">Our approach integrates finance into the heart of business decision-making &mdash; giving leadership teams a partner focused on clarity, control, and sustainability.</p>
+      <h1 class="h-title font-display text-[2.4rem] lg:text-5xl font-bold text-deep-navy leading-[1.06] tracking-[-0.025em] mb-5">A trusted <span class="text-accent-lav">growth partner.</span></h1>
+      <p class="h-body text-base lg:text-lg text-muted-steel leading-relaxed max-w-[560px] mb-7">Our approach integrates finance into the heart of business decision-making &mdash; giving leadership teams a partner focused on clarity, control, and sustainability.</p>
       <div class="h-ctas flex flex-col sm:flex-row gap-3">
-        <a href="contact.html" class="bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-white hover:text-deep-navy transition-colors duration-300 rounded-card flex items-center justify-center gap-2 group">
+        <a href="contact.html" class="bg-accent-lav text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:bg-deep-navy transition-colors duration-300 rounded-card flex items-center justify-center gap-2 group">
           Talk to an Expert
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
         </a>
-        <a href="what-we-do.html" class="border border-white/25 text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:border-white/60 hover:bg-white/5 transition-all duration-300 rounded-card flex items-center justify-center">What We Do</a>
+        <a href="what-we-do.html" class="border border-surface-variant text-deep-navy px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase hover:border-deep-navy/50 hover:bg-surface-cream transition-all duration-300 rounded-card flex items-center justify-center">What We Do</a>
       </div>
     </div>
   </div>
@@ -383,13 +382,12 @@ function updateNavTheme() {
   const heroBottom = heroEl ? heroEl.getBoundingClientRect().bottom : 0;
   if (heroBottom > 80) siteNav.classList.add('nav-dark'); else siteNav.classList.remove('nav-dark');
 }
-siteNav.classList.add('nav-dark');
 updateNavTheme();
 window.addEventListener('scroll', updateNavTheme, { passive: true });
 
 /* Vanta NET */
 function netCfg(el, extra){ return Object.assign({ el: el, mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200, minWidth: 200, scale: 1.0, scaleMobile: 1.0, color: 0x9C2D87, backgroundColor: 0x1C0A30, points: 10.0, maxDistance: 24.0, spacing: 18.0, showDots: true }, extra||{}); }
-if (document.getElementById('vanta-bg') && window.VANTA) VANTA.NET(netCfg('#vanta-bg'));
+if (document.getElementById('vanta-bg') && window.VANTA) VANTA.NET(netCfg('#vanta-bg', { backgroundColor: 0xffffff, color: 0x9C2D87, points: 9.0, maxDistance: 20.0 }));
 if (document.getElementById('vanta-cta')) {
   ScrollTrigger.create({ trigger: '#vanta-cta', start: 'top 90%', once: true,
     onEnter: () => { if (window.VANTA) VANTA.NET(netCfg('#vanta-cta', { points: 9.0, maxDistance: 22.0, spacing: 20.0, touchControls: false })); } });
