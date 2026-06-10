@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tw-config">
@@ -114,6 +114,70 @@
     .nav-logo-light{display:none}
     .nav-dark .nav-logo-color{display:none}
     .nav-dark .nav-logo-light{display:block}
+  
+    /* ===== The Growth Journey ===== */
+    .gj{background:#0e0618;color:#fff;position:relative;overflow:hidden;font-family:'Hanken Grotesk',sans-serif}
+    .gj-serif{font-family:'Playfair Display',Georgia,serif;font-weight:600}
+    .gj-grad{background-image:linear-gradient(100deg,#b06bd8 0%,#D4197F 55%,#1EA9D7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+    .gj-intro{position:relative;min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:7rem 1.5rem;background:radial-gradient(125% 90% at 50% -10%,#3a1560 0%,#1a0a30 48%,#0e0618 80%)}
+    .gj-stars{position:absolute;inset:0;pointer-events:none;z-index:1}
+    .gj-stars i{position:absolute;border-radius:50%;background:#fff;opacity:.35;animation:gjtw 4s ease-in-out infinite}
+    @keyframes gjtw{0%,100%{opacity:.12}50%{opacity:.75}}
+    .gj-intro-inner{position:relative;z-index:2}
+    .gj-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c9a8e8;margin-bottom:1.5rem}
+    .gj-dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(100deg,#D4197F,#1EA9D7);box-shadow:0 0 12px rgba(212,25,127,.8)}
+    .gj-intro-title{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:1.4rem;color:#fff}
+    .gj-intro-sub{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.6);max-width:34rem;margin:0 auto;line-height:1.6}
+    .gj-stages{position:relative;max-width:1200px;margin:0 auto;padding:1rem 1.5rem 3rem}
+    .gj-stages::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.12) 12%,rgba(255,255,255,.12) 88%,transparent);transform:translateX(-50%)}
+    .gj-stage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center;padding:clamp(3.5rem,8vw,7rem) 0;position:relative}
+    .gj-stage:nth-child(even) .gj-text{order:2}
+    .gj-stage:nth-child(even) .gj-visual{order:1}
+    .gj-text{padding:0 clamp(0rem,2vw,2rem)}
+    .gj-num{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(3.6rem,8vw,7rem);line-height:1;color:rgba(255,255,255,.07);transition:color .7s ease;margin-bottom:.2rem}
+    .gj-num.is-on{background-image:linear-gradient(120deg,#b06bd8,#D4197F);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+    .gj-pill{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);padding:.35rem .8rem;border-radius:9999px;margin-bottom:1.2rem}
+    .gj-pill svg{width:13px;height:13px;opacity:.85}
+    .gj-stage-title{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem;color:#fff}
+    .gj-stage-desc{color:rgba(255,255,255,.58);line-height:1.65;max-width:30rem;margin-bottom:1.6rem;font-size:1rem}
+    .gj-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem}
+    .gj-list li{display:flex;align-items:center;gap:.65rem;font-size:.92rem;color:rgba(255,255,255,.82)}
+    .gj-list svg{width:16px;height:16px;color:#D4197F;flex-shrink:0}
+    .gj-visual{display:flex;justify-content:center}
+    .gj-card{width:100%;max-width:26rem;background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+    .gj-txn-row{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:.6rem;background:rgba(255,255,255,.02)}
+    .gj-txn-row:last-child{margin-bottom:0}
+    .gj-txn-row > span:first-child{font-size:.9rem;color:rgba(255,255,255,.85)}
+    .gj-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:#7be0a3;background:rgba(46,160,90,.12);border:1px solid rgba(46,160,90,.25);padding:.2rem .55rem;border-radius:9999px}
+    .gj-badge svg{width:11px;height:11px}
+    .gj-bar{margin-bottom:1.1rem}
+    .gj-bar:last-child{margin-bottom:0}
+    .gj-bar-head{display:flex;justify-content:space-between;font-size:.82rem;color:rgba(255,255,255,.7);margin-bottom:.45rem}
+    .gj-bar-track{height:7px;border-radius:9999px;background:rgba(255,255,255,.08);overflow:hidden}
+    .gj-bar-fill{height:100%;width:0;border-radius:9999px;background:linear-gradient(90deg,#78267F,#D4197F)}
+    .gj-line-svg{width:100%;height:170px;display:block}
+    .gj-line-path{fill:none;stroke:#1EA9D7;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .gj-line-area{fill:url(#gjlg);opacity:0}
+    .gj-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;align-items:end;height:190px}
+    .gj-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+    .gj-col-track{width:100%;height:100%;display:flex;align-items:flex-end;border-radius:8px;background:rgba(255,255,255,.03)}
+    .gj-col-fill{width:100%;height:0;border-radius:8px;background:linear-gradient(180deg,#D4197F,#78267F)}
+    .gj-col-label{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.5rem}
+    .gj-outro{text-align:center;padding:clamp(4rem,8vw,7rem) 1.5rem clamp(5rem,9vw,8rem);background:radial-gradient(110% 80% at 50% 120%,#2a0e45 0%,#0e0618 60%)}
+    .gj-outro-title{font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.12;max-width:46rem;margin:0 auto 2rem;color:#fff}
+    .gj-outro-ctas{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
+    .gj-btn-ghost{background:rgba(255,255,255,.08);color:#fff}
+    @media(max-width:900px){
+      .gj-stages::before{display:none}
+      .gj-stage{grid-template-columns:1fr;gap:2.5rem}
+      .gj-stage:nth-child(even) .gj-text{order:1}
+      .gj-stage:nth-child(even) .gj-visual{order:2}
+      .gj-text{padding:0}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .gj-stars i{animation:none}
+      .gj-bar-fill,.gj-col-fill{transition:none}
+    }
   </style>
 </head>
 <body>
@@ -267,36 +331,103 @@
     </div>
   </div>
 </section>
-<section class="py-24 bg-surface-cream">
-  <div class="max-w-site mx-auto px-6 lg:px-10">
-    <div class="mb-14 rv max-w-[760px]">
-      <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>What We Do</span>
-      <h2 class="font-display text-3xl lg:text-[2.6rem] font-bold text-deep-navy leading-[1.12] tracking-tight">A four-stage approach.</h2>
-      <p class="text-base text-muted-steel leading-relaxed mt-5 max-w-[640px] ">It's all in the detail. We build financial control from the ground up &mdash; structured data, compliant accounting, real-time analysis, and growth.</p>
+<!-- ===== THE GROWTH JOURNEY ===== -->
+<section id="growth-journey" class="gj">
+  <div class="gj-intro">
+    <div class="gj-stars" id="gj-stars" aria-hidden="true"></div>
+    <div class="gj-intro-inner">
+      <span class="gj-eyebrow"><span class="gj-dot"></span>The Growth Journey</span>
+      <h2 class="gj-serif gj-intro-title">From raw data to <span class="gj-grad">real growth.</span></h2>
+      <p class="gj-intro-sub">Every client moves through the same four stages with us &mdash; scroll the journey.</p>
     </div>
-    <div class="space-y-10" id="approach-steps">
-      <div class="process-step relative pl-20">
-      <div class="absolute left-0 top-0 w-14 h-14 border border-surface-variant bg-white shadow-sm flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">01</span></div>
-      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Financial Data Processing</h3>
-      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">Every strong financial system starts with clean, structured data. We organise, structure and process your financial information systematically, aligning it with your ambitions so it's ready to support meaningful analysis. A reliable data foundation is the best system for financial control.</p>
+  </div>
+
+  <div class="gj-stages">
+    <!-- 01 -->
+    <div class="gj-stage">
+      <div class="gj-text">
+        <div class="gj-num" data-num>01</div>
+        <span class="gj-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12"/></svg>Capture &amp; clean</span>
+        <h3 class="gj-serif gj-stage-title">Financial Data Processing</h3>
+        <p class="gj-stage-desc">Every receipt, bank feed, and invoice ingested, categorized, and verified &mdash; turning raw transactions into trustworthy data.</p>
+        <ul class="gj-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Automated bank &amp; card feeds</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Receipt &amp; document capture</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Categorization &amp; validation</li></ul>
+      </div>
+      <div class="gj-visual">
+        <div class="gj-card gj-txn">
+          <div class="gj-txn-row"><span>Stripe payout</span><span class="gj-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> categorized</span></div>
+          <div class="gj-txn-row"><span>Vendor invoice</span><span class="gj-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> categorized</span></div>
+          <div class="gj-txn-row"><span>Payroll run</span><span class="gj-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> categorized</span></div>
+          <div class="gj-txn-row"><span>Card expense</span><span class="gj-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg> categorized</span></div>
+        </div>
+      </div>
     </div>
-      <div class="process-step relative pl-20">
-      <div class="absolute left-0 top-0 w-14 h-14 border border-surface-variant bg-white shadow-sm flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">02</span></div>
-      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Finance &amp; Accounting</h3>
-      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">Once your data is structured, we focus on compliant financial accounting &mdash; aiming to understand you and your business. By staying compliant in the day-to-day, we achieve clear visibility into how your business is truly performing, with management reports designed for business owners, not accountants.</p>
+
+    <!-- 02 -->
+    <div class="gj-stage">
+      <div class="gj-text">
+        <div class="gj-num" data-num>02</div>
+        <span class="gj-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h12A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6zM3.75 9h16.5M9 9v11.25"/></svg>Record &amp; reconcile</span>
+        <h3 class="gj-serif gj-stage-title">Finance &amp; Accounting</h3>
+        <p class="gj-stage-desc">Clean data becomes a closed set of books &mdash; reconciled to the cent, on time, and audit-ready every month.</p>
+        <ul class="gj-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Daily reconciliation</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Monthly close by the 5th</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Tax-ready statements</li></ul>
+      </div>
+      <div class="gj-visual">
+        <div class="gj-card gj-bars">
+          <div class="gj-bar"><div class="gj-bar-head"><span>Operating</span><span>100%</span></div><div class="gj-bar-track"><div class="gj-bar-fill" data-w="100%"></div></div></div>
+          <div class="gj-bar"><div class="gj-bar-head"><span>Card</span><span>100%</span></div><div class="gj-bar-track"><div class="gj-bar-fill" data-w="100%"></div></div></div>
+          <div class="gj-bar"><div class="gj-bar-head"><span>Savings</span><span>96%</span></div><div class="gj-bar-track"><div class="gj-bar-fill" data-w="96%"></div></div></div>
+        </div>
+      </div>
     </div>
-      <div class="process-step relative pl-20">
-      <div class="absolute left-0 top-0 w-14 h-14 border border-surface-variant bg-white shadow-sm flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">03</span></div>
-      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Financial Management &amp; Analysis</h3>
-      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">This is where numbers become a management tool. Through reporting and real-time analysis we look beyond the numbers &mdash; helping you understand profitability and strengthen controls using live data, not historical data. You become proactive, not reactive, so decisions are made with confidence, not assumptions.</p>
+
+    <!-- 03 -->
+    <div class="gj-stage">
+      <div class="gj-text">
+        <div class="gj-num" data-num>03</div>
+        <span class="gj-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>Understand &amp; decide</span>
+        <h3 class="gj-serif gj-stage-title">Financial Management &amp; Analysis</h3>
+        <p class="gj-stage-desc">Closed books become insight &mdash; dashboards, forecasts, and the monthly read that turns numbers into decisions.</p>
+        <ul class="gj-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>KPI dashboards &amp; board packs</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cashflow &amp; scenario forecasting</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Plain-language recommendations</li></ul>
+      </div>
+      <div class="gj-visual">
+        <div class="gj-card gj-chart">
+          <svg class="gj-line-svg" viewBox="0 0 400 170" preserveAspectRatio="none" aria-hidden="true">
+            <defs><linearGradient id="gjlg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1EA9D7" stop-opacity=".35"/><stop offset="100%" stop-color="#1EA9D7" stop-opacity="0"/></linearGradient></defs>
+            <path class="gj-line-area" d="M0,140 C60,140 70,108 120,106 C170,104 175,140 230,108 C285,78 300,42 400,28 L400,170 L0,170 Z"/>
+            <path class="gj-line-path" d="M0,140 C60,140 70,108 120,106 C170,104 175,140 230,108 C285,78 300,42 400,28"/>
+          </svg>
+        </div>
+      </div>
     </div>
-      <div class="process-step relative pl-20">
-      <div class="absolute left-0 top-0 w-14 h-14 border border-accent-lav/30 bg-accent-lav/10 flex items-center justify-center rounded-card"><span class="font-display text-lg font-bold text-accent-lav">04</span></div>
-      <h3 class="font-display text-lg font-bold text-deep-navy mb-2.5">Business Development &amp; Growth</h3>
-      <p class="text-sm text-muted-steel leading-relaxed max-w-[640px]">With financial management in place, we shift focus to development and growth. We optimise the systems already built, then design strategies and KPIs aligned with your long-term ambitions &mdash; for expansion, growth, or exit. Growth planning is the discipline; performance tracking is the execution.</p>
+
+    <!-- 04 -->
+    <div class="gj-stage">
+      <div class="gj-text">
+        <div class="gj-num" data-num>04</div>
+        <span class="gj-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg>Expand &amp; grow</span>
+        <h3 class="gj-serif gj-stage-title">Business Development &amp; Growth</h3>
+        <p class="gj-stage-desc">Insight becomes action &mdash; pricing, expansion, fundraising, and the strategic counsel to grow with confidence.</p>
+        <ul class="gj-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Growth &amp; expansion modeling</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Fundraising &amp; investor reporting</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Strategic CFO partnership</li></ul>
+      </div>
+      <div class="gj-visual">
+        <div class="gj-card gj-cols-wrap">
+          <div class="gj-cols">
+            <div class="gj-col"><div class="gj-col-track"><div class="gj-col-fill" data-h="38%"></div></div><span class="gj-col-label">Y1</span></div>
+            <div class="gj-col"><div class="gj-col-track"><div class="gj-col-fill" data-h="58%"></div></div><span class="gj-col-label">Y2</span></div>
+            <div class="gj-col"><div class="gj-col-track"><div class="gj-col-fill" data-h="78%"></div></div><span class="gj-col-label">Y3</span></div>
+            <div class="gj-col"><div class="gj-col-track"><div class="gj-col-fill" data-h="100%"></div></div><span class="gj-col-label">Y4</span></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="gj-outro">
+    <h2 class="gj-serif gj-outro-title">From raw data to real growth &mdash; we run the whole journey.</h2>
+    <div class="gj-outro-ctas">
+      <a href="contact.html" class="brand-grad btn-glass text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase rounded-card inline-flex items-center justify-center gap-2 group">Talk to an Expert <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
+      <a href="services.html" class="gj-btn-ghost btn-glass px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase rounded-card inline-flex items-center justify-center">Explore Services</a>
     </div>
-    <div class="mt-12 rv"><a href="what-we-do.html" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy hover:text-accent-lav transition-colors group">See how we can help <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a></div>
   </div>
 </section>
 <section class="relative isolate overflow-hidden py-24 bg-surface"><div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true"><div class="absolute -top-24 -left-20 w-[34rem] h-[34rem] rounded-full" style="background:radial-gradient(circle,rgba(122,42,140,.50),transparent 68%);filter:blur(70px)"></div><div class="absolute top-1/4 -right-16 w-[32rem] h-[32rem] rounded-full" style="background:radial-gradient(circle,rgba(212,25,127,.44),transparent 68%);filter:blur(80px)"></div><div class="absolute -bottom-28 left-1/3 w-[36rem] h-[36rem] rounded-full" style="background:radial-gradient(circle,rgba(30,169,215,.42),transparent 68%);filter:blur(80px)"></div></div>
@@ -565,6 +696,79 @@ if (heroEl) {
   const heroInner = heroEl.querySelector('.relative.z-10');
   if (heroInner) gsap.to(heroInner, { y: -45, ease: 'none', scrollTrigger: { trigger: heroEl, start: 'top top', end: 'bottom top', scrub: 1.5 } });
 }
+
+/* ===== Growth Journey animations ===== */
+(function(){
+  var gj = document.getElementById('growth-journey');
+  if(!gj || typeof gsap === 'undefined') return;
+
+  var stars = document.getElementById('gj-stars');
+  if(stars){
+    var s = '';
+    for(var i=0;i<70;i++){
+      var x=(Math.random()*100).toFixed(2), y=(Math.random()*100).toFixed(2),
+          d=(Math.random()*4+2).toFixed(1), de=(Math.random()*4).toFixed(1),
+          sz=(Math.random()*1.4+1).toFixed(1);
+      s += '<i style="left:'+x+'%;top:'+y+'%;width:'+sz+'px;height:'+sz+'px;animation-duration:'+d+'s;animation-delay:'+de+'s"></i>';
+    }
+    stars.innerHTML = s;
+  }
+
+  gsap.from('.gj-intro-inner > *', {opacity:0, y:34, duration:.9, stagger:.12, ease:'power3.out',
+    scrollTrigger:{trigger:'.gj-intro', start:'top 70%', once:true}});
+
+  gsap.utils.toArray('.gj-stage').forEach(function(stage){
+    var text = stage.querySelector('.gj-text');
+    gsap.from(text.children, {opacity:0, y:30, duration:.7, stagger:.09, ease:'power2.out',
+      scrollTrigger:{trigger:stage, start:'top 72%', once:true}});
+  });
+
+  gsap.utils.toArray('.gj-num').forEach(function(n){
+    ScrollTrigger.create({trigger:n, start:'top 78%', once:true, onEnter:function(){ n.classList.add('is-on'); }});
+  });
+
+  var txn = gj.querySelector('.gj-txn');
+  if(txn){
+    ScrollTrigger.create({trigger:txn, start:'top 80%', once:true, onEnter:function(){
+      gsap.fromTo(txn.querySelectorAll('.gj-txn-row'), {opacity:0, x:24},
+        {opacity:1, x:0, duration:.5, stagger:.13, ease:'power2.out'});
+      gsap.fromTo(txn.querySelectorAll('.gj-badge'), {opacity:0, scale:.7},
+        {opacity:1, scale:1, duration:.4, stagger:.13, delay:.3, ease:'back.out(2)'});
+    }});
+  }
+
+  var bars = gj.querySelector('.gj-bars');
+  if(bars){
+    ScrollTrigger.create({trigger:bars, start:'top 82%', once:true, onEnter:function(){
+      bars.querySelectorAll('.gj-bar-fill').forEach(function(f,i){
+        gsap.fromTo(f, {width:'0%'}, {width:f.dataset.w, duration:1.1, delay:i*.15, ease:'power2.out'});
+      });
+    }});
+  }
+
+  var line = gj.querySelector('.gj-line-path');
+  if(line){
+    var len = line.getTotalLength();
+    gsap.set(line, {strokeDasharray:len, strokeDashoffset:len});
+    ScrollTrigger.create({trigger:line, start:'top 84%', once:true, onEnter:function(){
+      gsap.to(line, {strokeDashoffset:0, duration:1.6, ease:'power2.inOut'});
+      gsap.to(gj.querySelector('.gj-line-area'), {opacity:1, duration:1.2, delay:.5});
+    }});
+  }
+
+  var cols = gj.querySelector('.gj-cols');
+  if(cols){
+    ScrollTrigger.create({trigger:cols, start:'top 84%', once:true, onEnter:function(){
+      cols.querySelectorAll('.gj-col-fill').forEach(function(c,i){
+        gsap.fromTo(c, {height:'0%'}, {height:c.dataset.h, duration:.9, delay:i*.13, ease:'power3.out'});
+      });
+    }});
+  }
+
+  gsap.from('.gj-outro > *', {opacity:0, y:30, duration:.8, stagger:.12, ease:'power2.out',
+    scrollTrigger:{trigger:'.gj-outro', start:'top 82%', once:true}});
+})();
+
 </script>
 </body>
 </html>
