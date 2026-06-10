@@ -144,8 +144,12 @@
     .gj-list li{display:flex;align-items:center;gap:.65rem;font-size:.92rem;color:rgba(255,255,255,.82)}
     .gj-list svg{width:16px;height:16px;color:#D4197F;flex-shrink:0}
     .gj-visual{display:flex;justify-content:center}
-    .gj-card{width:100%;max-width:26rem;background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 24px 60px rgba(0,0,0,.4)}
-    .gj-txn-row{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.08);border-radius:10px;margin-bottom:.6rem;background:rgba(255,255,255,.02)}
+    .gj-card{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:26rem;background:linear-gradient(150deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.03) 100%);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:1.4rem;-webkit-backdrop-filter:blur(26px) saturate(185%);backdrop-filter:blur(26px) saturate(185%);box-shadow:0 28px 64px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -18px 34px rgba(255,255,255,.05)}
+    .gj-card::before{content:'';position:absolute;left:0;right:0;top:0;height:58%;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,0))}
+    .gj-card::after{content:'';position:absolute;top:-40%;left:-95%;width:60%;height:180%;pointer-events:none;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);transition:left .9s cubic-bezier(.2,.6,.2,1)}
+    .gj-card:hover::after{left:175%}
+    .gj-card > *{position:relative;z-index:1}
+    .gj-txn-row{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.14);border-radius:12px;margin-bottom:.6rem;background:linear-gradient(150deg,rgba(255,255,255,.10),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
     .gj-txn-row:last-child{margin-bottom:0}
     .gj-txn-row > span:first-child{font-size:.9rem;color:rgba(255,255,255,.85)}
     .gj-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:#7be0a3;background:rgba(46,160,90,.12);border:1px solid rgba(46,160,90,.25);padding:.2rem .55rem;border-radius:9999px}
