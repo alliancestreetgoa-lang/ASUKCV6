@@ -41,6 +41,14 @@
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:#faf9f8}
+    .page-aurora{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+    .page-aurora i{position:absolute;border-radius:9999px}
+    .page-aurora .pa1{top:-12%;left:-10%;width:38rem;height:38rem;background:radial-gradient(circle,rgba(122,42,140,.42),transparent 68%);filter:blur(80px);animation:paDrift 26s ease-in-out infinite}
+    .page-aurora .pa2{top:30%;right:-12%;width:36rem;height:36rem;background:radial-gradient(circle,rgba(212,25,127,.36),transparent 68%);filter:blur(90px);animation:paDrift 32s ease-in-out -8s infinite reverse}
+    .page-aurora .pa3{bottom:-16%;left:28%;width:40rem;height:40rem;background:radial-gradient(circle,rgba(30,169,215,.34),transparent 68%);filter:blur(90px);animation:paDrift 38s ease-in-out -16s infinite}
+    @keyframes paDrift{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-4%,3%,0)}}
+    @media(prefers-reduced-motion:reduce){.page-aurora i{animation:none}}
+
     #sp{position:fixed;top:0;left:0;width:0%;height:3px;background:linear-gradient(90deg,#78267F,#D4197F,#1EA9D7);z-index:9999}
     #site-nav{transition:box-shadow .35s ease,background .35s ease,border-color .35s ease,backdrop-filter .35s ease;position:relative;overflow:hidden}
     #site-nav::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.04) 50%,rgba(255,255,255,0) 100%);pointer-events:none;z-index:0;border-radius:inherit}
@@ -117,61 +125,61 @@
     .nav-dark .nav-logo-light{display:block}
   
     /* ===== The Growth Journey ===== */
-    .gj{background:#0e0618;color:#fff;position:relative;overflow:hidden;font-family:'Hanken Grotesk',sans-serif}
+    .gj{background:transparent;color:#2A0E45;position:relative;font-family:'Hanken Grotesk',sans-serif}
     .gj-serif{font-family:'Playfair Display',Georgia,serif;font-weight:600}
-    .gj-grad{background-image:linear-gradient(100deg,#b06bd8 0%,#D4197F 55%,#1EA9D7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-    .gj-intro{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:clamp(2.5rem,5vw,4rem) 1.5rem;background:radial-gradient(125% 90% at 50% -10%,#3a1560 0%,#1a0a30 48%,#0e0618 80%)}
+    .gj-grad{background-image:linear-gradient(100deg,#7A2A8C 0%,#D4197F 55%,#1EA9D7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+    .gj-intro{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding:clamp(2.5rem,5vw,4rem) 1.5rem}
     .gj-stars{position:absolute;inset:0;pointer-events:none;z-index:1}
-    .gj-stars i{position:absolute;border-radius:50%;background:#fff;opacity:.35;animation:gjtw 4s ease-in-out infinite}
+    .gj-stars i{position:absolute;border-radius:50%;background:#78267F;opacity:.3;animation:gjtw 4s ease-in-out infinite}
     @keyframes gjtw{0%,100%{opacity:.12}50%{opacity:.75}}
     .gj-intro-inner{position:relative;z-index:2}
-    .gj-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#c9a8e8;margin-bottom:1.5rem}
+    .gj-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#78267F;margin-bottom:1.5rem}
     .gj-dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(100deg,#D4197F,#1EA9D7);box-shadow:0 0 12px rgba(212,25,127,.8)}
-    .gj-intro-title{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:1.4rem;color:#fff}
-    .gj-intro-sub{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.6);max-width:34rem;margin:0 auto;line-height:1.6}
+    .gj-intro-title{font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;letter-spacing:-.01em;margin-bottom:1.4rem;color:#2A0E45}
+    .gj-intro-sub{font-size:clamp(1rem,2vw,1.15rem);color:#5D708A;max-width:34rem;margin:0 auto;line-height:1.6}
     .gj-stages{position:relative;max-width:1200px;margin:0 auto;padding:0 1.5rem 1rem}
-    .gj-stages::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.12) 12%,rgba(255,255,255,.12) 88%,transparent);transform:translateX(-50%)}
+    .gj-stages::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(42,14,69,.14) 12%,rgba(42,14,69,.14) 88%,transparent);transform:translateX(-50%)}
     .gj-stage{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;padding:clamp(1.25rem,2.5vw,2rem) 0;position:relative}
     .gj-stage:nth-child(even) .gj-text{order:2}
     .gj-stage:nth-child(even) .gj-visual{order:1}
     .gj-text{padding:0 clamp(0rem,2vw,2rem)}
-    .gj-num{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(3rem,5vw,4.6rem);line-height:1.05;color:rgba(255,255,255,.07);transition:color .7s ease;margin-bottom:1rem}
-    .gj-num.is-on{color:#bb6ae0}
-    .gj-pill{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);padding:.35rem .8rem;border-radius:9999px;margin-bottom:1.2rem}
+    .gj-num{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(3rem,5vw,4.6rem);line-height:1.05;color:rgba(42,14,69,.10);transition:color .7s ease;margin-bottom:1rem}
+    .gj-num.is-on{color:#78267F}
+    .gj-pill{display:inline-flex;align-items:center;gap:.5rem;font-size:11px;font-weight:600;letter-spacing:.04em;color:#43474e;border:1px solid rgba(42,14,69,.15);background:rgba(255,255,255,.5);padding:.35rem .8rem;border-radius:9999px;margin-bottom:1.2rem}
     .gj-pill svg{width:13px;height:13px;opacity:.85}
-    .gj-stage-title{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem;color:#fff}
-    .gj-stage-desc{color:rgba(255,255,255,.58);line-height:1.65;max-width:30rem;margin-bottom:1.6rem;font-size:1rem}
+    .gj-stage-title{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:1rem;color:#2A0E45}
+    .gj-stage-desc{color:#5D708A;line-height:1.65;max-width:30rem;margin-bottom:1.6rem;font-size:1rem}
     .gj-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem}
-    .gj-list li{display:flex;align-items:center;gap:.65rem;font-size:.92rem;color:rgba(255,255,255,.82)}
+    .gj-list li{display:flex;align-items:center;gap:.65rem;font-size:.92rem;color:#43474e}
     .gj-list svg{width:16px;height:16px;color:#D4197F;flex-shrink:0}
     .gj-visual{display:flex;justify-content:center}
-    .gj-card{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:26rem;background:linear-gradient(150deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,.03) 100%);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:1.4rem;-webkit-backdrop-filter:blur(26px) saturate(185%);backdrop-filter:blur(26px) saturate(185%);box-shadow:0 28px 64px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.4),inset 0 -18px 34px rgba(255,255,255,.05)}
-    .gj-card::before{content:'';position:absolute;left:0;right:0;top:0;height:58%;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.20),rgba(255,255,255,0))}
-    .gj-card::after{content:'';position:absolute;top:-40%;left:-95%;width:60%;height:180%;pointer-events:none;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-18deg);transition:left .9s cubic-bezier(.2,.6,.2,1)}
+    .gj-card{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:26rem;background:linear-gradient(135deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.24) 100%);border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:1.4rem;-webkit-backdrop-filter:blur(26px) saturate(185%);backdrop-filter:blur(26px) saturate(185%);box-shadow:0 16px 44px rgba(1,10,40,.12),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -14px 30px rgba(255,255,255,.14)}
+    .gj-card::before{content:'';position:absolute;left:0;right:0;top:0;height:58%;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0))}
+    .gj-card::after{content:'';position:absolute;top:-40%;left:-95%;width:60%;height:180%;pointer-events:none;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-18deg);transition:left .9s cubic-bezier(.2,.6,.2,1)}
     .gj-card:hover::after{left:175%}
     .gj-card > *{position:relative;z-index:1}
-    .gj-txn-row{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.14);border-radius:12px;margin-bottom:.6rem;background:linear-gradient(150deg,rgba(255,255,255,.10),rgba(255,255,255,.03));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+    .gj-txn-row{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(42,14,69,.12);border-radius:12px;margin-bottom:.6rem;background:linear-gradient(150deg,rgba(255,255,255,.6),rgba(255,255,255,.3));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
     .gj-txn-row:last-child{margin-bottom:0}
-    .gj-txn-row > span:first-child{font-size:.9rem;color:rgba(255,255,255,.85)}
-    .gj-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:#9bedba;background:linear-gradient(150deg,rgba(125,224,163,.24),rgba(46,160,90,.06));border:1px solid rgba(140,240,180,.38);padding:.25rem .62rem;border-radius:9999px;-webkit-backdrop-filter:blur(8px) saturate(160%);backdrop-filter:blur(8px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.32),inset 0 -3px 6px rgba(0,0,0,.18),0 3px 10px rgba(0,0,0,.25)}
+    .gj-txn-row > span:first-child{font-size:.9rem;color:#2A0E45}
+    .gj-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:#1f8a4c;background:linear-gradient(150deg,rgba(125,224,163,.30),rgba(46,160,90,.10));border:1px solid rgba(34,150,84,.35);padding:.25rem .62rem;border-radius:9999px;-webkit-backdrop-filter:blur(8px) saturate(160%);backdrop-filter:blur(8px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.32),inset 0 -3px 6px rgba(1,10,40,.08),0 3px 10px rgba(1,10,40,.10)}
     .gj-badge svg{width:11px;height:11px}
     .gj-bar{margin-bottom:1.1rem}
     .gj-bar:last-child{margin-bottom:0}
-    .gj-bar-head{display:flex;justify-content:space-between;font-size:.82rem;color:rgba(255,255,255,.7);margin-bottom:.45rem}
-    .gj-bar-track{height:7px;border-radius:9999px;background:rgba(255,255,255,.08);overflow:hidden}
+    .gj-bar-head{display:flex;justify-content:space-between;font-size:.82rem;color:#43474e;margin-bottom:.45rem}
+    .gj-bar-track{height:7px;border-radius:9999px;background:rgba(42,14,69,.10);overflow:hidden}
     .gj-bar-fill{height:100%;width:0;border-radius:9999px;background:linear-gradient(90deg,#78267F,#D4197F)}
     .gj-line-svg{width:100%;height:170px;display:block}
     .gj-line-path{fill:none;stroke:#1EA9D7;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
     .gj-line-area{fill:url(#gjlg);opacity:0}
     .gj-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;align-items:end;height:190px}
     .gj-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
-    .gj-col-track{width:100%;height:100%;display:flex;align-items:flex-end;border-radius:8px;background:rgba(255,255,255,.03)}
+    .gj-col-track{width:100%;height:100%;display:flex;align-items:flex-end;border-radius:8px;background:rgba(42,14,69,.06)}
     .gj-col-fill{width:100%;height:0;border-radius:8px;background:linear-gradient(180deg,#D4197F,#78267F)}
-    .gj-col-label{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:.5rem}
-    .gj-outro{text-align:center;padding:clamp(3rem,6vw,4.5rem) 1.5rem clamp(3.5rem,7vw,5rem);background:radial-gradient(110% 80% at 50% 120%,#2a0e45 0%,#0e0618 60%)}
-    .gj-outro-title{font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.12;max-width:46rem;margin:0 auto 2rem;color:#fff}
+    .gj-col-label{font-size:.72rem;color:#5D708A;margin-top:.5rem}
+    .gj-outro{text-align:center;padding:clamp(3rem,6vw,4.5rem) 1.5rem clamp(3.5rem,7vw,5rem)}
+    .gj-outro-title{font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.12;max-width:46rem;margin:0 auto 2rem;color:#2A0E45}
     .gj-outro-ctas{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
-    .gj-btn-ghost{background:rgba(255,255,255,.08);color:#fff}
+    .gj-btn-ghost{background:rgba(42,14,69,.08);color:#2A0E45}
     @media(max-width:900px){
       .gj-stages::before{display:none}
       .gj-stage{grid-template-columns:1fr;gap:2.5rem}
@@ -186,6 +194,7 @@
   </style>
 </head>
 <body>
+<div class="page-aurora" aria-hidden="true"><i class="pa1"></i><i class="pa2"></i><i class="pa3"></i></div>
 
 <div id="sp" aria-hidden="true"></div>
 <div id="mob-overlay" aria-hidden="true" onclick="closeMobMenu()"></div>
@@ -229,9 +238,9 @@
     </div>
   </nav>
 </header>
-<section data-hero-light class="relative min-h-[calc(100svh-72px)] flex items-center overflow-hidden bg-white">
+<section data-hero-light class="relative min-h-[calc(100svh-72px)] flex items-center overflow-hidden">
   <div id="vanta-bg" class="absolute inset-0 w-full h-full opacity-60"></div>
-  <div class="absolute inset-0 bg-gradient-to-b from-white/50 via-white/10 to-white pointer-events-none z-[1]"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-transparent pointer-events-none z-[1]"></div>
   <div class="absolute top-10 right-10 w-14 h-14 border border-deep-navy/10 rotate-6 rounded-[3px]" aria-hidden="true"></div>
   <div class="absolute top-16 right-16 w-9 h-9 border border-accent-lav/25 rotate-6 rounded-[3px]" aria-hidden="true"></div>
   <div class="relative z-10 max-w-site mx-auto px-6 sm:px-10 lg:px-16 w-full py-10 lg:py-14">
@@ -252,7 +261,7 @@
     </div>
   </div>
 </section>
-<section class="relative isolate overflow-hidden py-24 bg-surface-cream"><div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true"><div class="absolute -top-24 -left-20 w-[34rem] h-[34rem] rounded-full" style="background:radial-gradient(circle,rgba(122,42,140,.50),transparent 68%);filter:blur(70px)"></div><div class="absolute top-1/4 -right-16 w-[32rem] h-[32rem] rounded-full" style="background:radial-gradient(circle,rgba(212,25,127,.44),transparent 68%);filter:blur(80px)"></div><div class="absolute -bottom-28 left-1/3 w-[36rem] h-[36rem] rounded-full" style="background:radial-gradient(circle,rgba(30,169,215,.42),transparent 68%);filter:blur(80px)"></div></div>
+<section class="relative isolate py-24">
   <div class="max-w-site mx-auto px-6 lg:px-10">
     <div class="mb-14 rv max-w-[760px]">
       <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Why Account Clerks</span>
@@ -282,7 +291,7 @@
     </div>
   </div>
 </section>
-<section class="relative isolate overflow-hidden py-24 bg-surface"><div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true"><div class="absolute -top-24 -left-20 w-[34rem] h-[34rem] rounded-full" style="background:radial-gradient(circle,rgba(122,42,140,.50),transparent 68%);filter:blur(70px)"></div><div class="absolute top-1/4 -right-16 w-[32rem] h-[32rem] rounded-full" style="background:radial-gradient(circle,rgba(212,25,127,.44),transparent 68%);filter:blur(80px)"></div><div class="absolute -bottom-28 left-1/3 w-[36rem] h-[36rem] rounded-full" style="background:radial-gradient(circle,rgba(30,169,215,.42),transparent 68%);filter:blur(80px)"></div></div>
+<section class="relative isolate py-24">
   <div class="max-w-site mx-auto px-6 lg:px-10">
     <div class="grid md:grid-cols-[1fr_auto] gap-10 items-end mb-14">
       <div class="rv max-w-[640px]"><span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Services</span><h2 class="font-display text-3xl lg:text-[2.6rem] font-bold text-deep-navy leading-[1.12] tracking-tight">Services built around<br/><span class="text-accent-lav">your business.</span></h2></div>
@@ -322,8 +331,9 @@
     </div>
   </div>
 </section>
-<section class="relative isolate overflow-hidden py-24 bg-deep-navy overflow-hidden"><div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true"><div class="absolute -top-24 -left-20 w-[34rem] h-[34rem] rounded-full" style="background:radial-gradient(circle,rgba(122,42,140,.50),transparent 68%);filter:blur(70px)"></div><div class="absolute top-1/4 -right-16 w-[32rem] h-[32rem] rounded-full" style="background:radial-gradient(circle,rgba(212,25,127,.44),transparent 68%);filter:blur(80px)"></div><div class="absolute -bottom-28 left-1/3 w-[36rem] h-[36rem] rounded-full" style="background:radial-gradient(circle,rgba(30,169,215,.42),transparent 68%);filter:blur(80px)"></div></div>
-  <div class="max-w-site mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-14 items-center">
+<section class="relative isolate py-24">
+  <div class="max-w-site mx-auto px-6 lg:px-10">
+  <div class="bg-deep-navy rounded-2xl px-8 py-12 lg:px-14 lg:py-14 shadow-2xl shadow-deep-navy/30 grid lg:grid-cols-2 gap-14 items-center">
     <div class="rv">
       <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-accent-lav mb-5"><span class="w-5 h-px bg-accent-lav/60 block"></span>Financial Management</span>
       <h2 class="font-display text-3xl lg:text-4xl font-bold text-white leading-[1.12] tracking-tight mb-6">Protect profitability.<br/>Then grow with intent.</h2>
@@ -334,6 +344,7 @@
       <div class="glass-card-dark rounded-card p-6 rv"><div class="w-10 h-10 rounded-card bg-[#1EA9D7]/25 text-[#1EA9D7] flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></div><p class="font-display text-base font-bold text-white mb-1.5">Expansion</p><p class="text-sm text-white/55 leading-relaxed">Cost management, budgeting and margin control to maintain profitability as you scale.</p></div>
       <div class="glass-card-dark rounded-card p-6 rv sm:mt-8"><div class="w-10 h-10 rounded-card bg-accent-lav/20 text-accent-lav flex items-center justify-center mb-4"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div><p class="font-display text-base font-bold text-white mb-1.5">Growth</p><p class="text-sm text-white/55 leading-relaxed">Financial modelling, forecasting and KPI development to scale sustainably or enter new markets.</p></div>
     </div>
+  </div>
   </div>
 </section>
 <!-- ===== THE GROWTH JOURNEY ===== -->
@@ -435,7 +446,7 @@
     </div>
   </div>
 </section>
-<section class="relative isolate overflow-hidden py-24 bg-surface"><div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true"><div class="absolute -top-24 -left-20 w-[34rem] h-[34rem] rounded-full" style="background:radial-gradient(circle,rgba(122,42,140,.50),transparent 68%);filter:blur(70px)"></div><div class="absolute top-1/4 -right-16 w-[32rem] h-[32rem] rounded-full" style="background:radial-gradient(circle,rgba(212,25,127,.44),transparent 68%);filter:blur(80px)"></div><div class="absolute -bottom-28 left-1/3 w-[36rem] h-[36rem] rounded-full" style="background:radial-gradient(circle,rgba(30,169,215,.42),transparent 68%);filter:blur(80px)"></div></div>
+<section class="relative isolate py-24">
   <div class="max-w-site mx-auto px-6 lg:px-10">
     <div class="text-center mb-14 rv">
       <span class="inline-flex justify-center items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Who We Work With</span>
@@ -471,7 +482,58 @@
     <div class="text-center mt-10 rv"><a href="who-we-help.html" class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.12em] text-deep-navy hover:text-accent-lav transition-colors group">See who we work with <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a></div>
   </div>
 </section>
-<section id="faq" class="py-24 bg-surface-cream">
+<!-- ===== MEET THE TEAM ===== -->
+<section id="team" class="relative isolate py-24">
+  <div class="max-w-site mx-auto px-6 lg:px-10">
+    <div class="mb-12 rv max-w-[640px]">
+      <span class="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[.14em] text-muted-steel mb-5"><span class="w-5 h-px bg-current/50 block"></span>Meet the Team</span>
+      <h2 class="font-display text-3xl lg:text-[2.6rem] font-bold text-deep-navy leading-[1.12] tracking-tight">Real people own your books.</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="glass-card rounded-2xl overflow-hidden rv">
+        <div class="relative aspect-square overflow-hidden">
+          <img src="assets/team-photo.jpg" alt="Alexandra Chen" class="w-full h-full object-cover" style="object-position:center 8%">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-4">
+          <p class="font-display text-base font-bold text-deep-navy">Alexandra Chen</p>
+          <p class="text-sm text-muted-steel">Lead Clerk &middot; CPA</p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl overflow-hidden rv">
+        <div class="relative aspect-square overflow-hidden">
+          <img src="assets/team-photo.jpg" alt="Marcus Reid" class="w-full h-full object-cover" style="object-position:center 8%">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-4">
+          <p class="font-display text-base font-bold text-deep-navy">Marcus Reid</p>
+          <p class="text-sm text-muted-steel">FP&amp;A Advisor</p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl overflow-hidden rv">
+        <div class="relative aspect-square overflow-hidden">
+          <img src="assets/team-photo.jpg" alt="Sarah Kapoor" class="w-full h-full object-cover" style="object-position:center 8%">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-4">
+          <p class="font-display text-base font-bold text-deep-navy">Sarah Kapoor</p>
+          <p class="text-sm text-muted-steel">Tax Lead &middot; EA</p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl overflow-hidden rv">
+        <div class="relative aspect-square overflow-hidden">
+          <img src="assets/team-photo.jpg" alt="James Whitfield" class="w-full h-full object-cover" style="object-position:center 8%">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="p-4">
+          <p class="font-display text-base font-bold text-deep-navy">James Whitfield</p>
+          <p class="text-sm text-muted-steel">Engagement Lead</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="faq" class="py-24">
   <div class="max-w-site mx-auto px-6 lg:px-10">
     <div class="grid md:grid-cols-[320px_1fr] gap-16">
       <div class="rv">
@@ -514,7 +576,7 @@
     </div>
   </div>
 </section>
-<section class="py-24 bg-surface">
+<section class="py-24">
   <div class="max-w-site mx-auto px-6 lg:px-10">
     <div class="relative overflow-hidden rounded-lg rv" style="background:#1C0A30">
       <div id="vanta-cta" class="absolute inset-0 w-full h-full rounded-lg"></div>
@@ -719,7 +781,7 @@ window.addEventListener('scroll', updateNavTheme, { passive: true });
 
 /* Vanta NET */
 function netCfg(el, extra){ return Object.assign({ el: el, mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200, minWidth: 200, scale: 1.0, scaleMobile: 1.0, color: 0x9C2D87, backgroundColor: 0x1C0A30, points: 10.0, maxDistance: 24.0, spacing: 18.0, showDots: true }, extra||{}); }
-if (document.getElementById('vanta-bg') && window.VANTA) VANTA.NET(netCfg('#vanta-bg', { backgroundColor: 0xffffff, color: 0x9C2D87, points: 9.0, maxDistance: 20.0 }));
+if (document.getElementById('vanta-bg') && window.VANTA) VANTA.NET(netCfg('#vanta-bg', { backgroundColor: 0xffffff, backgroundAlpha: 0, color: 0x9C2D87, points: 9.0, maxDistance: 20.0 }));
 if (document.getElementById('vanta-cta')) {
   ScrollTrigger.create({ trigger: '#vanta-cta', start: 'top 90%', once: true,
     onEnter: () => { if (window.VANTA) VANTA.NET(netCfg('#vanta-cta', { points: 9.0, maxDistance: 22.0, spacing: 20.0, touchControls: false })); } });
@@ -803,6 +865,23 @@ if (heroEl) {
     scrollTrigger:{trigger:'.gj-outro', start:'top 82%', once:true}});
 })();
 
+</script>
+<script>
+(function(){
+  if (!window.gsap || !window.ScrollTrigger) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  gsap.utils.toArray("section").forEach(function(sec){
+    if (sec.hasAttribute("data-hero-light")) return;
+    var isGj = sec.id === "growth-journey";
+    var parts = isGj ? Array.prototype.slice.call(sec.children)
+                     : [sec.querySelector(":scope > .max-w-site") || sec.firstElementChild];
+    parts.forEach(function(inner){
+      if (!inner) return;
+      gsap.fromTo(inner, { y: 60 }, { y: -60, ease: "none",
+        scrollTrigger: { trigger: isGj ? inner : sec, start: "top bottom", end: "bottom top", scrub: 0.8 } });
+    });
+  });
+})();
 </script>
 </body>
 </html>
