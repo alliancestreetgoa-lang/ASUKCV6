@@ -153,33 +153,40 @@
     .gj-list li{display:flex;align-items:center;gap:.65rem;font-size:.92rem;color:#43474e}
     .gj-list svg{width:16px;height:16px;color:#D4197F;flex-shrink:0}
     .gj-visual{display:flex;justify-content:center}
-    .gj-card{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:26rem;background:linear-gradient(135deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.24) 100%);border:1px solid rgba(255,255,255,.7);border-radius:20px;padding:1.4rem;-webkit-backdrop-filter:blur(26px) saturate(185%);backdrop-filter:blur(26px) saturate(185%);box-shadow:0 16px 44px rgba(1,10,40,.12),inset 0 1px 0 rgba(255,255,255,.92),inset 0 -14px 30px rgba(255,255,255,.14)}
-    .gj-card::before{content:'';position:absolute;left:0;right:0;top:0;height:58%;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0))}
-    .gj-card::after{content:'';position:absolute;top:-40%;left:-95%;width:60%;height:180%;pointer-events:none;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-18deg);transition:left .9s cubic-bezier(.2,.6,.2,1)}
+    .gj-card{position:relative;isolation:isolate;overflow:hidden;width:100%;max-width:26rem;background:radial-gradient(120% 120% at 15% 0%,rgba(122,42,140,.42) 0%,transparent 48%),radial-gradient(130% 140% at 95% 100%,rgba(30,169,215,.22) 0%,transparent 52%),linear-gradient(135deg,#37145A 0%,#2A0E45 62%,#23093C 100%);border:1px solid rgba(255,255,255,.16);border-radius:20px;padding:1.4rem;-webkit-backdrop-filter:blur(26px) saturate(185%);backdrop-filter:blur(26px) saturate(185%);box-shadow:0 20px 50px rgba(20,4,40,.34),inset 0 1px 0 rgba(255,255,255,.2)}
+    .gj-card::before{content:'';position:absolute;left:0;right:0;top:0;height:58%;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0))}
+    .gj-card::after{content:'';position:absolute;top:-40%;left:-95%;width:60%;height:180%;pointer-events:none;z-index:3;background:linear-gradient(105deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:left .9s cubic-bezier(.2,.6,.2,1)}
     .gj-card:hover::after{left:175%}
     .gj-card > *{position:relative;z-index:1}
-    .gj-txn-row{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(42,14,69,.12);border-radius:12px;margin-bottom:.6rem;background:linear-gradient(150deg,rgba(255,255,255,.6),rgba(255,255,255,.3));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+    .gj-txn-row{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:.85rem 1rem;border:1px solid rgba(255,255,255,.14);border-radius:12px;margin-bottom:.6rem;background:linear-gradient(150deg,rgba(255,255,255,.1),rgba(255,255,255,.04));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.16)}
     .gj-txn-row:last-child{margin-bottom:0}
-    .gj-txn-row > span:first-child{font-size:.9rem;color:#2A0E45}
-    .gj-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:#1f8a4c;background:linear-gradient(150deg,rgba(125,224,163,.30),rgba(46,160,90,.10));border:1px solid rgba(34,150,84,.35);padding:.25rem .62rem;border-radius:9999px;-webkit-backdrop-filter:blur(8px) saturate(160%);backdrop-filter:blur(8px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.32),inset 0 -3px 6px rgba(1,10,40,.08),0 3px 10px rgba(1,10,40,.10)}
+    .gj-txn-row > span:first-child{font-size:.9rem;color:rgba(255,255,255,.9)}
+    .gj-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;font-weight:600;color:#7de0a3;background:linear-gradient(150deg,rgba(125,224,163,.26),rgba(46,160,90,.12));border:1px solid rgba(125,224,163,.4);padding:.25rem .62rem;border-radius:9999px;-webkit-backdrop-filter:blur(8px) saturate(160%);backdrop-filter:blur(8px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 3px 10px rgba(1,10,40,.18)}
     .gj-badge svg{width:11px;height:11px}
     .gj-bar{margin-bottom:1.1rem}
     .gj-bar:last-child{margin-bottom:0}
-    .gj-bar-head{display:flex;justify-content:space-between;font-size:.82rem;color:#43474e;margin-bottom:.45rem}
-    .gj-bar-track{height:7px;border-radius:9999px;background:rgba(42,14,69,.10);overflow:hidden}
+    .gj-bar-head{display:flex;justify-content:space-between;font-size:.82rem;color:rgba(255,255,255,.72);margin-bottom:.45rem}
+    .gj-bar-track{height:7px;border-radius:9999px;background:rgba(255,255,255,.12);overflow:hidden}
     .gj-bar-fill{height:100%;width:0;border-radius:9999px;background:linear-gradient(90deg,#78267F,#D4197F)}
     .gj-line-svg{width:100%;height:170px;display:block}
     .gj-line-path{fill:none;stroke:#1EA9D7;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
     .gj-line-area{fill:url(#gjlg);opacity:0}
     .gj-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;align-items:end;height:190px}
     .gj-col{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
-    .gj-col-track{width:100%;height:100%;display:flex;align-items:flex-end;border-radius:8px;background:rgba(42,14,69,.06)}
+    .gj-col-track{width:100%;height:100%;display:flex;align-items:flex-end;border-radius:8px;background:rgba(255,255,255,.08)}
     .gj-col-fill{width:100%;height:0;border-radius:8px;background:linear-gradient(180deg,#D4197F,#78267F)}
-    .gj-col-label{font-size:.72rem;color:#5D708A;margin-top:.5rem}
+    .gj-col-label{font-size:.72rem;color:rgba(255,255,255,.6);margin-top:.5rem}
     .gj-outro{text-align:center;padding:clamp(3rem,6vw,4.5rem) 1.5rem clamp(3.5rem,7vw,5rem)}
     .gj-outro-title{font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.12;max-width:46rem;margin:0 auto 2rem;color:#2A0E45}
     .gj-outro-ctas{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
     .gj-btn-ghost{background:rgba(42,14,69,.08);color:#2A0E45}
+    .gj-outro-card{position:relative;isolation:isolate;overflow:hidden;max-width:52rem;margin:0 auto;padding:clamp(2.5rem,5vw,3.75rem) clamp(1.5rem,4vw,3rem);border-radius:24px;background:radial-gradient(120% 120% at 12% 0%,rgba(122,42,140,.5) 0%,transparent 46%),radial-gradient(130% 140% at 96% 100%,rgba(30,169,215,.26) 0%,transparent 50%),linear-gradient(135deg,#37145A 0%,#2A0E45 60%,#23093C 100%);border:1px solid rgba(255,255,255,.16);box-shadow:0 28px 70px rgba(20,4,40,.4),inset 0 1px 0 rgba(255,255,255,.22)}
+    .gj-outro-card::before{content:'';position:absolute;left:0;right:0;top:0;height:55%;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0))}
+    .gj-outro-card::after{content:'';position:absolute;top:-40%;left:-95%;width:60%;height:180%;pointer-events:none;z-index:2;background:linear-gradient(105deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);transition:left .9s cubic-bezier(.2,.6,.2,1)}
+    .gj-outro-card:hover::after{left:175%}
+    .gj-outro-card > *{position:relative;z-index:1}
+    .gj-outro-card .gj-outro-title{color:#fff;margin-bottom:2rem}
+    .gj-outro-card .gj-btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.22)}
     @media(max-width:900px){
       .gj-stages::before{display:none}
       .gj-stage{grid-template-columns:1fr;gap:2.5rem}
@@ -439,10 +446,12 @@
   </div>
 
   <div class="gj-outro">
+    <div class="gj-outro-card">
     <h2 class="gj-serif gj-outro-title">From raw data to real growth &mdash; we run the whole journey.</h2>
     <div class="gj-outro-ctas">
       <a href="contact.html" class="brand-grad btn-glass text-white px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase rounded-card inline-flex items-center justify-center gap-2 group">Talk to an Expert <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></a>
       <a href="services.html" class="gj-btn-ghost btn-glass px-8 py-4 text-[11px] font-bold tracking-[.12em] uppercase rounded-card inline-flex items-center justify-center">Explore Services</a>
+    </div>
     </div>
   </div>
 </section>
@@ -861,7 +870,7 @@ if (heroEl) {
     }});
   }
 
-  gsap.from('.gj-outro > *', {opacity:0, y:30, duration:.8, stagger:.12, ease:'power2.out',
+  gsap.from('.gj-outro-card > *', {opacity:0, y:30, duration:.8, stagger:.12, ease:'power2.out',
     scrollTrigger:{trigger:'.gj-outro', start:'top 82%', once:true}});
 })();
 
